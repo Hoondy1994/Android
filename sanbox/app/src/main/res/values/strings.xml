@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">沙箱 Demo</string>
+    <string name="demo_title">Android 沙箱体验</string>
+    <string name="demo_intro">沙箱把程序限制在独立边界内：Android 用 UID 隔离应用数据；Native 层可用 Seccomp 拦截危险系统调用。依次点击下面按钮，观察「允许」与「拦截」的差异。</string>
+    <string name="demo_btn_private">① 读写应用私有目录</string>
+    <string name="demo_btn_cross">② 尝试读取其他应用目录</string>
+    <string name="demo_btn_native">③ Native 正常读文件</string>
+    <string name="demo_btn_seccomp">④ Seccomp 拦截 openat()</string>
+    <string name="demo_btn_clear">清空日志</string>
+</resources>

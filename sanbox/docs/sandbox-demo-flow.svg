@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2480" width="1400" height="2480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fafbff"/><stop offset="100%" stop-color="#eef2fb"/></linearGradient>
+    <linearGradient id="startGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7e57c2"/><stop offset="100%" stop-color="#5e35b1"/></linearGradient>
+    <linearGradient id="procGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fff"/><stop offset="100%" stop-color="#f5f7ff"/></linearGradient>
+    <linearGradient id="okGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#66bb6a"/><stop offset="100%" stop-color="#43a047"/></linearGradient>
+    <linearGradient id="failGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ef5350"/><stop offset="100%" stop-color="#e53935"/></linearGradient>
+    <linearGradient id="warnGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ffa726"/><stop offset="100%" stop-color="#fb8c00"/></linearGradient>
+    <linearGradient id="lane1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8f5e9"/><stop offset="100%" stop-color="#f1f8e9"/></linearGradient>
+    <linearGradient id="lane2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffebee"/><stop offset="100%" stop-color="#fce4ec"/></linearGradient>
+    <linearGradient id="lane3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e3f2fd"/><stop offset="100%" stop-color="#e8eaf6"/></linearGradient>
+    <linearGradient id="lane4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff3e0"/><stop offset="100%" stop-color="#fbe9e7"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#546e7a"/></marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d32"/></marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c62828"/></marker>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity=".1"/></filter>
+    <style>
+      .title{font:700 28px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#1a237e}
+      .subtitle{font:400 14px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#546e7a}
+      .section{font:700 18px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#283593}
+      .lane-title{font:700 15px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#37474f}
+      .node-title{font:700 13px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#263238}
+      .node-text{font:400 12px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#455a64}
+      .mono{font:400 11px Consolas,monospace;fill:#37474f}
+      .decision{font:700 12px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#e65100}
+      .edge-label{font:400 11px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#607d8b}
+      .result-ok{font:700 12px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#fff}
+      .result-fail{font:700 12px "Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;fill:#fff}
+    </style>
+  </defs>
+  <rect width="1400" height="2480" fill="url(#bg)"/>
+  <text x="700" y="42" text-anchor="middle" class="title">&#x6C99;&#x7BB1; Demo &#x8BE6;&#x7EC6;&#x6D41;&#x7A0B;&#x56FE;</text>
+  <text x="700" y="68" text-anchor="middle" class="subtitle">&#x542F;&#x52A8;&#x6D41;&#x7A0B; + &#x56DB;&#x4E2A;&#x6F14;&#x793A;&#x573A;&#x666F;&#x7684;&#x5B8C;&#x6574;&#x6267;&#x884C;&#x8DEF;&#x5F84;</text>
+  <text x="60" y="108" class="section">A. &#x5E94;&#x7528;&#x542F;&#x52A8;&#x6D41;&#x7A0B;</text>
+  <rect x="40" y="120" width="1320" height="250" rx="14" fill="#fff" stroke="#c5cae9" filter="url(#shadow)"/>
+  <ellipse cx="700" cy="160" rx="88" ry="28" fill="url(#startGrad)"/><text x="700" y="165" text-anchor="middle" class="result-ok">&#x542F;&#x52A8; App</text>
+  <line x1="700" y1="188" x2="700" y2="208" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="520" y="210" width="360" height="44" rx="10" fill="url(#procGrad)" stroke="#9fa8da"/>
+  <text x="700" y="228" text-anchor="middle" class="node-title">MainActivity.onCreate()</text>
+  <text x="700" y="244" text-anchor="middle" class="node-text">ActivityMainBinding.inflate + setContentView</text>
+  <line x1="700" y1="254" x2="700" y2="274" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="470" y="276" width="460" height="44" rx="10" fill="url(#procGrad)" stroke="#9fa8da"/>
+  <text x="700" y="294" text-anchor="middle" class="node-title">SandboxDemo.appInfo(context)</text>
+  <text x="700" y="310" text-anchor="middle" class="mono">&#x663E;&#x793A; UID &#x548C; filesDir &#x5230; info_text</text>
+  <line x1="700" y1="320" x2="700" y2="340" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="430" y="342" width="540" height="44" rx="10" fill="url(#procGrad)" stroke="#9fa8da"/>
+  <text x="700" y="360" text-anchor="middle" class="node-title">&#x6CE8;&#x518C; 4 &#x4E2A;&#x6309;&#x94AE;&#x76D1;&#x542C; + appendLog(&#x5C31;&#x7EEA;)</text>
+  <text x="700" y="376" text-anchor="middle" class="node-text">&#x7B49;&#x5F85;&#x7528;&#x6237;&#x70B9;&#x51FB;</text>
+  <text x="60" y="410" class="section">B. &#x901A;&#x7528;&#x6F14;&#x793A;&#x6267;&#x884C;&#x6D41;&#x7A0B;</text>
+  <rect x="40" y="422" width="1320" height="170" rx="14" fill="#fff" stroke="#c5cae9" filter="url(#shadow)"/>
+  <rect x="590" y="442" width="220" height="36" rx="18" fill="url(#warnGrad)"/><text x="700" y="465" text-anchor="middle" class="result-ok">&#x7528;&#x6237;&#x70B9;&#x51FB;&#x6309;&#x94AE;</text>
+  <line x1="700" y1="478" x2="700" y2="498" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="520" y="500" width="360" height="36" rx="10" fill="url(#procGrad)" stroke="#9fa8da"/>
+  <text x="700" y="523" text-anchor="middle" class="node-title">MainActivity.runDemo(title) calls block()</text>
+  <line x1="700" y1="536" x2="700" y2="556" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="500" y="558" width="400" height="36" rx="10" fill="url(#procGrad)" stroke="#9fa8da"/>
+  <text x="700" y="581" text-anchor="middle" class="node-title">appendLog("[HH:mm:ss] title + result")</text>
+  <text x="60" y="630" class="section">C. Demo &#x2460; &#x8BFB;&#x5199;&#x5E94;&#x7528;&#x79C1;&#x6709;&#x76EE;&#x5F55; (&#x5141;&#x8BB8;)</text>
+  <rect x="40" y="642" width="1320" height="360" rx="14" fill="url(#lane1)" stroke="#a5d6a7" filter="url(#shadow)"/>
+  <text x="60" y="668" class="lane-title">SandboxDemo.demoPrivateFileAccess()</text>
+  <rect x="560" y="684" width="280" height="34" rx="10" fill="url(#procGrad)" stroke="#81c784"/>
+  <text x="700" y="706" text-anchor="middle" class="node-title">File(filesDir, "sandbox_secret.txt")</text>
+  <line x1="700" y1="718" x2="700" y2="738" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="560" y="740" width="280" height="34" rx="10" fill="url(#procGrad)" stroke="#81c784"/>
+  <text x="700" y="762" text-anchor="middle" class="node-title">file.writeText("token=timestamp")</text>
+  <line x1="700" y1="774" x2="700" y2="794" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <rect x="560" y="796" width="280" height="34" rx="10" fill="url(#procGrad)" stroke="#81c784"/>
+  <text x="700" y="818" text-anchor="middle" class="node-title">readBack = file.readText()</text>
+  <line x1="700" y1="830" x2="700" y2="850" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <polygon points="700,850 780,890 700,930 620,890" fill="#fff8e1" stroke="#fb8c00" stroke-width="2"/>
+  <text x="700" y="894" text-anchor="middle" class="decision">readBack == secret ?</text>
+  <line x1="780" y1="890" x2="930" y2="890" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="840" y="882" class="edge-label">&#x662F;</text>
+  <rect x="930" y="872" width="260" height="36" rx="10" fill="url(#okGrad)"/>
+  <text x="1060" y="895" text-anchor="middle" class="result-ok">[OK] &#x5199;&#x5165;&#x5E76;&#x8BFB;&#x56DE;&#x79C1;&#x6709;&#x6587;&#x4EF6;</text>
+  <line x1="620" y1="890" x2="470" y2="890" stroke="#c62828" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="545" y="882" class="edge-label">&#x5426;</text>
+  <rect x="210" y="872" width="260" height="36" rx="10" fill="url(#failGrad)"/>
+  <text x="340" y="895" text-anchor="middle" class="result-fail">[FAIL] &#x5F02;&#x5E38;&#x6216;&#x5931;&#x8D25;</text>
+  <rect x="80" y="948" width="420" height="42" rx="8" fill="#fff" stroke="#a5d6a7"/>
+  <text x="96" y="968" class="node-text">&#x540C; UID &#x8BBF;&#x95EE; /data/data/com.example.san/files/</text>
+  <text x="96" y="984" class="mono">VFS &#x6743;&#x9650;&#x68C0;&#x67E5;&#x901A;&#x8FC7;</text>
+  <text x="60" y="1040" class="section">D. Demo &#x2461; &#x8D8A;&#x754C;&#x8BBF;&#x95EE;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x76EE;&#x5F55; (&#x62D2;&#x7EDD;)</text>
+  <rect x="40" y="1052" width="1320" height="340" rx="14" fill="url(#lane2)" stroke="#ef9a9a" filter="url(#shadow)"/>
+  <text x="60" y="1078" class="lane-title">SandboxDemo.demoCrossBoundaryRead()</text>
+  <rect x="500" y="1094" width="400" height="34" rx="10" fill="url(#procGrad)" stroke="#e57373"/>
+  <text x="700" y="1116" text-anchor="middle" class="node-title">File("/data/data/com.android.settings")</text>
+  <line x1="700" y1="1128" x2="700" y2="1148" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="540" y="1150" width="320" height="34" rx="10" fill="url(#procGrad)" stroke="#e57373"/>
+  <text x="700" y="1172" text-anchor="middle" class="node-title">foreignFile.canRead()</text>
+  <line x1="700" y1="1184" x2="700" y2="1204" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <polygon points="700,1204 780,1244 700,1284 620,1244" fill="#fff8e1" stroke="#fb8c00" stroke-width="2"/>
+  <text x="700" y="1248" text-anchor="middle" class="decision">&#x53EF;&#x8BFB;?</text>
+  <line x1="620" y1="1244" x2="470" y2="1244" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="545" y="1236" class="edge-label">&#x5426; (&#x6B63;&#x5E38;)</text>
+  <rect x="210" y="1226" width="260" height="36" rx="10" fill="url(#okGrad)"/>
+  <text x="340" y="1249" text-anchor="middle" class="result-ok">[OK] &#x4E0D;&#x53EF;&#x8BFB;</text>
+  <line x1="780" y1="1244" x2="930" y2="1244" stroke="#c62828" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="840" y="1236" class="edge-label">&#x662F; (&#x5F02;&#x5E38;)</text>
+  <rect x="930" y="1226" width="260" height="36" rx="10" fill="url(#warnGrad)"/>
+  <text x="1060" y="1249" text-anchor="middle" class="result-ok">[WARN] &#x53EF;&#x8BFB;</text>
+  <line x1="700" y1="1284" x2="700" y2="1304" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="500" y="1306" width="400" height="34" rx="10" fill="url(#procGrad)" stroke="#e57373"/>
+  <text x="700" y="1328" text-anchor="middle" class="node-title">&#x5BF9;&#x6BD4; ownDir.canRead() = &#x672C;&#x5E94;&#x7528;&#x53EF;&#x8BFB;</text>
+  <line x1="700" y1="1340" x2="700" y2="1360" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="430" y="1362" width="540" height="36" rx="10" fill="url(#failGrad)"/>
+  <text x="700" y="1385" text-anchor="middle" class="result-fail">&#x7ED3;&#x8BBA;: Android &#x6309; UID &#x9694;&#x79BB; /data/data/</text>
+  <text x="60" y="1430" class="section">E. Demo &#x2462; Native &#x65E0; Seccomp (&#x5141;&#x8BB8;)</text>
+  <rect x="40" y="1442" width="1320" height="380" rx="14" fill="url(#lane3)" stroke="#90caf9" filter="url(#shadow)"/>
+  <text x="60" y="1468" class="lane-title">prepareNativeTestFile() + runNativeFileRead(path)</text>
+  <rect x="520" y="1484" width="360" height="34" rx="10" fill="url(#procGrad)" stroke="#64b5f6"/>
+  <text x="700" y="1506" text-anchor="middle" class="node-title">cacheDir/native_test.txt &#x5199;&#x5165; payload</text>
+  <line x1="700" y1="1518" x2="700" y2="1538" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="520" y="1540" width="360" height="34" rx="10" fill="url(#procGrad)" stroke="#64b5f6"/>
+  <text x="700" y="1562" text-anchor="middle" class="node-title">JNI runNativeFileRead(path)</text>
+  <line x1="700" y1="1574" x2="700" y2="1594" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="500" y="1596" width="400" height="48" rx="10" fill="#fff3e0" stroke="#ffb74d"/>
+  <text x="700" y="1616" text-anchor="middle" class="node-title">readFilePreview(path)</text>
+  <text x="700" y="1634" text-anchor="middle" class="mono">openat + read + close</text>
+  <line x1="700" y1="1644" x2="700" y2="1664" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <polygon points="700,1664 780,1704 700,1744 620,1704" fill="#fff8e1" stroke="#fb8c00" stroke-width="2"/>
+  <text x="700" y="1708" text-anchor="middle" class="decision">openat &#x6210;&#x529F;?</text>
+  <line x1="780" y1="1704" x2="930" y2="1704" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="840" y="1696" class="edge-label">&#x662F;</text>
+  <rect x="930" y="1686" width="300" height="36" rx="10" fill="url(#okGrad)"/>
+  <text x="1080" y="1709" text-anchor="middle" class="result-ok">[OK] &#x8BFB;&#x53D6; N &#x5B57;&#x8282; + &#x5185;&#x5BB9;&#x9884;&#x89C8;</text>
+  <line x1="620" y1="1704" x2="470" y2="1704" stroke="#c62828" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="545" y="1696" class="edge-label">&#x5426;</text>
+  <rect x="210" y="1686" width="260" height="36" rx="10" fill="url(#failGrad)"/>
+  <text x="340" y="1709" text-anchor="middle" class="result-fail">[FAIL] open/read + errno</text>
+  <text x="60" y="1860" class="section">F. Demo &#x2463; Seccomp &#x62E6;&#x622A; openat (&#x62D2;&#x7EDD;)</text>
+  <rect x="40" y="1872" width="1320" height="560" rx="14" fill="url(#lane4)" stroke="#ffcc80" filter="url(#shadow)"/>
+  <text x="60" y="1898" class="lane-title">runSeccompBlockedRead(path) + fork &#x5B50;&#x8FDB;&#x7A0B;&#x9694;&#x79BB;</text>
+  <rect x="560" y="1914" width="280" height="34" rx="10" fill="url(#procGrad)" stroke="#ffb74d"/>
+  <text x="700" y="1936" text-anchor="middle" class="node-title">prepareNativeTestFile()</text>
+  <line x1="700" y1="1948" x2="700" y2="1968" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="560" y="1970" width="280" height="34" rx="10" fill="url(#procGrad)" stroke="#ffb74d"/>
+  <text x="700" y="1992" text-anchor="middle" class="node-title">pid = fork()</text>
+  <line x1="700" y1="2004" x2="700" y2="2024" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <polygon points="700,2024 780,2064 700,2104 620,2064" fill="#fff8e1" stroke="#fb8c00" stroke-width="2"/>
+  <text x="700" y="2068" text-anchor="middle" class="decision">pid == 0 ?</text>
+  <line x1="620" y1="2064" x2="380" y2="2064" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="490" y="2056" class="edge-label">&#x5B50;&#x8FDB;&#x7A0B;</text>
+  <rect x="80" y="2084" width="300" height="40" rx="10" fill="#fff3e0" stroke="#ffb74d"/>
+  <text x="230" y="2102" text-anchor="middle" class="node-title">installOpenBlockFilter()</text>
+  <text x="230" y="2118" text-anchor="middle" class="mono">prctl + seccomp BPF</text>
+  <line x1="230" y1="2124" x2="230" y2="2144" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="80" y="2146" width="300" height="40" rx="10" fill="#fff3e0" stroke="#ffb74d"/>
+  <text x="230" y="2164" text-anchor="middle" class="node-title">openat(path) &#x88AB;&#x62E6;&#x622A;</text>
+  <text x="230" y="2180" text-anchor="middle" class="mono">SYS_openat = EPERM</text>
+  <line x1="230" y1="2186" x2="230" y2="2206" stroke="#c62828" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <rect x="130" y="2208" width="200" height="32" rx="8" fill="url(#failGrad)"/>
+  <text x="230" y="2229" text-anchor="middle" class="result-fail">_exit(1)</text>
+  <line x1="780" y1="2064" x2="1020" y2="2064" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="880" y="2056" class="edge-label">&#x7236;&#x8FDB;&#x7A0B;</text>
+  <rect x="900" y="2044" width="280" height="40" rx="10" fill="url(#procGrad)" stroke="#ffb74d"/>
+  <text x="1040" y="2062" text-anchor="middle" class="node-title">waitpid(pid, status)</text>
+  <text x="1040" y="2078" text-anchor="middle" class="node-text">&#x7B49;&#x5F85;&#x5B50;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;</text>
+  <line x1="1040" y1="2084" x2="1040" y2="2104" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="880" y="2106" width="320" height="48" rx="10" fill="url(#procGrad)" stroke="#ffb74d"/>
+  <text x="1040" y="2126" text-anchor="middle" class="node-title">decodeChildStatus(status)</text>
+  <text x="1040" y="2144" text-anchor="middle" class="mono">WIFEXITED / WIFSIGNALED</text>
+  <line x1="1040" y1="2154" x2="1040" y2="2174" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="860" y="2176" width="360" height="56" rx="10" fill="url(#failGrad)"/>
+  <text x="1040" y="2196" text-anchor="middle" class="result-fail">[BLOCK] openat() EPERM</text>
+  <text x="1040" y="2214" text-anchor="middle" class="result-fail">&#x6216; SIGSYS &#x88AB;&#x5185;&#x6838;&#x7EC8;&#x6B62;</text>
+  <line x1="1040" y1="2232" x2="1040" y2="2252" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="860" y="2254" width="360" height="34" rx="10" fill="url(#procGrad)" stroke="#ffb74d"/>
+  <text x="1040" y="2276" text-anchor="middle" class="node-title">&#x8FD4;&#x56DE; Java String -&gt; appendLog</text>
+  <rect x="40" y="2380" width="1320" height="72" rx="12" fill="#fff" stroke="#c5cae9" filter="url(#shadow)"/>
+  <text x="60" y="2406" class="node-title">&#x6D41;&#x7A0B;&#x603B;&#x7ED3;</text>
+  <text x="60" y="2428" class="node-text">Demo &#x2460;&#x2463; &#x6B63;&#x5E38;&#x884C;&#x4E3A;; Demo &#x2461; UID &#x9694;&#x79BB;; Demo &#x2463; Seccomp &#x5B50;&#x8FDB;&#x7A0B;&#x62E6;&#x622A;&#x4E0D;&#x5F71;&#x54CD;&#x4E3B;&#x8FDB;&#x7A0B;</text>
+  <text x="60" y="2448" class="mono">File.writeText | canRead | JNI | fork | prctl | seccomp | openat | waitpid</text>
+</svg>
