@@ -1,0 +1,122 @@
+pluginManagement {
+    repositories {
+        def useOppoMaven = {
+            def localFile = new File(settingsDir, 'local.properties')
+            if (localFile.exists()) {
+                def props = new Properties()
+                localFile.withInputStream { props.load(it) }
+                if (props.containsKey('useOBuildPlugin')) {
+                    return props.getProperty('useOBuildPlugin').toBoolean()
+                }
+            }
+            def gradleProps = new File(settingsDir, 'gradle.properties')
+            if (gradleProps.exists()) {
+                def props = new Properties()
+                gradleProps.withInputStream { props.load(it) }
+                if (props.containsKey('useOBuildPlugin')) {
+                    return props.getProperty('useOBuildPlugin').toBoolean()
+                }
+            }
+            return true
+        }()
+
+        google()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        gradlePluginPortal()
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+
+        if (useOppoMaven) {
+            maven {
+                allowInsecureProtocol = true
+                url prop_oppoMavenUrlRelease
+                credentials {
+                    username sonatypeUsername
+                    password sonatypeUsername
+                }
+            }
+            maven {
+                allowInsecureProtocol = true
+                url prop_oppoMavenUrlSnapshot
+                credentials {
+                    username sonatypeUsername
+                    password sonatypePassword
+                }
+            }
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        def useOppoMaven = {
+            def localFile = new File(settingsDir, 'local.properties')
+            if (localFile.exists()) {
+                def props = new Properties()
+                localFile.withInputStream { props.load(it) }
+                if (props.containsKey('useOBuildPlugin')) {
+                    return props.getProperty('useOBuildPlugin').toBoolean()
+                }
+            }
+            def gradleProps = new File(settingsDir, 'gradle.properties')
+            if (gradleProps.exists()) {
+                def props = new Properties()
+                gradleProps.withInputStream { props.load(it) }
+                if (props.containsKey('useOBuildPlugin')) {
+                    return props.getProperty('useOBuildPlugin').toBoolean()
+                }
+            }
+            return true
+        }()
+
+        google()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/central' }
+
+        if (useOppoMaven) {
+            maven {
+                allowInsecureProtocol = true
+                url prop_oppoMavenUrlRelease
+                credentials {
+                    username sonatypeUsername
+                    password sonatypeUsername
+                }
+            }
+            maven {
+                allowInsecureProtocol = true
+                url prop_oppoMavenUrlSnapshot
+                credentials {
+                    username sonatypeUsername
+                    password sonatypePassword
+                }
+            }
+        }
+    }
+}
+
+gradle.ext.useOBuildEnabled = {
+    def localFile = new File(settingsDir, 'local.properties')
+    if (localFile.exists()) {
+        def props = new Properties()
+        localFile.withInputStream { props.load(it) }
+        if (props.containsKey('useOBuildPlugin')) {
+            return props.getProperty('useOBuildPlugin').toBoolean()
+        }
+    }
+    def gradleProps = new File(settingsDir, 'gradle.properties')
+    if (gradleProps.exists()) {
+        def props = new Properties()
+        gradleProps.withInputStream { props.load(it) }
+        if (props.containsKey('useOBuildPlugin')) {
+            return props.getProperty('useOBuildPlugin').toBoolean()
+        }
+    }
+    return true
+}()
+
+rootProject.name = "Namespace"
+include ':app'
+include ':sdk'
+include ':mylibrary3'

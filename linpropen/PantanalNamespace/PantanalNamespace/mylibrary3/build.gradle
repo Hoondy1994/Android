@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+//apply from: "${rootDir}/publish.gradle"
+if (rootProject.ext.useOBuildEnabled) {
+    apply from: "${rootDir}/opipeline.gradle"
+}
+
+android {
+    namespace 'com.oplus.pantanal.namespace.mylibrary3'
+    compileSdkVersion prop_compileSdkVersion
+    buildToolsVersion prop_buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 33
+
+        versionCode prop_sdkVersionCode.toInteger()
+        versionName prop_sdkVersionName
+
+        buildConfigField("int", "VERSION_CODE", "${prop_sdkVersionCode}")
+        buildConfigField("String", "VERSION_NAME", "\"${prop_sdkVersionName}\"")
+
+        def gitCommitShortHash
+        def date
+        if (prop_versionCommit != "12345678") {
+            gitCommitShortHash = prop_versionCommit
+            date = prop_versionDate
+        } else {
+            gitCommitShortHash = getGitRevision()
+            date = getDate()
+        }
+        manifestPlaceholders = [versionCommit: "${gitCommitShortHash}", versionDate: "${date}"]
+        println("gitCommitShortHash: $gitCommitShortHash date: $date")
+        buildConfigField "String", "COMMITID", "\"${gitCommitShortHash}\""
+        buildConfigField "String", "BUILDTIME", "\"${date}\""
+        buildConfigField("int", "VERSION_CODE", "${versionCode}")
+        buildConfigField("String","VERSION_NAME", "\"${versionName}\"")
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags '-std=c++17'
+               // arguments "-DANDROID_STL=c++_shared"
+                arguments "-DANDROID_WEAK_API_DEFS=ON"
+                // pass local sdk dir to cmake
+                arguments "-DANDROID_SDK_DIR=" + getAndroidSdkDir()
+                // should enable unit tests
+                arguments "-DENABLE_UNIT_TESTS=" + getUnitTestsEnable()
+            }
+        }
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+        }
+    }
+    buildFeatures {
+        prefabPublishing true
+
+        viewBinding = true
+        // Do not forget to enable prefab for this module !
+        // But you only have to enable prefab and not prefabPublishing
+        prefab = true
+    }
+    // see this issue: https://issuetracker.google.com/issues/168775349
+    // prefab can't support multiple header for now
+    prefab {
+        create("namespace") {
+            headers "src/main/cpp/libnamespace/include"
+//            headers "src/main/cpp/libpreopen/include/"
+        }
+    }
+    packagingOptions {
+        jniLibs {
+            excludes += ['lib/*/libule_napi.so']
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'com.android.ndk.thirdparty:googletest:1.11.0-beta-1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+}

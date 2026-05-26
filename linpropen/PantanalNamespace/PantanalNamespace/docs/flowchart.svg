@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 3400">
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#37474F"/></marker>
+    <marker id="ag" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2E7D32"/></marker>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#C62828"/></marker>
+    <filter id="sh"><feDropShadow dx="1" dy="1" stdDeviation="1.5" flood-opacity="0.1"/></filter>
+  </defs>
+  <style>
+    .t{font-family:'Microsoft YaHei',Segoe UI,sans-serif}
+    .h1{font-size:24px;font-weight:bold;fill:#1A237E}
+    .h2{font-size:16px;font-weight:bold}
+    .h3{font-size:12px;font-weight:bold}
+    .b{font-size:10px;fill:#333}
+    .s{font-size:9px;fill:#616161}
+    .f{font-size:8px;fill:#757575;font-family:Consolas,monospace}
+  </style>
+
+  <text class="t h1" x="800" y="36" text-anchor="middle">PantanalNamespace &#27969;&#31243;&#22270;&#65288;&#35814;&#32454;&#29256;&#65289;</text>
+  <text class="t s" x="800" y="58" text-anchor="middle">&#26381;&#21153;&#29983;&#21629;&#21608;&#26399; &#183; ULE &#27491;&#24335;&#36335;&#24452; &#183; App JNI Demo &#183; InsertMap &#183; open_ &#183; po_find</text>
+
+  <!-- LEGEND -->
+  <rect x="40" y="75" width="1520" height="48" rx="6" fill="#FAFAFA" stroke="#E0E0E0"/>
+  <rect x="60" y="92" width="12" height="12" fill="#5C6BC0"/><text class="t s" x="80" y="103">&#36335;&#24452;A ULE</text>
+  <rect x="180" y="92" width="12" height="12" fill="#00897B"/><text class="t s" x="200" y="103">&#36335;&#24452;B Demo</text>
+  <rect x="320" y="92" width="12" height="12" fill="#EF6C00"/><text class="t s" x="340" y="103">&#20869;&#37096;&#26680;&#24515;</text>
+  <rect x="460" y="92" width="12" height="12" fill="#FFF9C4" stroke="#FBC02D"/><text class="t s" x="480" y="103">&#26729;/&#35774;&#35745;</text>
+  <rect x="580" y="92" width="12" height="12" fill="#C8E6C9" stroke="#2E7D32"/><text class="t s" x="600" y="103">&#25104;&#21151;</text>
+  <rect x="700" y="92" width="12" height="12" fill="#FFCDD2" stroke="#C62828"/><text class="t s" x="720" y="103">&#25298;&#32477;</text>
+
+  <!-- ========== SECTION 0: Lifecycle ========== -->
+  <rect x="40" y="140" width="1520" height="200" rx="8" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="168" fill="#6A1B9A">0. &#26381;&#21153;/&#25554;&#20214;&#29983;&#21629;&#21608;&#26399;&#65288;&#35774;&#35745;&#24577;&#65289;</text>
+
+  <rect x="80" y="185" width="140" height="40" rx="6" fill="#FFF" stroke="#9C27B0"/><text class="t b" x="150" y="210" text-anchor="middle">Host &#21551;&#21160;</text>
+  <line x1="220" y1="205" x2="260" y2="205" stroke="#6A1B9A" marker-end="url(#a)"/>
+  <rect x="260" y="185" width="160" height="40" rx="6" fill="#FFF9C4" stroke="#FBC02D"/><text class="t b" x="340" y="205" text-anchor="middle">ns_client_add</text><text class="t f" x="340" y="218" text-anchor="middle">(id, pathConfig)</text>
+  <line x1="420" y1="205" x2="460" y2="205" stroke="#6A1B9A" marker-end="url(#a)"/>
+  <rect x="460" y="185" width="180" height="40" rx="6" fill="#E8F5E9" stroke="#43A047"/><text class="t b" x="550" y="205" text-anchor="middle">Seqmap::InsertMap</text><text class="t f" x="550" y="218" text-anchor="middle">per directory</text>
+  <line x1="640" y1="205" x2="680" y2="205" stroke="#6A1B9A" marker-end="url(#a)"/>
+  <rect x="680" y="185" width="140" height="40" rx="6" fill="#E3F2FD" stroke="#1E88E5"/><text class="t b" x="750" y="210" text-anchor="middle">ULE &#21152;&#36733; JS</text>
+  <line x1="820" y1="205" x2="860" y2="205" stroke="#6A1B9A" marker-end="url(#a)"/>
+  <rect x="860" y="185" width="160" height="40" rx="6" fill="#E3F2FD" stroke="#1E88E5"/><text class="t b" x="940" y="205" text-anchor="middle">&#25554;&#20214;&#35843;&#29992;</text><text class="t f" x="940" y="218" text-anchor="middle">ule_file.*</text>
+  <line x1="1020" y1="205" x2="1060" y2="205" stroke="#6A1B9A" marker-end="url(#a)"/>
+  <rect x="1060" y="185" width="140" height="40" rx="6" fill="#FFE0B2" stroke="#FB8C00"/><text class="t b" x="1130" y="210" text-anchor="middle">open_/access_</text>
+  <line x1="1200" y1="205" x2="1240" y2="205" stroke="#6A1B9A" marker-end="url(#a)"/>
+  <rect x="1240" y="185" width="140" height="40" rx="6" fill="#FFEBEE" stroke="#E57373" stroke-dasharray="4,2"/><text class="t b" x="1310" y="205" text-anchor="middle">&#25554;&#20214;&#38144;&#27585;</text>
+  <line x1="1380" y1="205" x2="1420" y2="205" stroke="#6A1B9A" marker-end="url(#a)"/>
+  <rect x="1420" y="185" width="120" height="40" rx="6" fill="#FFEBEE" stroke="#E57373" stroke-dasharray="4,2"/><text class="t b" x="1480" y="205" text-anchor="middle">DeleteMap</text>
+
+  <text class="t s" x="80" y="250">&#24179;&#21488;&#36127;&#36131;&#22312;&#26381;&#21153;&#21551;&#21160;&#21069;&#27880;&#20876;&#30495;&#23454;&#30446;&#24405;&#21040;&#34394;&#25311;&#21069;&#32512;&#30340;&#26144;&#23556;&#65307;SDK &#36127;&#36131;&#26681;&#25454; serviceId &#25191;&#34892; open_ &#26102;&#30340;&#36335;&#24452;&#26657;&#39564;</text>
+  <text class="t s" x="80" y="266">&#26412;&#20179;&#24211; Namespace.cpp / ns_client_add &#20173;&#20026;&#26729;&#65292;&#38656;&#23487;&#20027;&#22242;&#38431;&#34917;&#40723;</text>
+
+  <!-- ========== PATH A ========== -->
+  <rect x="40" y="360" width="750" height="680" rx="8" fill="#E8EAF6" stroke="#5C6BC0" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="388" fill="#283593">&#36335;&#24452; A &#65306; ULE &#27491;&#24335;&#36335;&#24452;&#65288;&#35774;&#35745;&#30446;&#26631;&#65289;</text>
+
+  <rect x="60" y="405" width="710" height="36" rx="4" fill="#5C6BC0"/><text class="t h3" x="415" y="428" text-anchor="middle" fill="#FFF">Step 1: JS &#25554;&#20214;&#23618;</text>
+  <rect x="80" y="450" width="670" height="55" rx="6" fill="#FFF" stroke="#7986CB"/>
+  <text class="t b" x="90" y="472">// &#25554;&#20214; JS &#20195;&#30721;&#65288;&#19994;&#21153;&#26041;&#65289;</text>
+  <text class="t f" x="90" y="488">ule_file.move("/virtualA/src.txt", "/virtualA/dst.txt", onSuccess, onFail, onComplete)</text>
+  <text class="t s" x="90" y="500">&#21442;&#25968;: &#34394;&#25311;&#36335;&#24452;&#23383;&#31526;&#20018; + JS &#22238;&#35843;&#20989;&#25968;</text>
+
+  <line x1="415" y1="505" x2="415" y2="525" stroke="#5C6BC0" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="60" y="525" width="710" height="36" rx="4" fill="#5C6BC0"/><text class="t h3" x="415" y="548" text-anchor="middle" fill="#FFF">Step 2: NAPI &#26725;&#25509; (FilePlugin.cpp)</text>
+  <rect x="80" y="570" width="670" height="70" rx="6" fill="#FFF" stroke="#7986CB"/>
+  <text class="t b" x="90" y="590">constructor FileRegister() -&#8594; napi_module_register(&amp;fileModule)</text>
+  <text class="t f" x="90" y="606">nm_modname = "ule_file" | exports: init(), move()</text>
+  <text class="t b" x="90" y="622">MoveFile(napi_env env, napi_callback_info info):</text>
+  <text class="t f" x="90" y="634">napi_get_cb_info -&#8594; argv[0]=src, argv[1]=dest, argv[2]=success callback</text>
+
+  <line x1="415" y1="640" x2="415" y2="660" stroke="#5C6BC0" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="60" y="660" width="710" height="36" rx="4" fill="#FFF9C4" stroke="#FBC02D"/><text class="t h3" x="415" y="683" text-anchor="middle" fill="#F57F17">Step 3: NamespaceLibc &#23618; (&#24453;&#23454;&#29616;)</text>
+  <rect x="80" y="705" width="670" height="55" rx="6" fill="#FFF" stroke="#FBC02D" stroke-dasharray="5,3"/>
+  <text class="t f" x="90" y="725">ns_open(napi_env* env, const char* virtualPath, int flags, ...)</text>
+  <text class="t f" x="90" y="740">ns_access / ns_stat / ns_unlink / ns_rename ...</text>
+  <text class="t s" x="90" y="752" fill="#C62828">&#24403;&#21069; NamespaceLibc.cpp &#20840;&#37096; return 0 &#26729;</text>
+
+  <line x1="415" y1="760" x2="415" y2="780" stroke="#5C6BC0" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="60" y="780" width="710" height="36" rx="4" fill="#EF6C00"/><text class="t h3" x="415" y="803" text-anchor="middle" fill="#FFF">Step 4-6: libpreopen &#26680;&#24515; (&#35265;&#19979;&#26041;&#20869;&#37096;&#27969;&#31243;)</text>
+  <rect x="80" y="825" width="670" height="50" rx="6" fill="#FFE0B2" stroke="#FB8C00"/>
+  <text class="t b" x="90" y="845">open_(serviceId, virtualPath, flags) -&#8594; find_relative() -&#8594; Seqmap::GetRel</text>
+  <text class="t b" x="90" y="862">&#8594; po_find() -&#8594; openat(dirfd, relative_path, flags)</text>
+
+  <rect x="80" y="885" width="320" height="40" rx="6" fill="#C8E6C9" stroke="#2E7D32"/>
+  <text class="t b" x="240" y="910" text-anchor="middle" fill="#1B5E20">napi_call_function(success)</text>
+  <rect x="420" y="885" width="330" height="40" rx="6" fill="#FFCDD2" stroke="#C62828"/>
+  <text class="t b" x="585" y="910" text-anchor="middle" fill="#B71C1C">napi_call_function(fail)</text>
+
+  <text class="t s" x="80" y="1040">FilePlugin &#29616;&#29366;: &#30828;&#32534;&#30721; map_id=1000, InsertMap("/data/local/tmp/ns/testdelete", "/testdelete") &#20165;&#20026;&#27979;&#35797;</text>
+
+  <!-- ========== PATH B ========== -->
+  <rect x="810" y="360" width="750" height="680" rx="8" fill="#E0F2F1" stroke="#00897B" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="830" y="388" fill="#00695C">&#36335;&#24452; B &#65306; App JNI Demo&#65288;&#24403;&#21069;&#21487;&#36816;&#34892;&#65289;</text>
+
+  <rect x="830" y="405" width="710" height="36" rx="4" fill="#00897B"/><text class="t h3" x="1185" y="428" text-anchor="middle" fill="#FFF">Step 1: UI &#23618;</text>
+  <rect x="850" y="450" width="670" height="50" rx="6" fill="#FFF" stroke="#00897B"/>
+  <text class="t b" x="860" y="472">FirstFragment.kt - buttonPreopenDemo.onClick</text>
+  <text class="t f" x="860" y="488">Thread { PreopenBridge.runDemo(filesDir/preopen_demo) }</text>
+
+  <line x1="1185" y1="500" x2="1185" y2="520" stroke="#00897B" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="830" y="520" width="710" height="36" rx="4" fill="#00897B"/><text class="t h3" x="1185" y="543" text-anchor="middle" fill="#FFF">Step 2: Kotlin JNI</text>
+  <rect x="850" y="565" width="670" height="45" rx="6" fill="#FFF" stroke="#00897B"/>
+  <text class="t b" x="860" y="585">PreopenBridge.kt: System.loadLibrary("preopen_demo")</text>
+  <text class="t f" x="860" y="600">external fun runDemo(baseDir: String): String</text>
+
+  <line x1="1185" y1="610" x2="1185" y2="630" stroke="#00897B" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="830" y="630" width="710" height="36" rx="4" fill="#00897B"/><text class="t h3" x="1185" y="653" text-anchor="middle" fill="#FFF">Step 3: Native &#20934;&#22791;</text>
+  <rect x="850" y="675" width="670" height="85" rx="6" fill="#FFF" stroke="#00897B"/>
+  <text class="t f" x="860" y="695">preopen_jni.cpp :: runDemo(baseDir)</text>
+  <text class="t f" x="860" y="710">1. realRoot = baseDir + "/real_root"</text>
+  <text class="t f" x="860" y="725">2. mkdir(realRoot, 0755)</text>
+  <text class="t f" x="860" y="740">3. fopen(realRoot/hello.txt) write "preopen-demo-ok"</text>
+  <text class="t f" x="860" y="755">4. InsertMap(1000, realRoot, "/vdemo")</text>
+
+  <line x1="1185" y1="760" x2="1185" y2="780" stroke="#00897B" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="830" y="780" width="710" height="36" rx="4" fill="#00897B"/><text class="t h3" x="1185" y="803" text-anchor="middle" fill="#FFF">Step 4: &#26435;&#38480;&#27979;&#35797;</text>
+  <rect x="850" y="825" width="320" height="55" rx="6" fill="#C8E6C9" stroke="#2E7D32"/>
+  <text class="t b" x="1010" y="845" text-anchor="middle" fill="#1B5E20">&#20801;&#35768;&#36335;&#24452;</text>
+  <text class="t f" x="860" y="862">open_(1000,"/vdemo/hello.txt",O_RDONLY)</text>
+  <text class="t f" x="860" y="875">read() -&#8592; "preopen-demo-ok"</text>
+  <rect x="1200" y="825" width="320" height="55" rx="6" fill="#FFCDD2" stroke="#C62828"/>
+  <text class="t b" x="1360" y="845" text-anchor="middle" fill="#B71C1C">&#25298;&#32477;&#36335;&#24452;</text>
+  <text class="t f" x="1210" y="862">open_(1000,"/outside/no_permission.txt")</text>
+  <text class="t f" x="1210" y="875">fd &lt; 0 &#26435;&#38480;&#29983;&#25928;</text>
+
+  <rect x="850" y="890" width="670" height="40" rx="6" fill="#FFF" stroke="#00897B"/>
+  <text class="t b" x="860" y="915">access_(1000, path, F_OK) &#21516;&#26679;&#26657;&#39564;</text>
+
+  <rect x="850" y="940" width="670" height="40" rx="6" fill="#E0F2F1" stroke="#00897B"/>
+  <text class="t b" x="860" y="965">runOnUiThread { textPreopenResult.text = result }</text>
+
+  <!-- ========== InsertMap detail ========== -->
+  <rect x="40" y="1060" width="1520" height="280" rx="8" fill="#FFF8E1" stroke="#FFA000" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="1088" fill="#E65100">InsertMap &#35814;&#32454;&#27969;&#31243; (libseqmap.cpp)</text>
+
+  <rect x="700" y="1110" width="200" height="36" rx="18" fill="#FFE0B2" stroke="#FB8C00"/>
+  <text class="t b" x="800" y="1133" text-anchor="middle">InsertMap(id, path, pathname)</text>
+  <line x1="800" y1="1146" x2="800" y2="1165" stroke="#E65100" marker-end="url(#a)"/>
+
+  <polygon points="800,1175 880,1205 800,1235 720,1205" fill="#FFF3E0" stroke="#FB8C00"/>
+  <text class="t b" x="800" y="1202" text-anchor="middle">pathmap_</text>
+  <text class="t b" x="800" y="1216" text-anchor="middle">.find(id)?</text>
+
+  <line x1="720" y1="1205" x2="200" y2="1205" stroke="#2E7D32" marker-end="url(#ag)"/>
+  <text class="t b" x="450" y="1195" text-anchor="middle" fill="#2E7D32">id &#19981;&#23384;&#22312;</text>
+  <rect x="60" y="1185" width="280" height="100" rx="6" fill="#E8F5E9" stroke="#43A047"/>
+  <text class="t f" x="70" y="1205">CreatePreOpenMap(4)</text>
+  <text class="t f" x="70" y="1220">fd = openat(AT_FDCWD, path, O_RDONLY)</text>
+  <text class="t f" x="70" y="1235">po_add(map, path, pathname, fd)</text>
+  <text class="t f" x="70" y="1250">pathmap_.insert(id, map)</text>
+  <text class="t f" x="70" y="1265">return 0</text>
+
+  <line x1="880" y1="1205" x2="1400" y2="1205" stroke="#1565C0" marker-end="url(#a)"/>
+  <text class="t b" x="1150" y="1195" text-anchor="middle" fill="#1565C0">id &#24050;&#23384;&#22312;</text>
+  <rect x="1260" y="1185" width="280" height="100" rx="6" fill="#E3F2FD" stroke="#1E88E5"/>
+  <text class="t f" x="1270" y="1205">p_map = iter-&gt;second</text>
+  <text class="t f" x="1270" y="1220">rel = po_find(p_map, path)</text>
+  <text class="t f" x="1270" y="1235">if &#26410;&#21305;&#37197;: po_add(...)</text>
+  <text class="t f" x="1270" y="1250">mutex lock/unlock</text>
+  <text class="t f" x="1270" y="1265">return 0 / -1</text>
+
+  <text class="t s" x="60" y="1310">path=&#30495;&#23454;&#30446;&#24405;&#32477;&#23545;&#36335;&#24452; | pathname=&#34394;&#25311;&#21069;&#32512; (po_map_entry.pathmap) | po_add &#22833;&#36133;&#36820;&#22238; nullptr -&#8594; InsertMap return -1</text>
+
+  <!-- ========== open_ internal ========== -->
+  <rect x="40" y="1360" width="1520" height="420" rx="8" fill="#FFF3E0" stroke="#EF6C00" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="1388" fill="#E65100">open_(id, path, flags) &#20869;&#37096;&#27969;&#31243; (po_libc_wrappers.cpp)</text>
+
+  <rect x="700" y="1410" width="200" height="32" rx="6" fill="#FFE0B2" stroke="#FB8C00"/>
+  <text class="t b" x="800" y="1431" text-anchor="middle">open_(id, path, flags, ...)</text>
+  <line x1="800" y1="1442" x2="800" y2="1460" stroke="#E65100" marker-end="url(#a)"/>
+  <rect x="650" y="1465" width="300" height="28" rx="4" fill="#FFF" stroke="#FB8C00"/>
+  <text class="t f" x="800" y="1483" text-anchor="middle">rel = find_relative(path, id)</text>
+  <line x1="800" y1="1493" x2="800" y2="1510" stroke="#E65100" marker-end="url(#a)"/>
+  <rect x="620" y="1515" width="360" height="28" rx="4" fill="#FFF" stroke="#FB8C00"/>
+  <text class="t f" x="800" y="1533" text-anchor="middle">rel = Seqmap::GetInstance().GetRel(path, id)</text>
+  <line x1="800" y1="1543" x2="800" y2="1560" stroke="#E65100" marker-end="url(#a)"/>
+
+  <polygon points="800,1570 900,1610 800,1650 700,1610" fill="#FFF3E0" stroke="#FB8C00" stroke-width="2"/>
+  <text class="t b" x="800" y="1605" text-anchor="middle">id &#22312;</text>
+  <text class="t b" x="800" y="1620" text-anchor="middle">pathmap_?</text>
+
+  <line x1="700" y1="1610" x2="350" y2="1610" stroke="#C62828" marker-end="url(#ar)"/>
+  <text class="t b" x="520" y="1600" fill="#C62828">&#21542;</text>
+  <rect x="80" y="1585" width="270" height="50" rx="6" fill="#FFEBEE" stroke="#C62828"/>
+  <text class="t f" x="90" y="1605">GetRel: map==null</text>
+  <text class="t f" x="90" y="1620">rel.dirfd=AT_FDCWD, rel.path=full path</text>
+
+  <line x1="900" y1="1610" x2="1250" y2="1610" stroke="#2E7D32" marker-end="url(#ag)"/>
+  <text class="t b" x="1080" y="1600" fill="#2E7D32">&#26159;</text>
+  <rect x="1280" y="1575" width="260" height="70" rx="6" fill="#E8F5E9" stroke="#43A047"/>
+  <text class="t f" x="1290" y="1595">rel = po_find(map, path)</text>
+  <text class="t f" x="1290" y="1610">&#26368;&#38271;&#34394;&#25311;&#21069;&#32512;&#21305;&#37197;</text>
+  <text class="t f" x="1290" y="1625">relpath = path + bestlen</text>
+  <text class="t f" x="1290" y="1640">match.dirfd = entry.fd</text>
+
+  <line x1="800" y1="1650" x2="800" y2="1670" stroke="#E65100" marker-end="url(#a)"/>
+  <polygon points="800,1680 880,1710 800,1740 720,1710" fill="#FFF3E0" stroke="#FB8C00"/>
+  <text class="t b" x="800" y="1708" text-anchor="middle">rel.relative_path</text>
+  <text class="t b" x="800" y="1724" text-anchor="middle">== "." ?</text>
+
+  <rect x="200" y="1695" width="240" height="45" rx="6" fill="#E8F5E9" stroke="#2E7D32"/>
+  <text class="t f" x="210" y="1715">&#26159;: return dup(rel.dirfd)</text>
+  <text class="t f" x="210" y="1730">(&#30446;&#24405;&#26412;&#36523;)</text>
+  <line x1="720" y1="1710" x2="440" y2="1717" stroke="#2E7D32" marker-end="url(#ag)"/>
+
+  <rect x="1160" y="1695" width="280" height="45" rx="6" fill="#FFF" stroke="#FB8C00"/>
+  <text class="t f" x="1170" y="1715">&#21542;: openat(rel.dirfd,</text>
+  <text class="t f" x="1170" y="1730">rel.relative_path, flags, mode)</text>
+  <line x1="880" y1="1710" x2="1160" y2="1717" stroke="#E65100" marker-end="url(#a)"/>
+
+  <polygon points="800,1760 880,1790 800,1820 720,1790" fill="#FFF3E0" stroke="#FB8C00"/>
+  <text class="t b" x="800" y="1795" text-anchor="middle">dirfd &gt;= 0 ?</text>
+
+  <rect x="280" y="1765" width="200" height="50" rx="6" fill="#C8E6C9" stroke="#2E7D32"/>
+  <text class="t b" x="380" y="1790" text-anchor="middle" fill="#1B5E20">&#25104;&#21151;</text>
+  <text class="t f" x="290" y="1805">return fd (&gt;=0)</text>
+  <line x1="720" y1="1790" x2="480" y2="1790" stroke="#2E7D32" marker-end="url(#ag)"/>
+
+  <rect x="1120" y="1765" width="200" height="50" rx="6" fill="#FFCDD2" stroke="#C62828"/>
+  <text class="t b" x="1220" y="1790" text-anchor="middle" fill="#B71C1C">&#22833;&#36133;</text>
+  <text class="t f" x="1130" y="1805">dirfd=-1, openat&#22833;&#36133;</text>
+  <line x1="880" y1="1790" x2="1120" y2="1790" stroke="#C62828" marker-end="url(#ar)"/>
+
+  <text class="t s" x="60" y="1860">access_/stat_/unlink_/rename_ &#21516;&#26679;&#32463;&#36807; find_relative &#8594; faccessat/fstatat/unlinkat/renameat</text>
+
+  <!-- ========== libc wrappers table ========== -->
+  <rect x="40" y="1800" width="1520" height="200" rx="8" fill="#FAFAFA" stroke="#BDBDBD" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="1828" fill="#37474F">libc_wrapper.h &#23553;&#35013;&#20989;&#25968;&#19968;&#35272;</text>
+  <text class="t h3" x="80" y="1852" fill="#616161">&#20989;&#25968;</text>
+  <text class="t h3" x="280" y="1852" fill="#616161">&#21442;&#25968;</text>
+  <text class="t h3" x="500" y="1852" fill="#616161">&#24213;&#23618; syscall</text>
+  <text class="t h3" x="720" y="1852" fill="#616161">&#27979;&#35797;&#29366;&#24577;</text>
+  <line x1="60" y1="1860" x2="1540" y2="1860" stroke="#E0E0E0"/>
+  <text class="t f" x="80" y="1878">open_</text><text class="t f" x="280" y="1878">(id, path, flags, ...)</text><text class="t f" x="500" y="1878">openat(dirfd, rel, flags)</text><text class="t f" x="720" y="1878" fill="#2E7D32">Demo+gtest OK</text>
+  <text class="t f" x="80" y="1896">access_</text><text class="t f" x="280" y="1896">(id, path, mode)</text><text class="t f" x="500" y="1896">faccessat</text><text class="t f" x="720" y="1896" fill="#2E7D32">Demo OK</text>
+  <text class="t f" x="80" y="1914">stat_ / lstat_</text><text class="t f" x="280" y="1914">(id, path, stat*)</text><text class="t f" x="500" y="1914">fstatat</text><text class="t f" x="720" y="1914">gtest</text>
+  <text class="t f" x="80" y="1932">unlink_</text><text class="t f" x="280" y="1932">(id, path)</text><text class="t f" x="500" y="1932">unlinkat</text><text class="t f" x="720" y="1932">gtest</text>
+  <text class="t f" x="80" y="1950">rename_</text><text class="t f" x="280" y="1950">(id, from, to)</text><text class="t f" x="500" y="1950">renameat x2</text><text class="t f" x="720" y="1950">gtest</text>
+
+  <!-- ========== Test matrix ========== -->
+  <rect x="40" y="2020" width="1520" height="200" rx="8" fill="#E8F5E9" stroke="#66BB6A" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="2048" fill="#2E7D32">&#39564;&#35777;&#26041;&#24335;&#30697;&#38453;</text>
+  <text class="t h3" x="80" y="2072">&#26041;&#24335;</text>
+  <text class="t h3" x="280" y="2072">&#20837;&#21475;</text>
+  <text class="t h3" x="520" y="2072">&#36335;&#24452;</text>
+  <text class="t h3" x="900" y="2072">&#35828;&#26126;</text>
+  <line x1="60" y1="2080" x2="1540" y2="2080" stroke="#C8E6C9"/>
+  <text class="t s" x="80" y="2098">App JNI Demo</text><text class="t s" x="280" y="2098">PreopenBridge</text><text class="t s" x="520" y="2098">filesDir/preopen_demo</text><text class="t s" x="900" y="2098">&#26080;&#38656; root&#65292;&#25512;&#33616;&#28436;&#31034;</text>
+  <text class="t s" x="80" y="2116">gtest</text><text class="t s" x="280" y="2116">libpreopen_tests.cpp</text><text class="t s" x="520" y="2116">/data/local/tmp/ns/</text><text class="t s" x="900" y="2116">&#38656; prop_enable_unittests=true</text>
+  <text class="t s" x="80" y="2134">Node</text><text class="t s" x="280" y="2134">nodejs-cmake/index.js</text><text class="t s" x="520" y="2134">PC &#25991;&#20214;&#31995;&#32479;</text><text class="t s" x="900" y="2134">&#39537;&#21160; NAPI binding &#20840;&#37327; API</text>
+  <text class="t s" x="80" y="2152">ULE &#38598;&#25104;</text><text class="t s" x="280" y="2152">ule_file.move</text><text class="t s" x="520" y="2152">&#30828;&#32534;&#30721;&#27979;&#35797;&#36335;&#24452;</text><text class="t s" x="900" y="2152">&#24453;&#19982;&#24179;&#21488;&#32852;&#35843;</text>
+
+  <!-- ========== File index ========== -->
+  <rect x="40" y="2240" width="1520" height="320" rx="8" fill="#E3F2FD" stroke="#42A5F5" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="2268" fill="#1565C0">&#20851;&#38190;&#28304;&#30721;&#32034;&#24341;</text>
+  <text class="t f" x="80" y="2292">mylibrary3/src/main/cpp/FilePlugin.cpp          - NAPI ule_file, move/init</text>
+  <text class="t f" x="80" y="2310">mylibrary3/src/main/cpp/preopen_jni.cpp         - JNI Demo runDemo</text>
+  <text class="t f" x="80" y="2328">mylibrary3/.../libpreopen/lib/libseqmap.cpp     - InsertMap, GetRel, po_find</text>
+  <text class="t f" x="80" y="2346">mylibrary3/.../libpreopen/lib/po_libc_wrappers.cpp - open_, access_, find_relative</text>
+  <text class="t f" x="80" y="2364">mylibrary3/.../libnamespace/NamespaceLibc.cpp    - ns_* stubs</text>
+  <text class="t f" x="80" y="2382">mylibrary3/.../libnamespace/uri.cpp            - URI parser</text>
+  <text class="t f" x="80" y="2400">mylibrary3/.../demo/PreopenBridge.kt            - loadLibrary preopen_demo</text>
+  <text class="t f" x="80" y="2418">app/.../FirstFragment.kt                        - UI trigger Demo</text>
+  <text class="t f" x="80" y="2436">mylibrary3/src/main/cpp/tests/libpreopen_tests.cpp - unit tests</text>
+  <text class="t f" x="80" y="2454">nodejs-cmake/binding.c + index.js               - desktop NAPI test</text>
+  <text class="t f" x="80" y="2472">mylibrary3/src/main/cpp/CMakeLists.txt           - native build targets</text>
+  <text class="t f" x="80" y="2490">docs/PROJECT_GUIDE.md                           - full text documentation</text>
+
+  <text class="t s" x="800" y="2585" text-anchor="middle">PantanalNamespace flowchart (detailed) - see PROJECT_GUIDE.md</text>
+  <text class="t s" x="800" y="2605" text-anchor="middle">architecture.svg for layered component view</text>
+</svg>

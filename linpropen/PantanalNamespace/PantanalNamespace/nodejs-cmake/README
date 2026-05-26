@@ -1,0 +1,5 @@
+1. sudo npm install cmake-js -g
+2. cmake-js configure
+3. cmake-js compile
+4. npm install
+5. node index.js

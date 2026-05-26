@@ -1,0 +1,28 @@
+/**
+ * gradle 接入公司流水线
+ *
+ * 目标：
+ * 1、通过 ALM 仓库把 Namespace-SDK 上传到公司的 maven 仓库
+ *
+ * 流水线必须的相关配置：
+ * 1、代码单元测试（执行 unitTestTask）
+ *    ==
+ * 2、代码质量检测（执行 codeScanTask）
+ *    == ocoverage 插件，需要在 app 目录下的 build.gradle 引用
+ */
+apply plugin: 'obuildplugin'
+
+/**
+ * o build 用到，执行 task “assembleReleaseSpiltPixel”，会将每个 module 生成的 sdk 都放到“根目录”的 build/
+ */
+version = "${prop_sdkVersionName}" + "${versionSuffix}"
+
+OBuildConfig {
+    groupId = "${prop_archivesGroupName}"
+    sdkArtifactId = "${archivesBaseName}"
+    /**
+     * 执行 SDK 打包任务，约定为 assembleReleaseSplitPixel，执行后，会将 SDK 推送到 SNAPSHOT-maven：
+     * 并同时发布到 JFrog，以便后续正式提测发布
+     */
+    sdkExecuteTask = "assembleReleaseSplitPixel"
+}

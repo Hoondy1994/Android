@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="sandbox_title">插件文件沙箱演示</string>
+    <string name="sandbox_subtitle">演示 libpreopen：同一 App 内两个插件 A/B 的虚拟路径隔离，并对比无沙箱 open() 的越权读取。</string>
+    <string name="run_sandbox_demo">运行沙箱演示</string>
+    <string name="sandbox_hint">点击上方按钮，将在 Native 层创建两个插件目录并执行 open_ 权限测试。</string>
+    <string name="sandbox_running">正在运行 Native 沙箱演示…</string>
+</resources>

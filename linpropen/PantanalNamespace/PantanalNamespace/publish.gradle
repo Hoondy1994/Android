@@ -1,0 +1,90 @@
+apply plugin: 'maven-publish'
+
+def isReleaseBuild() {
+    return hasProperty('prop_versionName') ?
+            !prop_versionName.toUpperCase().contains("SNAPSHOT") : false
+}
+
+def getRepositoryUsername() {
+    return hasProperty('sonatypeUsername') ? sonatypeUsername : ""
+}
+
+def getRepositoryPassword() {
+    return hasProperty('sonatypePassword') ? sonatypePassword : ""
+}
+
+static def getSnapshotUrl() {
+    return 'http://maven.scm.adc.com:8081/nexus/repository/oppo-browser-snapshots/'
+}
+
+static def getReleaseUrl() {
+    return 'http://maven.scm.adc.com:8081/nexus/repository/oppo-browser-releases/'
+}
+
+def getRepositoryUrl() {
+    return isReleaseBuild() ? getReleaseUrl() : getSnapshotUrl()
+}
+
+publishing {
+    publications {
+        android.libraryVariants.all { variant ->
+            if (variant.buildType.name != "release") {
+                return
+            }
+
+            if (prop_aarName != "sdk") {
+                return
+            }
+
+            def pomVersion = "${prop_versionName}"
+            def pomArtifactId = "${prop_aarName}"
+            def pomGroupId = "${prop_archivesGroupName}"
+            def pomArtifact = tasks.findByName("bundle${variant.name.capitalize()}Aar")
+
+            println("getRepositoryUrl=" + getRepositoryUrl())
+            println("userName=" + getRepositoryUsername())
+            println("passWord=" + getRepositoryPassword())
+            println("pomArtifactId=${pomArtifactId}")
+            println("pomGroupId=${pomGroupId}")
+            println("pomVersion=${pomVersion}")
+            println("pomArtifact=${pomArtifact}")
+
+            create(variant.name, MavenPublication) {
+                artifactId = "${pomArtifactId}"
+                groupId = "${pomGroupId}"
+                version = "${pomVersion}"
+                artifact tasks.findByName("bundle${variant.name.capitalize()}Aar")
+//            pom.withXml {
+//                def dependenciesNode = asNode().appendNode('dependencies')
+//                configurations.implementation.allDependencies.each {
+//                    def dependencyNode = dependenciesNode.appendNode('dependency')
+//                    dependencyNode.appendNode('groupId', it.group)
+//                    dependencyNode.appendNode('artifactId', it.name)
+//                    dependencyNode.appendNode('version', it.version)
+//                    dependencyNode.appendNode('scope', 'implementation')
+//                }
+//                // 添加flavorImplementation的依赖
+//                def flavorImplementation = configurations.getByName("${variant.flavorName}Implementation")
+//                flavorImplementation.allDependencies.each {
+//                    println it.toString()
+//                    def dependencyNode = dependenciesNode.appendNode('dependency')
+//                    dependencyNode.appendNode('groupId', it.group)
+//                    dependencyNode.appendNode('artifactId', it.name)
+//                    dependencyNode.appendNode('version', it.version)
+//                    dependencyNode.appendNode('scope', 'implementation')
+//                }
+//            }
+            }
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username getRepositoryUsername()
+                password getRepositoryPassword()
+            }
+            allowInsecureProtocol true
+            url getRepositoryUrl()
+        }
+    }
+}

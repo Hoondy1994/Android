@@ -1,0 +1,86 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        gradlePluginPortal()
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+
+        if (gradle.ext.useOBuildEnabled) {
+            maven {
+                allowInsecureProtocol = true
+                url prop_oppoMavenUrlRelease
+                credentials {
+                    username sonatypeUsername
+                    password sonatypeUsername
+                }
+            }
+            maven {
+                allowInsecureProtocol = true
+                url prop_oppoMavenUrlSnapshot
+                credentials {
+                    username sonatypeUsername
+                    password sonatypePassword
+                }
+            }
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$prop_gradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$prop_kotlinVersion"
+        if (gradle.ext.useOBuildEnabled) {
+            classpath "com.inno.buildplugin:build-plugin:$prop_obuildVersion"
+            classpath 'com.oppo.test:oapm-perf:2.8.9'
+        }
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.3.0' apply false
+    id 'com.android.library' version '7.3.0' apply false
+    id 'com.android.test' version '7.3.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+}
+
+ext.useOBuildEnabled = gradle.ext.useOBuildEnabled
+
+/**
+ * 添加 unitTestTask 给流水线使用（需连接公司 Maven）
+ */
+if (useOBuildEnabled) {
+    apply plugin: 'ocoverage'
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//获取其他格式的日期
+static def getDate() {
+    return new Date().format('yyyyMMddHHmm')
+}
+
+// 获取当前的git的commit_id
+static def getGitRevision() {
+    return "git rev-parse --short HEAD".execute().text.trim()
+}
+
+def getCustomProperties() {
+    Properties properties = new Properties()
+    File file = project.rootProject.file('local.properties')
+    if (file.exists()) {
+        properties.load(file.newDataInputStream())
+    }
+    return properties
+}
+
+def getAndroidSdkDir() {
+    return getCustomProperties().getProperty('sdk.dir', '').toString()
+}
+
+def getUnitTestsEnable() {
+    return getCustomProperties().getProperty('prop_enable_unittests', 'false').toString()
+}

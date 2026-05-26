@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2200">
+  <defs>
+    <linearGradient id="gHost" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E8EAF6"/><stop offset="100%" stop-color="#C5CAE9"/></linearGradient>
+    <linearGradient id="gBridge" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E3F2FD"/><stop offset="100%" stop-color="#BBDEFB"/></linearGradient>
+    <linearGradient id="gSdk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E8F5E9"/><stop offset="100%" stop-color="#C8E6C9"/></linearGradient>
+    <linearGradient id="gCore" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFF3E0"/><stop offset="100%" stop-color="#FFE0B2"/></linearGradient>
+    <linearGradient id="gOs" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ECEFF1"/><stop offset="100%" stop-color="#CFD8DC"/></linearGradient>
+    <linearGradient id="gSide" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FAFAFA"/><stop offset="100%" stop-color="#F5F5F5"/></linearGradient>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#455A64"/></marker>
+    <marker id="arO" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#E65100"/></marker>
+    <filter id="sh"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/></filter>
+  </defs>
+
+  <style>
+    .t{font-family:'Microsoft YaHei',Segoe UI,sans-serif}
+    .h1{font-size:24px;font-weight:bold;fill:#1A237E}
+    .h2{font-size:15px;font-weight:bold}
+    .h3{font-size:12px;font-weight:bold}
+    .b{font-size:10px;fill:#424242}
+    .s{font-size:9px;fill:#616161}
+    .ok{fill:#2E7D32}.stub{fill:#F57C00}.plan{fill:#1565C0}.no{fill:#C62828}
+  </style>
+
+  <!-- TITLE -->
+  <text class="t h1" x="800" y="40" text-anchor="middle">PantanalNamespace &#26550;&#26500;&#22270;&#65288;&#35814;&#32454;&#29256;&#65289;</text>
+  <text class="t s" x="800" y="62" text-anchor="middle">OPPO Pantanal / ULE &#25554;&#20214;&#25991;&#20214;&#27801;&#31665; SDK &#183; com.oplus.pantanal.namespace</text>
+  <text class="t s" x="800" y="78" text-anchor="middle">&#36866;&#29992;&#33539;&#22260;&#65306;&#20165;&#25509;&#20837; Pantanal &#30340;&#23487;&#20027; App &#65292;&#38750;&#20840;&#31995;&#32479;&#26381;&#21153;&#65292;&#38750;&#25152;&#26377; OPPO App</text>
+
+  <!-- LEGEND -->
+  <rect x="40" y="95" width="1520" height="52" rx="6" fill="#FAFAFA" stroke="#E0E0E0"/>
+  <text class="t h3" x="60" y="118">&#22270;&#20363;</text>
+  <rect x="110" y="108" width="14" height="14" fill="#C8E6C9" stroke="#2E7D32"/><text class="t s" x="132" y="120">&#24050;&#23454;&#29616;</text>
+  <rect x="220" y="108" width="14" height="14" fill="#FFE0B2" stroke="#F57C00"/><text class="t s" x="242" y="120">&#37096;&#20998;&#23454;&#29616;/Demo</text>
+  <rect x="360" y="108" width="14" height="14" fill="#FFF9C4" stroke="#FBC02D" stroke-dasharray="3,2"/><text class="t s" x="382" y="120">&#26729;&#20195;&#30721;/&#35774;&#35745;&#24577;</text>
+  <rect x="500" y="108" width="14" height="14" fill="#FFEBEE" stroke="#C62828" stroke-dasharray="4,2"/><text class="t s" x="522" y="120">&#38750;&#29983;&#20135;&#36335;&#24452;</text>
+  <line x1="650" y1="115" x2="650" y2="135" stroke="#BDBDBD"/>
+  <text class="t s" x="670" y="120">&#34394;&#32447;&#26694;=&#26410;&#23436;&#25104;&#38142;&#36335;</text>
+  <text class="t s" x="900" y="120">&#23454;&#32447;&#31661;=&#20381;&#36182;/&#35843;&#29992;</text>
+
+  <!-- LEFT: Gradle modules -->
+  <rect x="40" y="165" width="340" height="520" rx="8" fill="url(#gSide)" stroke="#9E9E9E" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="192" fill="#37474F">Gradle &#24037;&#31243;&#27169;&#22359;</text>
+  <rect x="55" y="205" width="310" height="36" rx="4" fill="#FFEBEE" stroke="#E57373" stroke-dasharray="4,2"/>
+  <text class="t h3" x="210" y="228" text-anchor="middle" fill="#C62828">:app</text>
+  <text class="t s" x="65" y="242">com.oplus.pantanal.namespace</text>
+  <text class="t s" x="65" y="254">FirstFragment + PreopenBridge Demo</text>
+
+  <rect x="55" y="268" width="310" height="50" rx="4" fill="#E8F5E9" stroke="#66BB6A"/>
+  <text class="t h3" x="210" y="290" text-anchor="middle" fill="#2E7D32">:mylibrary3</text>
+  <text class="t s" x="65" y="306">Native &#20027;&#30740;&#21457;&#27169;&#22359;</text>
+  <text class="t s" x="65" y="318">externalNativeBuild + prefab(namespace)</text>
+
+  <rect x="55" y="328" width="310" height="44" rx="4" fill="#E8F5E9" stroke="#66BB6A"/>
+  <text class="t h3" x="210" y="350" text-anchor="middle" fill="#2E7D32">:sdk</text>
+  <text class="t s" x="65" y="366">&#19982; mylibrary3 &#21516;&#26500;&#65292;Maven &#21457;&#24067; (publish.gradle)</text>
+
+  <rect x="55" y="382" width="310" height="40" rx="4" fill="#E3F2FD" stroke="#64B5F6" stroke-dasharray="4,2"/>
+  <text class="t h3" x="210" y="404" text-anchor="middle" fill="#1565C0">nodejs-cmake</text>
+  <text class="t s" x="65" y="418">PC Node binding.c &#26700;&#38754;&#39564;&#35777;</text>
+
+  <text class="t h3" x="60" y="445" fill="#37474F">CMake Native &#20135;&#29289;</text>
+  <text class="t s" x="65" y="462">libnamespace.so</text>
+  <text class="t s" x="65" y="476">libule_file1.so (mylibrary3) / libule_file.so (sdk)</text>
+  <text class="t s" x="65" y="490">libpreopen_demo.so (JNI Demo)</text>
+  <text class="t s" x="65" y="504">libpreopen.a (static)</text>
+  <text class="t s" x="65" y="518">libule_napi.so (IMPORTED, &#25171;&#21253;&#25490;&#38500;)</text>
+  <text class="t s" x="65" y="532">gtest (ENABLE_UNIT_TESTS)</text>
+
+  <text class="t h3" x="60" y="558" fill="#37474F">&#38142;&#25509;&#20851;&#31995;</text>
+  <text class="t s" x="65" y="575">ule_file1 -&#8594; namespace, ulenapi, utils</text>
+  <text class="t s" x="65" y="589">namespace -&#8594; preopen, ulenapi, utils</text>
+  <text class="t s" x="65" y="603">preopen_demo -&#8594; preopen, utils, log</text>
+  <text class="t s" x="65" y="617">preopen (static) -&#8594; utils</text>
+
+  <text class="t h3" x="60" y="642" fill="#37474F">&#21457;&#24067;</text>
+  <text class="t s" x="65" y="659">group: com.oplus.pantanal.namespace</text>
+  <text class="t s" x="65" y="673">Prefab &#27169;&#22359;: namespace (headers)</text>
+
+  <!-- CENTER: Main layers -->
+  <!-- L0 Context -->
+  <rect x="400" y="165" width="1160" height="72" rx="8" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="420" y="190" fill="#6A1B9A">L0 &#29983;&#24577;&#19978;&#19979;&#25991;</text>
+  <text class="t b" x="420" y="210">ColorOS / OPPO &#25163;&#26426; -&#8594; Pantanal &#27867;&#22312;&#24179;&#21488; -&#8594; &#36127;&#19968;&#23631;/&#21345;&#29255;/&#26234;&#24935;&#33021;&#21147; &#23481;&#22120; App</text>
+  <text class="t s" x="420" y="226">&#23481;&#22120;&#36827;&#31243;&#20869;&#38598;&#25104; Namespace SDK&#65307;&#19982;&#24494;&#20449;/&#26222;&#36890; App &#26080;&#20851;</text>
+
+  <!-- L1 Host -->
+  <rect x="400" y="250" width="1160" height="130" rx="8" fill="url(#gHost)" stroke="#5C6BC0" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="420" y="275" fill="#283593">L1 &#23487;&#20027;&#19982;&#25554;&#20214;&#23618;</text>
+  <rect x="420" y="288" width="200" height="78" rx="6" fill="#FFF" stroke="#7986CB"/>
+  <text class="t h3" x="520" y="312" text-anchor="middle" fill="#303F9F">Pantanal Host App</text>
+  <text class="t s" x="430" y="328">&#36127;&#36131;: &#21551;&#21160; ULE&#12289;&#27880;&#20876;&#26381;&#21153;</text>
+  <text class="t s" x="430" y="342">ns_client_add(id, data) &#27880;&#20837;&#26144;&#23556;</text>
+  <text class="t s" x="430" y="356" fill="#F57C00">&#24179;&#21488;&#20391;&#23454;&#29616;&#65288;&#19981;&#22312;&#26412;&#20179;&#24211;&#65289;</text>
+
+  <rect x="640" y="288" width="200" height="78" rx="6" fill="#FFF" stroke="#7986CB"/>
+  <text class="t h3" x="740" y="312" text-anchor="middle" fill="#303F9F">ULE JS Runtime</text>
+  <text class="t s" x="650" y="328">libule_napi.so</text>
+  <text class="t s" x="650" y="342">V8/JS &#24341;&#25806; + &#26631;&#20934;&#24211;</text>
+  <text class="t s" x="650" y="356">+ &#23487;&#20027;&#27880;&#20876;&#30340; Native &#27169;&#22359;</text>
+
+  <rect x="860" y="288" width="200" height="78" rx="6" fill="#FFF" stroke="#7986CB"/>
+  <text class="t h3" x="960" y="312" text-anchor="middle" fill="#303F9F">JS Plugin (.js)</text>
+  <text class="t s" x="870" y="328">&#19994;&#21153;&#26041;&#19981;&#21487;&#20449;&#20195;&#30721;</text>
+  <text class="t s" x="870" y="342">&#21482;&#33021;&#29992;&#34394;&#25311;&#36335;&#24452;</text>
+  <text class="t s" x="870" y="356">&#20363;: /vdemo/a.txt</text>
+
+  <rect x="1080" y="288" width="200" height="78" rx="6" fill="#FFEBEE" stroke="#E57373" stroke-dasharray="5,3"/>
+  <text class="t h3" x="1180" y="312" text-anchor="middle" fill="#C62828">app &#28436;&#31034;&#27169;&#22359;</text>
+  <text class="t s" x="1090" y="328">:app FirstFragment</text>
+  <text class="t s" x="1090" y="342">PreopenBridge.kt</text>
+  <text class="t s" x="1090" y="356">&#20165; JNI &#39564;&#35777;&#27801;&#31665;</text>
+
+  <rect x="1300" y="288" width="240" height="78" rx="6" fill="#FFFDE7" stroke="#FBC02D"/>
+  <text class="t h3" x="1420" y="308" text-anchor="middle" fill="#F57F17">serviceId (uint64_t)</text>
+  <text class="t s" x="1310" y="324">&#27599;&#20010;&#27867;&#22312;&#26381;&#21153;&#19968;&#20010; id</text>
+  <text class="t s" x="1310" y="338">Seqmap: map&lt;id, po_map*&gt;</text>
+  <text class="t s" x="1310" y="352">Demo &#22266;&#23450; id=1000</text>
+
+  <!-- L2 Bridge -->
+  <rect x="400" y="395" width="1160" height="145" rx="8" fill="url(#gBridge)" stroke="#42A5F5" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="420" y="420" fill="#1565C0">L2 &#26725;&#25509;&#23618; (JS/Kotlin/Node &#8596; Native)</text>
+
+  <rect x="420" y="435" width="260" height="95" rx="6" fill="#FFF" stroke="#64B5F6"/>
+  <text class="t h3" x="550" y="458" text-anchor="middle" fill="#0D47A1">NAPI ule_file</text>
+  <text class="t s" x="430" y="474">FilePlugin.cpp</text>
+  <text class="t s" x="430" y="488">nm_modname = "ule_file"</text>
+  <text class="t s" x="430" y="502">&#23548;&#20986;: init(), move(src,dest,ok,fail,...)</text>
+  <text class="t s" x="430" y="516" fill="#F57C00">move &#20869;&#37096;&#24050;&#35843; InsertMap+open_</text>
+
+  <rect x="700" y="435" width="260" height="95" rx="6" fill="#FFF" stroke="#64B5F6"/>
+  <text class="t h3" x="830" y="458" text-anchor="middle" fill="#0D47A1">JNI preopen_demo</text>
+  <text class="t s" x="710" y="474">preopen_jni.cpp</text>
+  <text class="t s" x="710" y="488">PreopenBridge.runDemo(baseDir)</text>
+  <text class="t s" x="710" y="502" fill="#2E7D32">&#24050;&#23454;&#29616;&#23436;&#25972; Demo</text>
+  <text class="t s" x="710" y="516">Logcat: PreopenDemo</text>
+
+  <rect x="980" y="435" width="280" height="95" rx="6" fill="#FFF" stroke="#64B5F6" stroke-dasharray="5,3"/>
+  <text class="t h3" x="1120" y="458" text-anchor="middle" fill="#0D47A1">Node desktop</text>
+  <text class="t s" x="990" y="474">nodejs-cmake/binding.c</text>
+  <text class="t s" x="990" y="488">copy, move, list, read, write, access...</text>
+  <text class="t s" x="990" y="502">index.js &#39537;&#21160;&#27979;&#35797;</text>
+
+  <rect x="1280" y="435" width="260" height="95" rx="6" fill="#E8EAF6" stroke="#7986CB"/>
+  <text class="t h3" x="1410" y="458" text-anchor="middle" fill="#303F9F">libule_napi.so</text>
+  <text class="t s" x="1290" y="474">napi_env, napi_call_function</text>
+  <text class="t s" x="1290" y="488">IMPORTED GLOBAL</text>
+  <text class="t s" x="1290" y="502">&#25171;&#21253;&#26102; excludes (&#30001;&#23487;&#20027;&#25552;&#20379;)</text>
+
+  <!-- L3 namespace -->
+  <rect x="400" y="555" width="1160" height="175" rx="8" fill="url(#gSdk)" stroke="#66BB6A" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="420" y="580" fill="#2E7D32">L3 libnamespace.so (SDK &#23545;&#22806;&#23618; / Prefab)</text>
+
+  <rect x="420" y="595" width="220" height="120" rx="6" fill="#FFF" stroke="#81C784"/>
+  <text class="t h3" x="530" y="618" text-anchor="middle" fill="#1B5E20">NamespaceLibc</text>
+  <text class="t s" x="430" y="634">NamespaceLibc.cpp / .h</text>
+  <text class="t s" x="430" y="648">ns_open, ns_access, ns_stat</text>
+  <text class="t s" x="430" y="662">ns_unlink, ns_rename, ns_openat</text>
+  <text class="t s" x="430" y="676" fill="#F57C00">&#20840;&#37096;&#26729; return 0</text>
+  <text class="t s" x="430" y="690">&#35774;&#35745;: &#36716;&#21457;&#21040; open_(id,...)</text>
+
+  <rect x="660" y="595" width="200" height="120" rx="6" fill="#FFF" stroke="#81C784"/>
+  <text class="t h3" x="760" y="618" text-anchor="middle" fill="#1B5E20">Namespace.h</text>
+  <text class="t s" x="670" y="634">Namespace.cpp</text>
+  <text class="t s" x="670" y="648">ns_client_add(id, data)</text>
+  <text class="t s" x="670" y="662">ns_client_remove(id)</text>
+  <text class="t s" x="670" y="676" fill="#F57C00">&#26729;&#23454;&#29616;</text>
+
+  <rect x="880" y="595" width="200" height="120" rx="6" fill="#FFF" stroke="#81C784"/>
+  <text class="t h3" x="980" y="618" text-anchor="middle" fill="#1B5E20">uri.cpp</text>
+  <text class="t s" x="890" y="634">URI &#31867;</text>
+  <text class="t s" x="890" y="648">scheme://host/path</text>
+  <text class="t s" x="890" y="662" fill="#2E7D32">ParseUri &#24050;&#23454;&#29616;</text>
+  <text class="t s" x="890" y="676" fill="#1565C0">&#26410;&#19982; Seqmap &#33258;&#21160;&#20018;&#32852;</text>
+
+  <rect x="1100" y="595" width="440" height="120" rx="6" fill="#FFFDE7" stroke="#FBC02D"/>
+  <text class="t h3" x="1320" y="618" text-anchor="middle" fill="#F57F17">include/namespace/</text>
+  <text class="t s" x="1110" y="634">NamespaceLibc.h, Namespace.h, uri.h, Log.h</text>
+  <text class="t s" x="1110" y="648">&#20381;&#36182;&#26041;&#36890;&#36807; Prefab &#24341;&#29992; C++ API</text>
+  <text class="t s" x="1110" y="662">utils/: Singleton.h, Log.h, AndroidLogger</text>
+
+  <!-- L4 Core -->
+  <rect x="400" y="745" width="1160" height="200" rx="8" fill="url(#gCore)" stroke="#FFA726" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="420" y="770" fill="#E65100">L4 &#27801;&#31665;&#26680;&#24515; (libpreopen + Seqmap) &#24050;&#23454;&#29616;</text>
+
+  <rect x="420" y="785" width="360" height="145" rx="6" fill="#FFF" stroke="#FFB74D"/>
+  <text class="t h3" x="600" y="808" text-anchor="middle" fill="#E65100">Seqmap (libseqmap)</text>
+  <text class="t s" x="430" y="824">libseqmap.h / libseqmap.cpp</text>
+  <text class="t s" x="430" y="838">Singleton&lt;Seqmap&gt;</text>
+  <text class="t s" x="430" y="852">pathmap_: map&lt;uint64_t, po_map*&gt;</text>
+  <text class="t s" x="430" y="866">InsertMap(id, realDir, virtualPrefix)</text>
+  <text class="t s" x="430" y="880">  openat(AT_FDCWD, realDir) -&#8594; fd</text>
+  <text class="t s" x="430" y="894">  po_add(map, realDir, virtualPrefix, fd)</text>
+  <text class="t s" x="430" y="908">GetRel(path,id) / DeleteMap(id)</text>
+
+  <rect x="800" y="785" width="360" height="145" rx="6" fill="#FFF" stroke="#FFB74D"/>
+  <text class="t h3" x="980" y="808" text-anchor="middle" fill="#E65100">libpreopen.a (static)</text>
+  <text class="t s" x="810" y="824">libpreopen.cpp - po_isprefix</text>
+  <text class="t s" x="810" y="838">po_map.cpp - po_map &#32467;&#26500;</text>
+  <text class="t s" x="810" y="852">po_err.cpp - po_last_error</text>
+  <text class="t s" x="810" y="866">po_libc_wrappers.cpp:</text>
+  <text class="t s" x="810" y="880">  open_, access_, stat_, lstat_</text>
+  <text class="t s" x="810" y="894">  unlink_, rename_</text>
+  <text class="t s" x="810" y="908">find_relative() -&#8594; Seqmap::GetRel</text>
+
+  <rect x="1180" y="785" width="360" height="145" rx="6" fill="#FFF8E1" stroke="#FFA000"/>
+  <text class="t h3" x="1360" y="808" text-anchor="middle" fill="#E65100">&#25968;&#25454;&#32467;&#26500;</text>
+  <text class="t s" x="1190" y="824">po_map_entry: name, fd, pathmap</text>
+  <text class="t s" x="1190" y="838">po_map: entries[], length, capacity</text>
+  <text class="t s" x="1190" y="852">po_relpath: { dirfd, relative_path }</text>
+  <text class="t s" x="1190" y="866">&#21305;&#37197;: &#26368;&#38271;&#34394;&#25311;&#21069;&#32512;</text>
+  <text class="t s" x="1190" y="880">&#26410;&#21305;&#37197;: dirfd=-1</text>
+  <text class="t s" x="1190" y="894">&#29702;&#35770;: Capsicum pre-open</text>
+
+  <line x1="780" y1="857" x2="800" y2="857" stroke="#E65100" stroke-width="2" marker-end="url(#arO)"/>
+
+  <!-- L5 OS -->
+  <rect x="400" y="960" width="1160" height="70" rx="8" fill="url(#gOs)" stroke="#78909C" stroke-width="2" filter="url(#sh)"/>
+  <text class="t h2" x="420" y="985" fill="#37474F">L5 Android Linux &#20869;&#26680;</text>
+  <text class="t b" x="420" y="1005">openat(dirfd, path, flags) | faccessat | fstatat | unlinkat | renameat</text>
+  <text class="t s" x="420" y="1020">App &#31169;&#26377;&#30446;&#24405;: Context.getFilesDir() /data/user/0/&lt;pkg&gt;/files/</text>
+
+  <!-- Vertical flow arrows -->
+  <line x1="740" y1="237" x2="740" y2="250" stroke="#455A64" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="740" y1="380" x2="740" y2="395" stroke="#455A64" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="740" y1="540" x2="740" y2="555" stroke="#455A64" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="740" y1="730" x2="740" y2="745" stroke="#455A64" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="740" y1="945" x2="740" y2="960" stroke="#455A64" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- RIGHT: Dependency graph -->
+  <rect x="40" y="1050" width="760" height="320" rx="8" fill="#FAFAFA" stroke="#BDBDBD" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="1078" fill="#37474F">Native &#20381;&#36182;&#22270; (CMake target)</text>
+  <rect x="80" y="1095" width="120" height="36" rx="4" fill="#FFE0B2" stroke="#FB8C00"/><text class="t s" x="140" y="1118" text-anchor="middle">ule_file1</text>
+  <rect x="80" y="1155" width="120" height="36" rx="4" fill="#FFE0B2" stroke="#FB8C00"/><text class="t s" x="140" y="1178" text-anchor="middle">preopen_demo</text>
+  <rect x="280" y="1125" width="120" height="36" rx="4" fill="#C8E6C9" stroke="#43A047"/><text class="t s" x="340" y="1148" text-anchor="middle">namespace</text>
+  <rect x="480" y="1145" width="100" height="36" rx="4" fill="#FFECB3" stroke="#FFA000"/><text class="t s" x="530" y="1168" text-anchor="middle">preopen.a</text>
+  <rect x="620" y="1145" width="80" height="36" rx="4" fill="#E0E0E0" stroke="#9E9E9E"/><text class="t s" x="660" y="1168" text-anchor="middle">utils</text>
+  <rect x="280" y="1095" width="120" height="36" rx="4" fill="#E3F2FD" stroke="#1E88E5" stroke-dasharray="4,2"/><text class="t s" x="340" y="1118" text-anchor="middle">ulenapi.so</text>
+  <line x1="200" y1="1113" x2="280" y2="1143" stroke="#455A64" marker-end="url(#ar)"/>
+  <line x1="200" y1="1173" x2="480" y2="1163" stroke="#455A64" marker-end="url(#ar)"/>
+  <line x1="400" y1="1143" x2="480" y2="1163" stroke="#455A64" marker-end="url(#ar)"/>
+  <line x1="340" y1="1131" x2="340" y2="1125" stroke="#455A64" marker-end="url(#ar)"/>
+  <line x1="580" y1="1163" x2="620" y2="1163" stroke="#455A64" marker-end="url(#ar)"/>
+
+  <text class="t h3" x="60" y="1220" fill="#37474F">tests/ (gtest)</text>
+  <text class="t s" x="80" y="1238">libpreopen_tests.cpp - Open, Access, InsertMap, DeleteMap</text>
+  <text class="t s" x="80" y="1252">liburi_test.cpp - URI &#35299;&#26512;</text>
+  <text class="t s" x="80" y="1266">&#27979;&#35797;&#36335;&#24452;: /data/local/tmp/ns/ (&#38656; root/&#35774;&#22791;)</text>
+  <text class="t s" x="80" y="1280">Demo &#36335;&#24452;: filesDir/preopen_demo/ (&#26080;&#38656; root)</text>
+  <text class="t s" x="80" y="1294">prop_enable_unittests in local.properties</text>
+
+  <!-- Mapping example panel -->
+  <rect x="820" y="1050" width="740" height="320" rx="8" fill="#FFFDE7" stroke="#FBC02D" filter="url(#sh)"/>
+  <text class="t h2" x="840" y="1078" fill="#F57F17">&#36335;&#24452;&#26144;&#23556;&#31034;&#20363; (Demo)</text>
+  <text class="t b" x="840" y="1100">serviceId = 1000</text>
+  <text class="t b" x="840" y="1118">InsertMap(1000, "/data/.../files/preopen_demo/real_root", "/vdemo")</text>
+  <text class="t s" x="840" y="1138">po_map_entry: name=real_root_path, pathmap="/vdemo", fd=&#30446;&#24405;fd</text>
+  <text class="t s" x="840" y="1156">&#25554;&#20214;&#35831;&#27714;: open_(1000, "/vdemo/hello.txt", O_RDONLY)</text>
+  <text class="t s" x="840" y="1174">po_find: "/vdemo" &#21069;&#32512;&#21305;&#37197; -&#8594; rel="hello.txt", dirfd=&#30495;&#23454;&#30446;&#24405;fd</text>
+  <text class="t s" x="840" y="1192">&#8594; openat(dirfd, "hello.txt", O_RDONLY) &#25104;&#21151;</text>
+  <text class="t s" x="840" y="1218">&#25554;&#20214;&#35831;&#27714;: open_(1000, "/outside/secret", ...)</text>
+  <text class="t s" x="840" y="1236">po_find: &#26080;&#21305;&#37197; -&#8594; dirfd=-1 -&#8594; openat &#22833;&#36133; (&#26435;&#38480;&#25298;&#32477;)</text>
+  <rect x="840" y="1258" width="680" height="96" rx="4" fill="#FFF" stroke="#E0E0E0"/>
+  <text class="t h3" x="860" y="1280" fill="#37474F">&#34394;&#25311;&#36335;&#24452; vs &#30495;&#23454;&#36335;&#24452;</text>
+  <text class="t s" x="860" y="1298">&#34394;&#25311;: /vdemo/hello.txt  (&#25554;&#20214;/JS &#21487;&#35265;)</text>
+  <text class="t s" x="860" y="1314">&#30495;&#23454;: .../real_root/hello.txt (&#24213;&#23618; openat &#30456;&#23545;&#36335;&#24452;)</text>
+  <text class="t s" x="860" y="1330">&#23433;&#20840;: &#25554;&#20214;&#19981;&#30693;&#36947;&#30495;&#23454;&#32477;&#23545;&#36335;&#24452;</text>
+
+  <!-- Comparison table -->
+  <rect x="40" y="1390" width="1520" height="200" rx="8" fill="#FAFAFA" stroke="#E0E0E0" filter="url(#sh)"/>
+  <text class="t h2" x="60" y="1418" fill="#37474F">&#19982;&#24120;&#35265; Android &#26041;&#26696;&#23545;&#27604;</text>
+  <text class="t h3" x="80" y="1442" fill="#616161">&#26041;&#26696;</text>
+  <text class="t h3" x="280" y="1442" fill="#616161">&#31890;&#24230;</text>
+  <text class="t h3" x="500" y="1442" fill="#616161">&#26412;&#39033;&#30446;&#20851;&#31995;</text>
+  <line x1="60" y1="1450" x2="1540" y2="1450" stroke="#E0E0E0"/>
+  <text class="t s" x="80" y="1470">App Sandbox (UID)</text><text class="t s" x="280" y="1470">&#21253;/&#36827;&#31243;</text><text class="t s" x="500" y="1470">&#22522;&#30784;&#38548;&#31163;&#65292;&#21516;&#36827;&#31243;&#22810;&#25554;&#20214;&#19981;&#22815;</text>
+  <text class="t s" x="80" y="1490">Scoped Storage / SAF</text><text class="t s" x="280" y="1490">App+&#29992;&#25143;&#25480;&#26435;</text><text class="t s" x="500" y="1490">&#33258;&#23478;&#19994;&#21153;&#65292;&#19981;&#36866;&#21512;&#34394;&#25311; POSIX &#36335;&#24452;</text>
+  <text class="t s" x="80" y="1510">FileProvider</text><text class="t s" x="280" y="1510">Uri &#26174;&#24335;&#20998;&#20139;</text><text class="t s" x="500" y="1510">&#36328; App &#20998;&#20139;&#65292;&#19981;&#36866;&#21512;&#39640;&#39057;&#25554;&#20214; FS API</text>
+  <text class="t s" x="80" y="1530">&#23567;&#31243;&#24207; wx FS</text><text class="t s" x="280" y="1530">JS API &#26080;&#36335;&#24452;</text><text class="t s" x="500" y="1530">&#24605;&#24819;&#30456;&#36817;&#65292;&#25105;&#20204;&#20445;&#30041; Native POSIX &#21253;&#35013;</text>
+  <text class="t s" x="80" y="1550">WASI preopen</text><text class="t s" x="280" y="1550">&#30446;&#24405; preopen</text><text class="t s" x="500" y="1550">&#29702;&#35770;&#21516;&#28304; (libpreopen &#26469;&#33258; Capsicum &#30740;&#31350;)</text>
+  <text class="t s" x="80" y="1570" fill="#2E7D32" font-weight="bold">PantanalNamespace</text><text class="t s" x="280" y="1570">serviceId+&#34394;&#25311;&#36335;&#24452;</text><text class="t s" x="500" y="1570" fill="#2E7D32">ULE &#25554;&#20214;&#32454;&#31890;&#24230;&#25991;&#20214;&#27801;&#31665;</text>
+
+  <!-- Footer -->
+  <text class="t s" x="800" y="1620" text-anchor="middle">&#35814;&#35265; docs/PROJECT_GUIDE.md &#183; flowchart.svg</text>
+  <text class="t s" x="800" y="1638" text-anchor="middle">Generated for PantanalNamespace repository</text>
+</svg>
