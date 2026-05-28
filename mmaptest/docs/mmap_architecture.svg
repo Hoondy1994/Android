@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#546E7A"/>
+    </marker>
+    <marker id="arrBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1565C0"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2E7D32"/>
+    </marker>
+    <linearGradient id="layer1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#42A5F5"/>
+      <stop offset="100%" stop-color="#1565C0"/>
+    </linearGradient>
+    <linearGradient id="layer2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB74D"/>
+      <stop offset="100%" stop-color="#EF6C00"/>
+    </linearGradient>
+    <linearGradient id="layer3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BA68C8"/>
+      <stop offset="100%" stop-color="#7B1FA2"/>
+    </linearGradient>
+    <linearGradient id="layer4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4DB6AC"/>
+      <stop offset="100%" stop-color="#00695C"/>
+    </linearGradient>
+    <linearGradient id="layer5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78909C"/>
+      <stop offset="100%" stop-color="#37474F"/>
+    </linearGradient>
+    <filter id="sh" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="76" fill="#263238"/>
+  <text x="500" y="34" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">MmapTest &#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#x56FE;</text>
+  <text x="500" y="58" text-anchor="middle" fill="#B0BEC5" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13">&#x5206;&#x5C42;&#x67B6;&#x6784; &#xB7; JNI &#x6865;&#x63A5; &#xB7; Linux mmap &#x5B50;&#x7CFB;&#x7EDF;</text>
+
+  <!-- Layer 1 -->
+  <rect x="60" y="88" width="640" height="100" rx="12" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/>
+  <rect x="60" y="88" width="640" height="28" rx="12" fill="url(#layer1)"/>
+  <rect x="60" y="104" width="640" height="12" fill="url(#layer1)"/>
+  <text x="80" y="108" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">&#x2460; Presentation Layer&#xFF08;Android UI&#xFF09;</text>
+
+  <rect x="80" y="128" width="180" height="48" rx="8" fill="#FFFFFF" stroke="#42A5F5" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="170" y="148" text-anchor="middle" fill="#1565C0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="bold">activity_main.xml</text>
+  <text x="170" y="166" text-anchor="middle" fill="#757575" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">&#x6309;&#x94AE; &#xB7; ScrollView</text>
+
+  <rect x="280" y="128" width="200" height="48" rx="8" fill="#FFFFFF" stroke="#42A5F5" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="380" y="148" text-anchor="middle" fill="#1565C0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="bold">MainActivity.kt</text>
+  <text x="380" y="166" text-anchor="middle" fill="#757575" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">runDemo / loadLibrary</text>
+
+  <rect x="500" y="128" width="180" height="48" rx="8" fill="#FFFFFF" stroke="#42A5F5" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="590" y="156" text-anchor="middle" fill="#1565C0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="bold">filesDir</text>
+
+  <line x1="380" y1="188" x2="380" y2="212" stroke="#1565C0" stroke-width="2" marker-end="url(#arrBlue)"/>
+  <text x="392" y="206" fill="#1565C0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">JNI</text>
+
+  <!-- Layer 2 -->
+  <rect x="60" y="214" width="640" height="88" rx="12" fill="#FFF3E0" stroke="#EF6C00" stroke-width="1.5"/>
+  <rect x="60" y="214" width="640" height="28" rx="12" fill="url(#layer2)"/>
+  <rect x="60" y="230" width="640" height="12" fill="url(#layer2)"/>
+  <text x="80" y="234" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">&#x2461; JNI Bridge Layer</text>
+
+  <rect x="100" y="254" width="240" height="36" rx="8" fill="#FFFFFF" stroke="#FB8C00" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="220" y="276" text-anchor="middle" fill="#E65100" font-family="Consolas, monospace" font-size="11">libmyapplication.so</text>
+
+  <rect x="360" y="254" width="160" height="36" rx="8" fill="#FFFFFF" stroke="#FB8C00" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="440" y="276" text-anchor="middle" fill="#E65100" font-family="Consolas, monospace" font-size="11">native-lib.cpp</text>
+
+  <rect x="540" y="254" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#FB8C00" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="610" y="276" text-anchor="middle" fill="#E65100" font-family="Consolas, monospace" font-size="10">jstring &lt;-&gt; string</text>
+
+  <line x1="380" y1="302" x2="380" y2="326" stroke="#7B1FA2" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Layer 3 -->
+  <rect x="60" y="328" width="640" height="168" rx="12" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1.5"/>
+  <rect x="60" y="328" width="640" height="28" rx="12" fill="url(#layer3)"/>
+  <rect x="60" y="344" width="640" height="12" fill="url(#layer3)"/>
+  <text x="80" y="348" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">&#x2462; Native Logic&#xFF08;mmap_demo.cpp&#xFF09;</text>
+
+  <rect x="80" y="368" width="180" height="56" rx="8" fill="#FFFFFF" stroke="#AB47BC" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="170" y="400" text-anchor="middle" fill="#6A1B9A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="bold">runAllMmapDemos()</text>
+
+  <rect x="280" y="368" width="180" height="56" rx="8" fill="#FFFFFF" stroke="#AB47BC" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="370" y="400" text-anchor="middle" fill="#6A1B9A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="bold">runSingleMmapDemo()</text>
+
+  <rect x="480" y="362" width="200" height="124" rx="8" fill="#FFFFFF" stroke="#CE93D8" stroke-width="1" stroke-dasharray="5 3"/>
+  <text x="500" y="382" fill="#6A1B9A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="bold">9 &#x6F14;&#x793A;&#x6A21;&#x5757;</text>
+  <text x="500" y="404" fill="#4527A0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">1 SHARED  2 PRIVATE  3 ANON</text>
+  <text x="500" y="422" fill="#4527A0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">4 mprotect  5 madvise  6 offset</text>
+  <text x="500" y="440" fill="#4527A0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">7 dual  8 ringbuf  9 mincore</text>
+
+  <rect x="80" y="440" width="180" height="44" rx="8" fill="#FFFFFF" stroke="#AB47BC" stroke-width="1.2" filter="url(#sh)"/>
+  <text x="170" y="466" text-anchor="middle" fill="#6A1B9A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="bold">ScopedFd / ScopedMmap</text>
+
+  <line x1="380" y1="496" x2="380" y2="520" stroke="#00695C" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+  <!-- Layer 4 -->
+  <rect x="60" y="522" width="640" height="72" rx="12" fill="#E0F2F1" stroke="#00695C" stroke-width="1.5"/>
+  <rect x="60" y="522" width="640" height="28" rx="12" fill="url(#layer4)"/>
+  <rect x="60" y="538" width="640" height="12" fill="url(#layer4)"/>
+  <text x="80" y="542" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">&#x2463; Utility Layer&#xFF08;mmap_utils.h&#xFF09;</text>
+
+  <text x="100" y="578" fill="#00695C" font-family="Consolas, monospace" font-size="11">pageSize()  alignUp()  hexDump()  errnoStr()  LOGI/LOGE</text>
+
+  <line x1="380" y1="594" x2="380" y2="618" stroke="#37474F" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Layer 5 -->
+  <rect x="60" y="620" width="640" height="120" rx="12" fill="#ECEFF1" stroke="#37474F" stroke-width="1.5"/>
+  <rect x="60" y="620" width="640" height="28" rx="12" fill="url(#layer5)"/>
+  <rect x="60" y="636" width="640" height="12" fill="url(#layer5)"/>
+  <text x="80" y="640" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">&#x2464; Linux Kernel / Bionic / Storage</text>
+
+  <rect x="80" y="660" width="600" height="32" rx="8" fill="#FFFFFF" stroke="#607D8B" stroke-width="1"/>
+  <text x="380" y="680" text-anchor="middle" fill="#37474F" font-family="Consolas, monospace" font-size="10">mmap  munmap  mprotect  madvise  msync  mincore  open  ftruncate</text>
+
+  <rect x="80" y="702" width="180" height="28" rx="6" fill="#CFD8DC" stroke="#546E7A" stroke-width="1"/>
+  <text x="170" y="720" text-anchor="middle" fill="#263238" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">&#x6587;&#x4EF6; backing / Page Cache</text>
+
+  <rect x="280" y="702" width="180" height="28" rx="6" fill="#CFD8DC" stroke="#546E7A" stroke-width="1"/>
+  <text x="370" y="720" text-anchor="middle" fill="#263238" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">MAP_ANONYMOUS &#x533F;&#x540D;&#x5185;&#x5B58;</text>
+
+  <rect x="480" y="702" width="200" height="28" rx="6" fill="#CFD8DC" stroke="#546E7A" stroke-width="1"/>
+  <text x="580" y="720" text-anchor="middle" fill="#263238" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">VMA &#xB7; &#x9875;&#x8868; &#xB7; COW</text>
+
+  <!-- Right panel: data flow -->
+  <rect x="720" y="88" width="260" height="200" rx="10" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" filter="url(#sh)"/>
+  <text x="740" y="112" fill="#37474F" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="bold">&#x6570;&#x636E;&#x6D41;&#x5411;</text>
+  <circle cx="750" cy="136" r="6" fill="#1565C0"/>
+  <text x="764" y="140" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">filesDir (String)</text>
+  <circle cx="750" cy="162" r="6" fill="#EF6C00"/>
+  <text x="764" y="166" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">demoId (Int)</text>
+  <circle cx="750" cy="188" r="6" fill="#7B1FA2"/>
+  <text x="764" y="192" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">&#x62A5;&#x544A; (std::string)</text>
+  <circle cx="750" cy="214" r="6" fill="#37474F"/>
+  <text x="764" y="218" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">Logcat: MmapDemo</text>
+  <text x="740" y="248" fill="#78909C" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">&#x6784;&#x5EFA;: Gradle + CMake + NDK</text>
+  <text x="740" y="268" fill="#78909C" font-family="Consolas, monospace" font-size="9">&#x2192; libmyapplication.so</text>
+
+  <!-- Right panel: mmap memory model -->
+  <rect x="720" y="310" width="260" height="430" rx="10" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" filter="url(#sh)"/>
+  <text x="740" y="334" fill="#37474F" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="bold">mmap &#x5185;&#x5B58;&#x6A21;&#x578B;</text>
+
+  <rect x="740" y="350" width="220" height="44" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="1"/>
+  <text x="850" y="368" text-anchor="middle" fill="#1565C0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="bold">&#x8FDB;&#x7A0B;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7A7A;&#x95F4;</text>
+  <text x="850" y="384" text-anchor="middle" fill="#546E7A" font-family="Consolas, monospace" font-size="9">mapA  mapB  ringbuf</text>
+
+  <line x1="850" y1="394" x2="850" y2="414" stroke="#78909C" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="862" y="408" fill="#78909C" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">mmap()</text>
+
+  <rect x="740" y="416" width="220" height="44" rx="6" fill="#FFF3E0" stroke="#EF6C00" stroke-width="1"/>
+  <text x="850" y="434" text-anchor="middle" fill="#E65100" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="bold">VMA (&#x865A;&#x62DF;&#x5185;&#x5B58;&#x533A;&#x57DF;)</text>
+  <text x="850" y="450" text-anchor="middle" fill="#546E7A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">PROT_READ | WRITE | NONE</text>
+
+  <line x1="850" y1="460" x2="850" y2="480" stroke="#78909C" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="862" y="474" fill="#78909C" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">&#x9875;&#x8868;&#x6620;&#x5C04;</text>
+
+  <rect x="740" y="482" width="220" height="44" rx="6" fill="#E8F5E9" stroke="#43A047" stroke-width="1"/>
+  <text x="850" y="500" text-anchor="middle" fill="#2E7D32" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="bold">&#x7269;&#x7406;&#x9875; / Page Cache</text>
+  <text x="850" y="516" text-anchor="middle" fill="#546E7A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">MAP_SHARED &#x5171;&#x4EAB; &#xB7; COW &#x79C1;&#x6709;</text>
+
+  <line x1="850" y1="526" x2="850" y2="546" stroke="#78909C" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="862" y="540" fill="#78909C" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">msync / writeback</text>
+
+  <rect x="740" y="548" width="220" height="44" rx="6" fill="#ECEFF1" stroke="#546E7A" stroke-width="1"/>
+  <text x="850" y="566" text-anchor="middle" fill="#37474F" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="bold">&#x5B58;&#x50A8;&#x540E;&#x7AEF;</text>
+  <text x="850" y="582" text-anchor="middle" fill="#546E7A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">filesDir/*.dat &#xB7; ext4/f2fs</text>
+
+  <rect x="740" y="610" width="100" height="56" rx="6" fill="#F3E5F5" stroke="#AB47BC" stroke-width="1"/>
+  <text x="790" y="632" text-anchor="middle" fill="#6A1B9A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9" font-weight="bold">MAP_SHARED</text>
+  <text x="790" y="648" text-anchor="middle" fill="#757575" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="8">&#x5199;&#x7A7F;&#x5230;&#x78C1;&#x76D8;</text>
+
+  <rect x="860" y="610" width="100" height="56" rx="6" fill="#F3E5F5" stroke="#AB47BC" stroke-width="1"/>
+  <text x="910" y="632" text-anchor="middle" fill="#6A1B9A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9" font-weight="bold">MAP_PRIVATE</text>
+  <text x="910" y="648" text-anchor="middle" fill="#757575" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="8">COW &#x5199;&#x65F6;&#x590D;&#x5236;</text>
+
+  <rect x="740" y="680" width="220" height="44" rx="6" fill="#E0F7FA" stroke="#00ACC1" stroke-width="1"/>
+  <text x="850" y="698" text-anchor="middle" fill="#00838F" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="bold">MAP_ANONYMOUS</text>
+  <text x="850" y="714" text-anchor="middle" fill="#546E7A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="9">&#x65E0;&#x6587;&#x4EF6;&#x540E;&#x7AEF; &#xB7; swap</text>
+</svg>

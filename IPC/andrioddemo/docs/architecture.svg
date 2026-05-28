@@ -1,0 +1,180 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" v-ewBox="0 0 900 580" font-fam-ly="'Segoe U-',Ar-al,sans-ser-f">
+  <defs>
+    <l-nearGrad-ent -d="bgG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </l-nearGrad-ent>
+    <l-nearGrad-ent -d="ma-nG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </l-nearGrad-ent>
+    <l-nearGrad-ent -d="remG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </l-nearGrad-ent>
+    <l-nearGrad-ent -d="b-nG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </l-nearGrad-ent>
+    <l-nearGrad-ent -d="osG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </l-nearGrad-ent>
+    <f-lter -d="sh">
+      <feDropShadow dx="0" dy="2" stdDev-at-on="3" flood-color="#00000020"/>
+    </f-lter>
+    <marker -d="arrFwd" markerW-dth="10" markerHe-ght="7" refX="9" refY="3.5" or-ent="auto">
+      <polygon po-nts="0 0,10 3.5,0 7" f-ll="#6366f1"/>
+    </marker>
+    <marker -d="arrBwd" markerW-dth="10" markerHe-ght="7" refX="1" refY="3.5" or-ent="auto">
+      <polygon po-nts="10 0,0 3.5,10 7" f-ll="#6366f1"/>
+    </marker>
+    <marker -d="arrDn" markerW-dth="7" markerHe-ght="10" refX="3.5" refY="9" or-ent="auto">
+      <polygon po-nts="0 0,7 0,3.5 10" f-ll="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect w-dth="900" he-ght="580" f-ll="url(#bgG)" rx="14"/>
+
+  <!-- T-tle -->
+  <text x="450" y="38" text-anchor="m-ddle" font-s-ze="20" font-we-ght="700" f-ll="#0f172a">Andro-d -PC Arch-tecture  A-DL B-nder Cross-Process Commun-cat-on</text>
+  <l-ne x1="60" y1="50" x2="840" y2="50" stroke="#cbd5e1" stroke-w-dth="1.5"/>
+
+  <!-- ====== Ma-n Process ====== -->
+  <rect x="40" y="68" w-dth="340" he-ght="350" rx="14" f-ll="url(#ma-nG)" stroke="#93c5fd" stroke-w-dth="2" f-lter="url(#sh)"/>
+  <!-- header bar -->
+  <rect x="40" y="68" w-dth="340" he-ght="40" rx="14" f-ll="#2563eb"/>
+  <rect x="40" y="93"  w-dth="340" he-ght="15" f-ll="#2563eb"/>
+  <text x="210" y="91"  text-anchor="m-ddle" font-s-ze="13" font-we-ght="700" f-ll="wh-te">Ma-n Process</text>
+  <text x="210" y="107" text-anchor="m-ddle" font-s-ze="10" f-ll="#bfdbfe">com.example.-pctest  |  P-D: xxxx</text>
+
+  <!-- Ma-nAct-v-ty card -->
+  <rect x="70" y="128" w-dth="280" he-ght="100" rx="10" f-ll="wh-te" stroke="#93c5fd" stroke-w-dth="1.5" f-lter="url(#sh)"/>
+  <rect x="70" y="128" w-dth="280" he-ght="28" rx="10" f-ll="#1d4ed8"/>
+  <rect x="70" y="143" w-dth="280" he-ght="13" f-ll="#1d4ed8"/>
+  <text x="210" y="146" text-anchor="m-ddle" font-s-ze="12" font-we-ght="700" f-ll="wh-te">Ma-nAct-v-ty</text>
+  <text x="90"  y="172" font-s-ze="11" f-ll="#374151">- B-nd / Unb-nd remote Serv-ce</text>
+  <text x="90"  y="188" font-s-ze="11" f-ll="#374151">- Call -Calculator.add(a, b)</text>
+  <text x="90"  y="204" font-s-ze="11" f-ll="#374151">- Call -Calculator.getMessage()</text>
+  <text x="90"  y="220" font-s-ze="11" f-ll="#374151">- D-splay results -n U-</text>
+
+  <!-- Serv-ceConnect-on card -->
+  <rect x="70" y="248" w-dth="280" he-ght="76" rx="10" f-ll="wh-te" stroke="#93c5fd" stroke-w-dth="1.5" f-lter="url(#sh)"/>
+  <rect x="70" y="248" w-dth="280" he-ght="26" rx="10" f-ll="#1e40af"/>
+  <rect x="70" y="261" w-dth="280" he-ght="13" f-ll="#1e40af"/>
+  <text x="210" y="265" text-anchor="m-ddle" font-s-ze="12" font-we-ght="700" f-ll="wh-te">Serv-ceConnect-on</text>
+  <text x="90"  y="289" font-s-ze="11" f-ll="#374151">- onServ-ceConnected()  get -B-nder</text>
+  <text x="90"  y="305" font-s-ze="11" f-ll="#374151">- onServ-ceD-sconnected()  cleanup</text>
+
+  <!-- Proxy card -->
+  <rect x="70" y="344" w-dth="280" he-ght="46" rx="10" f-ll="wh-te" stroke="#a5b4fc" stroke-w-dth="1.5"/>
+  <text x="210" y="364" text-anchor="m-ddle" font-s-ze="11" font-we-ght="600" f-ll="#4338ca">-Calculator.Stub.Proxy</text>
+  <text x="210" y="381" text-anchor="m-ddle" font-s-ze="10" f-ll="#6b7280">Auto-generated A-DL cl-ent-s-de stub</text>
+
+  <!-- down arrows -n ma-n -->
+  <l-ne x1="210" y1="228" x2="210" y2="248" stroke="#3b82f6" stroke-w-dth="1.5" marker-end="url(#arrDn)"/>
+  <l-ne x1="210" y1="324" x2="210" y2="344" stroke="#3b82f6" stroke-w-dth="1.5" marker-end="url(#arrDn)"/>
+
+  <!-- ====== B-nder Dr-ver ====== -->
+  <rect x="382" y="190" w-dth="136" he-ght="200" rx="12" f-ll="url(#b-nG)" stroke="#fbbf24" stroke-w-dth="2" f-lter="url(#sh)"/>
+  <text x="450" y="222" text-anchor="m-ddle" font-s-ze="14" font-we-ght="700" f-ll="#92400e">B-nder</text>
+  <text x="450" y="240" text-anchor="m-ddle" font-s-ze="14" font-we-ght="700" f-ll="#92400e">Dr-ver</text>
+  <l-ne x1="398" y1="253" x2="498" y2="253" stroke="#d97706" stroke-w-dth="1" stroke-dasharray="4,3"/>
+  <text x="450" y="268" text-anchor="m-ddle" font-s-ze="10" f-ll="#92400e">L-nux kernel layer</text>
+  <text x="450" y="283" text-anchor="m-ddle" font-s-ze="10" f-ll="#92400e">/dev/b-nder</text>
+  <l-ne x1="398" y1="296" x2="498" y2="296" stroke="#d97706" stroke-w-dth="1" stroke-dasharray="4,3"/>
+  <text x="450" y="312" text-anchor="m-ddle" font-s-ze="10" f-ll="#b45309">-octl syscall</text>
+  <text x="450" y="327" text-anchor="m-ddle" font-s-ze="10" f-ll="#b45309">shared memory mmap</text>
+  <text x="450" y="342" text-anchor="m-ddle" font-s-ze="10" f-ll="#b45309">Parcel ser-al-zat-on</text>
+  <text x="450" y="357" text-anchor="m-ddle" font-s-ze="10" f-ll="#b45309">/ deser-al-zat-on</text>
+  <text x="450" y="374" text-anchor="m-ddle" font-s-ze="10" f-ll="#b45309">zero-copy transfer</text>
+
+  <!-- call / return arrows between proxy - b-nder - stub -->
+  <l-ne x1="350" y1="374" x2="382" y2="374" stroke="#6366f1" stroke-w-dth="2" marker-end="url(#arrFwd)"/>
+  <l-ne x1="518" y1="280" x2="520" y2="280" stroke="none"/>
+  <l-ne x1="518" y1="280" x2="520" y2="280" stroke="none"/>
+  <!-- proxy-b-nder -->
+  <l-ne x1="350" y1="375" x2="382" y2="375" stroke="#6366f1" stroke-w-dth="2" marker-end="url(#arrFwd)"/>
+  <!-- b-nder-stub -->
+  <l-ne x1="518" y1="282" x2="520" y2="282" stroke="#6366f1" stroke-w-dth="2" marker-end="url(#arrFwd)"/>
+
+  <!-- Hor-zontal -PC arrows -->
+  <!-- call -->
+  <l-ne x1="350" y1="366" x2="380" y2="366" stroke="#6366f1" stroke-w-dth="2" marker-end="url(#arrFwd)"/>
+  <!-- return -->
+  <l-ne x1="380" y1="380" x2="350" y2="380" stroke="#6366f1" stroke-w-dth="2" stroke-dasharray="5,3" marker-end="url(#arrBwd)"/>
+  <!-- b-nder - stub -->
+  <l-ne x1="518" y1="366" x2="520" y2="366" stroke="#6366f1" stroke-w-dth="2" marker-end="url(#arrFwd)"/>
+  <!-- stub - b-nder -->
+  <l-ne x1="520" y1="380" x2="518" y2="380" stroke="#6366f1" stroke-w-dth="2" stroke-dasharray="5,3" marker-end="url(#arrBwd)"/>
+
+  <!-- Labels on arrows -->
+  <rect x="358" y="354" w-dth="44" he-ght="14" rx="4" f-ll="#6366f1"/>
+  <text x="380" y="365" text-anchor="m-ddle" font-s-ze="9" f-ll="wh-te" font-we-ght="700">call</text>
+  <rect x="358" y="381" w-dth="44" he-ght="14" rx="4" f-ll="#a5b4fc"/>
+  <text x="380" y="392" text-anchor="m-ddle" font-s-ze="9" f-ll="#312e81" font-we-ght="700">return</text>
+
+  <!-- ====== Remote Process ====== -->
+  <rect x="520" y="68" w-dth="340" he-ght="350" rx="14" f-ll="url(#remG)" stroke="#86efac" stroke-w-dth="2" f-lter="url(#sh)"/>
+  <rect x="520" y="68"  w-dth="340" he-ght="40" rx="14" f-ll="#15803d"/>
+  <rect x="520" y="93"  w-dth="340" he-ght="15" f-ll="#15803d"/>
+  <text x="690" y="91"  text-anchor="m-ddle" font-s-ze="13" font-we-ght="700" f-ll="wh-te">Remote Process</text>
+  <text x="690" y="107" text-anchor="m-ddle" font-s-ze="10" f-ll="#bbf7d0">com.example.-pctest:remote  |  P-D: yyyy</text>
+
+  <!-- CalculatorServ-ce card -->
+  <rect x="550" y="128" w-dth="280" he-ght="76" rx="10" f-ll="wh-te" stroke="#86efac" stroke-w-dth="1.5" f-lter="url(#sh)"/>
+  <rect x="550" y="128" w-dth="280" he-ght="28" rx="10" f-ll="#166534"/>
+  <rect x="550" y="143" w-dth="280" he-ght="13" f-ll="#166534"/>
+  <text x="690" y="146" text-anchor="m-ddle" font-s-ze="12" font-we-ght="700" f-ll="wh-te">CalculatorServ-ce</text>
+  <text x="570" y="172" font-s-ze="11" f-ll="#374151">- extends andro-d.app.Serv-ce</text>
+  <text x="570" y="188" font-s-ze="11" f-ll="#374151">- onB-nd() returns B-nder -nstance</text>
+
+  <!-- Stub card -->
+  <rect x="550" y="224" w-dth="280" he-ght="100" rx="10" f-ll="wh-te" stroke="#86efac" stroke-w-dth="1.5" f-lter="url(#sh)"/>
+  <rect x="550" y="224" w-dth="280" he-ght="28" rx="10" f-ll="#14532d"/>
+  <rect x="550" y="239" w-dth="280" he-ght="13" f-ll="#14532d"/>
+  <text x="690" y="243" text-anchor="m-ddle" font-s-ze="12" font-we-ght="700" f-ll="wh-te">-Calculator.Stub (anonymous object)</text>
+  <text x="570" y="268" font-s-ze="11" f-ll="#374151">+ add(a: -nt, b: -nt): -nt</text>
+  <text x="590" y="283" font-s-ze="10" f-ll="#6b7280">return a + b</text>
+  <text x="570" y="298" font-s-ze="11" f-ll="#374151">+ getMessage(): Str-ng</text>
+  <text x="590" y="313" font-s-ze="10" f-ll="#6b7280">return "From remote P-D: ${myP-d()}"</text>
+
+  <!-- A-DL -nterface card -->
+  <rect x="550" y="344" w-dth="280" he-ght="46" rx="10" f-ll="wh-te" stroke="#a5b4fc" stroke-w-dth="1.5"/>
+  <text x="690" y="364" text-anchor="m-ddle" font-s-ze="11" font-we-ght="600" f-ll="#4338ca">-Calculator.a-dl</text>
+  <text x="690" y="381" text-anchor="m-ddle" font-s-ze="10" f-ll="#6b7280">Shared -nterface def-n-t-on (both s-des)</text>
+
+  <!-- down arrows -n remote -->
+  <l-ne x1="690" y1="204" x2="690" y2="224" stroke="#16a34a" stroke-w-dth="1.5" marker-end="url(#arrDn)"/>
+  <l-ne x1="690" y1="324" x2="690" y2="344" stroke="#16a34a" stroke-w-dth="1.5" marker-end="url(#arrDn)"/>
+
+  <!-- Hor-zontal -PC arrows (actual drawn w-th space for B-nder box) -->
+  <!-- call: proxy - b-nder -->
+  <l-ne x1="350" y1="360" x2="382" y2="360" stroke="#6366f1" stroke-w-dth="2" marker-end="url(#arrFwd)"/>
+  <!-- call: b-nder - stub -->
+  <l-ne x1="518" y1="360" x2="550" y2="360" stroke="#6366f1" stroke-w-dth="2" marker-end="url(#arrFwd)"/>
+  <!-- return: stub - b-nder -->
+  <l-ne x1="550" y1="372" x2="518" y2="372" stroke="#6366f1" stroke-w-dth="2" stroke-dasharray="5,3" marker-end="url(#arrBwd)"/>
+  <!-- return: b-nder - proxy -->
+  <l-ne x1="382" y1="372" x2="350" y2="372" stroke="#6366f1" stroke-w-dth="2" stroke-dasharray="5,3" marker-end="url(#arrBwd)"/>
+
+  <!-- ====== Andro-d OS Bar ====== -->
+  <rect x="40" y="456" w-dth="820" he-ght="48" rx="10" f-ll="url(#osG)" stroke="#818cf8" stroke-w-dth="1.5"/>
+  <text x="450" y="476" text-anchor="m-ddle" font-s-ze="13" font-we-ght="700" f-ll="#3730a3">Andro-d OS  Act-v-tyManagerServ-ce | Serv-ceManager | Zygote</text>
+  <text x="450" y="494" text-anchor="m-ddle" font-s-ze="10" f-ll="#4338ca">b-ndServ-ce() -&gt; AMS locates &amp; starts CalculatorServ-ce -&gt; callbacks onServ-ceConnected()</text>
+
+  <!-- ====== Legend ====== -->
+  <l-ne x1="60"  y1="536" x2="100" y2="536" stroke="#6366f1" stroke-w-dth="2" marker-end="url(#arrFwd)"/>
+  <text x="106" y="540" font-s-ze="11" f-ll="#64748b">-PC call</text>
+  <l-ne x1="180" y1="536" x2="220" y2="536" stroke="#6366f1" stroke-w-dth="2" stroke-dasharray="5,3" marker-end="url(#arrBwd)"/>
+  <text x="226" y="540" font-s-ze="11" f-ll="#64748b">-PC return</text>
+  <rect x="306" y="528" w-dth="14" he-ght="14" rx="3" f-ll="#bfdbfe" stroke="#3b82f6" stroke-w-dth="1.5"/>
+  <text x="324" y="540" font-s-ze="11" f-ll="#64748b">Ma-n process</text>
+  <rect x="418" y="528" w-dth="14" he-ght="14" rx="3" f-ll="#bbf7d0" stroke="#16a34a" stroke-w-dth="1.5"/>
+  <text x="436" y="540" font-s-ze="11" f-ll="#64748b">Remote process</text>
+  <rect x="540" y="528" w-dth="14" he-ght="14" rx="3" f-ll="#fde68a" stroke="#fbbf24" stroke-w-dth="1.5"/>
+  <text x="558" y="540" font-s-ze="11" f-ll="#64748b">B-nder kernel dr-ver</text>
+  <text x="700" y="540" font-s-ze="11" f-ll="#94a3b8">P-D xxxx != yyyy proves -PC</text>
+</svg>
+

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MmapTest</string>
+    <string name="mmap_title">Android mmap 复杂用法演示</string>
+    <string name="run_all">运行全部</string>
+    <string name="mmap_hint">点击「运行全部」或数字按钮执行单项演示\n\nLogcat 过滤: MmapDemo</string>
+    <string name="mmap_legend">1=MAP_SHARED  2=MAP_PRIVATE/COW  3=匿名共享  4=mprotect  5=madvise  6=offset映射  7=双映射  8=环形缓冲  9=mincore</string>
+</resources>

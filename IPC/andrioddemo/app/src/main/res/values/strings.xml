@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ipctest</string>
+    <string name="ipc_title">AIDL 跨进程通信示例</string>
+    <string name="ipc_description">CalculatorService 运行在独立进程 (:remote)。Activity 通过 Binder 调用远程方法，两个进程的 PID 不同即证明 IPC 生效。</string>
+    <string name="local_pid">当前进程 PID: %1$d</string>
+    <string name="ipc_bind">绑定服务</string>
+    <string name="ipc_unbind">解绑服务</string>
+    <string name="ipc_input_a">数字 A</string>
+    <string name="ipc_input_b">数字 B</string>
+    <string name="ipc_call_add">IPC 调用 add(A, B)</string>
+    <string name="ipc_call_message">IPC 调用 getMessage()</string>
+    <string name="ipc_log_title">调用日志</string>
+    <string name="ipc_connected">已连接到远程服务</string>
+    <string name="ipc_disconnected">远程服务意外断开</string>
+    <string name="ipc_unbound">已解绑远程服务</string>
+    <string name="ipc_not_bound">请先绑定远程服务</string>
+    <string name="ipc_invalid_input">请输入有效整数</string>
+    <string name="ipc_add_result">add(%1$d, %2$d) = %3$d</string>
+    <string name="ipc_message_result">getMessage() → %1$s</string>
+    <string name="ipc_call_failed">调用失败: %1$s</string>
+</resources>

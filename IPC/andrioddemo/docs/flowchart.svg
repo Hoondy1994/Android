@@ -1,0 +1,225 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" v-ewBox="0 0 860 880" font-fam-ly="'Segoe U-',Ar-al,sans-ser-f">
+  <defs>
+    <l-nearGrad-ent -d="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </l-nearGrad-ent>
+    <l-nearGrad-ent -d="uCol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </l-nearGrad-ent>
+    <l-nearGrad-ent -d="mCol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </l-nearGrad-ent>
+    <l-nearGrad-ent -d="bCol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </l-nearGrad-ent>
+    <l-nearGrad-ent -d="rCol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </l-nearGrad-ent>
+    <f-lter -d="sh2">
+      <feDropShadow dx="0" dy="2" stdDev-at-on="3" flood-color="#00000020"/>
+    </f-lter>
+    <marker -d="aFwd" markerW-dth="10" markerHe-ght="7" refX="9" refY="3.5" or-ent="auto">
+      <polygon po-nts="0 0,10 3.5,0 7" f-ll="#6366f1"/>
+    </marker>
+    <marker -d="aRet" markerW-dth="10" markerHe-ght="7" refX="1" refY="3.5" or-ent="auto">
+      <polygon po-nts="10 0,0 3.5,10 7" f-ll="#f472b6"/>
+    </marker>
+    <marker -d="aDn" markerW-dth="7" markerHe-ght="10" refX="3.5" refY="9" or-ent="auto">
+      <polygon po-nts="0 0,7 0,3.5 10" f-ll="#6366f1"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect w-dth="860" he-ght="880" f-ll="url(#bg2)" rx="14"/>
+
+  <!-- T-tle -->
+  <text x="430" y="36" text-anchor="m-ddle" font-s-ze="20" font-we-ght="700" f-ll="#0f172a">Andro-d -PC Flow  A-DL B-nder Call Sequence</text>
+  <l-ne x1="60" y1="48" x2="800" y2="48" stroke="#cbd5e1" stroke-w-dth="1.5"/>
+
+  <!-- ====== Column Headers ====== -->
+  <rect x="20"  y="58" w-dth="155" he-ght="34" rx="8" f-ll="#0284c7"/>
+  <text x="97"  y="80" text-anchor="m-ddle" font-s-ze="12" font-we-ght="700" f-ll="wh-te">User / U-</text>
+
+  <rect x="195" y="58" w-dth="200" he-ght="34" rx="8" f-ll="#2563eb"/>
+  <text x="295" y="80" text-anchor="m-ddle" font-s-ze="12" font-we-ght="700" f-ll="wh-te">Ma-n Process - Ma-nAct-v-ty</text>
+
+  <rect x="415" y="58" w-dth="145" he-ght="34" rx="8" f-ll="#d97706"/>
+  <text x="487" y="80" text-anchor="m-ddle" font-s-ze="12" font-we-ght="700" f-ll="wh-te">B-nder Dr-ver</text>
+
+  <rect x="580" y="58" w-dth="260" he-ght="34" rx="8" f-ll="#16a34a"/>
+  <text x="710" y="80" text-anchor="m-ddle" font-s-ze="12" font-we-ght="700" f-ll="wh-te">Remote Process - CalculatorServ-ce</text>
+
+  <!-- Sw-mlane gu-de l-nes -->
+  <l-ne x1="97"  y1="92" x2="97"  y2="836" stroke="#bae6fd" stroke-w-dth="1" stroke-dasharray="6,4"/>
+  <l-ne x1="295" y1="92" x2="295" y2="836" stroke="#93c5fd" stroke-w-dth="1" stroke-dasharray="6,4"/>
+  <l-ne x1="487" y1="92" x2="487" y2="836" stroke="#fbbf24" stroke-w-dth="1" stroke-dasharray="6,4"/>
+  <l-ne x1="710" y1="92" x2="710" y2="836" stroke="#86efac" stroke-w-dth="1" stroke-dasharray="6,4"/>
+
+  <!-- ====== B-ND PHASE ====== -->
+  <text x="430" y="112" text-anchor="m-ddle" font-s-ze="10" font-we-ght="700" f-ll="#94a3b8" letter-spac-ng="2">B-ND PHASE</text>
+
+  <!-- Step 1: onCreate -->
+  <rect x="195" y="118" w-dth="200" he-ght="42" rx="8" f-ll="url(#mCol)" stroke="#3b82f6" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="295" y="134" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#1e40af">1. onCreate()</text>
+  <text x="295" y="151" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">-n-t V-ewB-nd-ng, set cl-ck l-steners</text>
+
+  <!-- Step 2: onStart / b-ndServ-ce -->
+  <rect x="195" y="178" w-dth="200" he-ght="42" rx="8" f-ll="url(#mCol)" stroke="#3b82f6" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="295" y="194" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#1e40af">2. onStart() -&gt; b-ndServ-ce()</text>
+  <text x="295" y="211" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">Send b-nd request to AMS</text>
+  <l-ne x1="295" y1="160" x2="295" y2="178" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aDn)"/>
+
+  <!-- Step 3: AMS routes -->
+  <rect x="415" y="178" w-dth="145" he-ght="42" rx="8" f-ll="url(#bCol)" stroke="#fbbf24" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="487" y="194" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#92400e">3. AMS routes</text>
+  <text x="487" y="211" text-anchor="m-ddle" font-s-ze="10" f-ll="#78350f">F-nd / start remote process</text>
+  <l-ne x1="395" y1="199" x2="415" y2="199" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <!-- Step 4: onB-nd -->
+  <rect x="580" y="178" w-dth="260" he-ght="42" rx="8" f-ll="url(#rCol)" stroke="#16a34a" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="710" y="194" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#166534">4. CalculatorServ-ce.onB-nd()</text>
+  <text x="710" y="211" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">Returns -Calculator.Stub -nstance</text>
+  <l-ne x1="560" y1="199" x2="580" y2="199" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <!-- Step 5: onServ-ceConnected callback -->
+  <rect x="195" y="244" w-dth="200" he-ght="42" rx="8" f-ll="url(#mCol)" stroke="#3b82f6" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="295" y="260" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#1e40af">5. onServ-ceConnected()</text>
+  <text x="295" y="277" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">Hold Proxy ref, bound = true</text>
+  <!-- callback arrow: remote -> ma-n -->
+  <l-ne x1="710" y1="220" x2="710" y2="265" stroke="#f472b6" stroke-w-dth="1.8" stroke-dasharray="5,3"/>
+  <l-ne x1="710" y1="265" x2="395" y2="265" stroke="#f472b6" stroke-w-dth="1.8" stroke-dasharray="5,3" marker-end="url(#aRet)"/>
+  <rect x="518" y="256" w-dth="68" he-ght="14" rx="4" f-ll="#fce7f3"/>
+  <text x="552" y="267" text-anchor="m-ddle" font-s-ze="9" f-ll="#be185d" font-we-ght="600">-B-nder callback</text>
+
+  <!-- ====== ADD PHASE ====== -->
+  <l-ne x1="40" y1="306" x2="820" y2="306" stroke="#e2e8f0" stroke-w-dth="1.5" stroke-dasharray="8,4"/>
+  <text x="430" y="320" text-anchor="m-ddle" font-s-ze="10" font-we-ght="700" f-ll="#94a3b8" letter-spac-ng="2">CALL add(12, 30)</text>
+
+  <!-- Step 6: user cl-cks -->
+  <rect x="20"  y="328" w-dth="155" he-ght="42" rx="8" f-ll="url(#uCol)" stroke="#0284c7" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="97"  y="344" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#0c4a6e">6. Tap "Call add"</text>
+  <text x="97"  y="361" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">-nput A=12, B=30</text>
+
+  <!-- Step 7: callAdd -->
+  <rect x="195" y="328" w-dth="200" he-ght="42" rx="8" f-ll="url(#mCol)" stroke="#3b82f6" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="295" y="344" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#1e40af">7. callAdd()</text>
+  <text x="295" y="361" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">proxy.add(12,30)  ser-al-ze Parcel</text>
+  <l-ne x1="175" y1="349" x2="195" y2="349" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <!-- Step 8: B-nder transport -->
+  <rect x="415" y="328" w-dth="145" he-ght="42" rx="8" f-ll="url(#bCol)" stroke="#fbbf24" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="487" y="344" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#92400e">8. -octl transfer</text>
+  <text x="487" y="361" text-anchor="m-ddle" font-s-ze="10" f-ll="#78350f">Wr-te Parcel to shared mem</text>
+  <l-ne x1="395" y1="349" x2="415" y2="349" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <!-- Step 9: onTransact -->
+  <rect x="580" y="328" w-dth="260" he-ght="42" rx="8" f-ll="url(#rCol)" stroke="#16a34a" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="710" y="344" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#166534">9. Stub.onTransact()</text>
+  <text x="710" y="361" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">Deser-al-ze args, d-spatch to add()</text>
+  <l-ne x1="560" y1="349" x2="580" y2="349" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <!-- Step 10: add executes -->
+  <rect x="580" y="388" w-dth="260" he-ght="42" rx="8" f-ll="url(#rCol)" stroke="#16a34a" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="710" y="404" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#166534">10. add(12, 30)</text>
+  <text x="710" y="421" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">Compute 12+30=42, wr-te reply Parcel</text>
+  <l-ne x1="710" y1="370" x2="710" y2="388" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aDn)"/>
+
+  <!-- Step 11: return v-a b-nder -->
+  <rect x="415" y="388" w-dth="145" he-ght="42" rx="8" f-ll="url(#bCol)" stroke="#fbbf24" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="487" y="404" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#92400e">11. Return result</text>
+  <text x="487" y="421" text-anchor="m-ddle" font-s-ze="10" f-ll="#78350f">B-nder sends reply to ma-n</text>
+  <l-ne x1="580" y1="409" x2="560" y2="409" stroke="#f472b6" stroke-w-dth="1.8" stroke-dasharray="5,3" marker-end="url(#aRet)"/>
+
+  <!-- Step 12: unpack result -->
+  <rect x="195" y="388" w-dth="200" he-ght="42" rx="8" f-ll="url(#mCol)" stroke="#3b82f6" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="295" y="404" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#1e40af">12. Unpack reply</text>
+  <text x="295" y="421" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">result=42, appendLog() update U-</text>
+  <l-ne x1="415" y1="409" x2="395" y2="409" stroke="#f472b6" stroke-w-dth="1.8" stroke-dasharray="5,3" marker-end="url(#aRet)"/>
+
+  <!-- Step 13: show result -->
+  <rect x="20"  y="388" w-dth="155" he-ght="42" rx="8" f-ll="url(#uCol)" stroke="#0284c7" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="97"  y="404" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#0c4a6e">13. Show result</text>
+  <text x="97"  y="421" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">Log: add(12,30) = 42</text>
+  <l-ne x1="195" y1="409" x2="175" y2="409" stroke="#f472b6" stroke-w-dth="1.8" stroke-dasharray="5,3" marker-end="url(#aRet)"/>
+
+  <!-- ====== getMessage PHASE ====== -->
+  <l-ne x1="40" y1="450" x2="820" y2="450" stroke="#e2e8f0" stroke-w-dth="1.5" stroke-dasharray="8,4"/>
+  <text x="430" y="464" text-anchor="m-ddle" font-s-ze="10" font-we-ght="700" f-ll="#94a3b8" letter-spac-ng="2">CALL getMessage()</text>
+
+  <rect x="20"  y="472" w-dth="155" he-ght="42" rx="8" f-ll="url(#uCol)" stroke="#0284c7" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="97"  y="488" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#0c4a6e">14. Tap "getMessage"</text>
+  <text x="97"  y="505" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151"/>
+
+  <rect x="195" y="472" w-dth="200" he-ght="42" rx="8" f-ll="url(#mCol)" stroke="#3b82f6" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="295" y="488" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#1e40af">15. callGetMessage()</text>
+  <text x="295" y="505" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">proxy.getMessage()  ser-al-ze</text>
+  <l-ne x1="175" y1="493" x2="195" y2="493" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <rect x="415" y="472" w-dth="145" he-ght="42" rx="8" f-ll="url(#bCol)" stroke="#fbbf24" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="487" y="488" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#92400e">16. B-nder -PC</text>
+  <text x="487" y="505" text-anchor="m-ddle" font-s-ze="10" f-ll="#78350f">-octl to remote process</text>
+  <l-ne x1="395" y1="493" x2="415" y2="493" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <rect x="580" y="472" w-dth="260" he-ght="42" rx="8" f-ll="url(#rCol)" stroke="#16a34a" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="710" y="488" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#166534">17. getMessage() executes</text>
+  <text x="710" y="505" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">Returns "From remote P-D: yyyy"</text>
+  <l-ne x1="560" y1="493" x2="580" y2="493" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <rect x="195" y="532" w-dth="200" he-ght="42" rx="8" f-ll="url(#mCol)" stroke="#3b82f6" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="295" y="548" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#1e40af">18. Unpack reply str-ng</text>
+  <text x="295" y="565" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">appendLog() update U-</text>
+  <l-ne x1="710" y1="514" x2="710" y2="553" stroke="#f472b6" stroke-w-dth="1.8" stroke-dasharray="5,3"/>
+  <l-ne x1="710" y1="553" x2="395" y2="553" stroke="#f472b6" stroke-w-dth="1.8" stroke-dasharray="5,3" marker-end="url(#aRet)"/>
+
+  <rect x="20"  y="532" w-dth="155" he-ght="42" rx="8" f-ll="url(#uCol)" stroke="#0284c7" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="97"  y="548" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#0c4a6e">19. Show message</text>
+  <text x="97"  y="565" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">Proves cross-process -PC</text>
+  <l-ne x1="195" y1="553" x2="175" y2="553" stroke="#f472b6" stroke-w-dth="1.8" stroke-dasharray="5,3" marker-end="url(#aRet)"/>
+
+  <!-- ====== UNB-ND PHASE ====== -->
+  <l-ne x1="40" y1="594" x2="820" y2="594" stroke="#e2e8f0" stroke-w-dth="1.5" stroke-dasharray="8,4"/>
+  <text x="430" y="608" text-anchor="m-ddle" font-s-ze="10" font-we-ght="700" f-ll="#94a3b8" letter-spac-ng="2">UNB-ND PHASE</text>
+
+  <rect x="20"  y="616" w-dth="155" he-ght="42" rx="8" f-ll="url(#uCol)" stroke="#0284c7" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="97"  y="632" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#0c4a6e">20. Tap "Unb-nd"</text>
+  <text x="97"  y="649" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">or Act-v-ty.onStop()</text>
+
+  <rect x="195" y="616" w-dth="200" he-ght="42" rx="8" f-ll="url(#mCol)" stroke="#3b82f6" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="295" y="632" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#1e40af">21. unb-ndServ-ce()</text>
+  <text x="295" y="649" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">bound=false, calculator=null</text>
+  <l-ne x1="175" y1="637" x2="195" y2="637" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <rect x="415" y="616" w-dth="145" he-ght="42" rx="8" f-ll="url(#bCol)" stroke="#fbbf24" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="487" y="632" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#92400e">22. Not-fy AMS</text>
+  <text x="487" y="649" text-anchor="m-ddle" font-s-ze="10" f-ll="#78350f">Ref count reaches zero</text>
+  <l-ne x1="395" y1="637" x2="415" y2="637" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <rect x="580" y="616" w-dth="260" he-ght="42" rx="8" f-ll="url(#rCol)" stroke="#16a34a" stroke-w-dth="1.5" f-lter="url(#sh2)"/>
+  <text x="710" y="632" text-anchor="m-ddle" font-s-ze="11" font-we-ght="700" f-ll="#166534">23. onUnb-nd() callback</text>
+  <text x="710" y="649" text-anchor="m-ddle" font-s-ze="10" f-ll="#374151">Serv-ce may be collected by system</text>
+  <l-ne x1="560" y1="637" x2="580" y2="637" stroke="#6366f1" stroke-w-dth="1.8" marker-end="url(#aFwd)"/>
+
+  <!-- ====== Legend ====== -->
+  <rect x="30" y="678" w-dth="800" he-ght="52" rx="10" f-ll="#f1f5f9" stroke="#cbd5e1" stroke-w-dth="1.5"/>
+  <text x="58" y="700" font-s-ze="11" font-we-ght="700" f-ll="#475569">Legend:</text>
+  <l-ne x1="108" y1="696" x2="148" y2="696" stroke="#6366f1" stroke-w-dth="2" marker-end="url(#aFwd)"/>
+  <text x="154" y="700" font-s-ze="10" f-ll="#475569">Forward call</text>
+  <l-ne x1="230" y1="696" x2="270" y2="696" stroke="#f472b6" stroke-w-dth="2" stroke-dasharray="5,3" marker-end="url(#aRet)"/>
+  <text x="276" y="700" font-s-ze="10" f-ll="#475569">Return / callback</text>
+  <rect x="366" y="689" w-dth="13" he-ght="13" rx="3" f-ll="#bae6fd" stroke="#0284c7" stroke-w-dth="1.5"/>
+  <text x="383" y="700" font-s-ze="10" f-ll="#475569">User/U-</text>
+  <rect x="432" y="689" w-dth="13" he-ght="13" rx="3" f-ll="#bfdbfe" stroke="#2563eb" stroke-w-dth="1.5"/>
+  <text x="449" y="700" font-s-ze="10" f-ll="#475569">Ma-n process</text>
+  <rect x="524" y="689" w-dth="13" he-ght="13" rx="3" f-ll="#fde68a" stroke="#d97706" stroke-w-dth="1.5"/>
+  <text x="541" y="700" font-s-ze="10" f-ll="#475569">B-nder dr-ver</text>
+  <rect x="614" y="689" w-dth="13" he-ght="13" rx="3" f-ll="#bbf7d0" stroke="#16a34a" stroke-w-dth="1.5"/>
+  <text x="631" y="700" font-s-ze="10" f-ll="#475569">Remote process</text>
+
+  <text x="58"  y="720" font-s-ze="10" f-ll="#94a3b8">Note: All -PC calls block the caller thread by default. Use a worker thread or "oneway" A-DL keyword for async -nvocat-on.</text>
+</svg>
+

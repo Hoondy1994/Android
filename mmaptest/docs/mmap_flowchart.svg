@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 1180" width="920" height="1180">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#455A64"/>
+    </marker>
+    <linearGradient id="startGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#66BB6A"/>
+      <stop offset="100%" stop-color="#43A047"/>
+    </linearGradient>
+    <linearGradient id="uiGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#42A5F5"/>
+      <stop offset="100%" stop-color="#1E88E5"/>
+    </linearGradient>
+    <linearGradient id="jniGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA726"/>
+      <stop offset="100%" stop-color="#FB8C00"/>
+    </linearGradient>
+    <linearGradient id="nativeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#AB47BC"/>
+      <stop offset="100%" stop-color="#8E24AA"/>
+    </linearGradient>
+    <linearGradient id="decisionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF59D"/>
+      <stop offset="100%" stop-color="#FDD835"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="920" height="72" fill="#263238"/>
+  <text x="460" y="32" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="bold">MmapTest &#x6267;&#x884C;&#x6D41;&#x7A0B;&#x56FE;</text>
+  <text x="460" y="56" text-anchor="middle" fill="#B0BEC5" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13">&#x7528;&#x6237;&#x64CD;&#x4F5C; &#x2192; JNI &#x2192; mmap &#x6F14;&#x793A; &#x2192; &#x7ED3;&#x679C;&#x56DE;&#x663E;</text>
+
+  <ellipse cx="460" cy="110" rx="72" ry="28" fill="url(#startGrad)" filter="url(#shadow)"/>
+  <text x="460" y="115" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="bold">&#x5F00;&#x59CB;</text>
+
+  <line x1="460" y1="138" x2="460" y2="168" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="300" y="170" width="320" height="52" rx="10" fill="url(#uiGrad)" filter="url(#shadow)"/>
+  <text x="460" y="194" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="bold">&#x7528;&#x6237;&#x70B9;&#x51FB;&#x6309;&#x94AE;</text>
+  <text x="460" y="212" text-anchor="middle" fill="#E3F2FD" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">&#x300C;&#x8FD0;&#x884C;&#x5168;&#x90E8;&#x300D;&#x6216; Demo 1&#x2013;9</text>
+
+  <line x1="460" y1="222" x2="460" y2="252" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="260" y="254" width="400" height="56" rx="10" fill="url(#uiGrad)" filter="url(#shadow)"/>
+  <text x="460" y="278" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="bold">MainActivity.runDemo()</text>
+  <text x="460" y="296" text-anchor="middle" fill="#E3F2FD" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">outputText &#x2190; &quot;&#x8FD0;&#x884C;&#x4E2D;...&quot;</text>
+
+  <line x1="460" y1="310" x2="460" y2="340" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="280" y="342" width="360" height="52" rx="10" fill="#ECEFF1" stroke="#607D8B" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="460" y="366" text-anchor="middle" fill="#37474F" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="bold">&#x540E;&#x53F0; Thread &#x542F;&#x52A8;</text>
+  <text x="460" y="384" text-anchor="middle" fill="#546E7A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">&#x907F;&#x514D;&#x963B;&#x585E; UI &#x4E3B;&#x7EBF;&#x7A0B;</text>
+
+  <line x1="460" y1="394" x2="460" y2="424" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <polygon points="460,426 580,476 460,526 340,476" fill="url(#decisionGrad)" stroke="#F9A825" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="460" y="472" text-anchor="middle" fill="#424242" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">&#x8FD0;&#x884C;&#x6A21;&#x5F0F;?</text>
+  <text x="460" y="490" text-anchor="middle" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">&#x5168;&#x90E8; / &#x5355;&#x9879;</text>
+
+  <line x1="340" y1="476" x2="180" y2="476" stroke="#455A64" stroke-width="2"/>
+  <line x1="180" y1="476" x2="180" y2="560" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="250" y="468" fill="#546E7A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="12">&#x5168;&#x90E8;</text>
+
+  <rect x="60" y="562" width="240" height="48" rx="10" fill="url(#jniGrad)" filter="url(#shadow)"/>
+  <text x="180" y="584" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">runAllMmapDemos</text>
+  <text x="180" y="600" text-anchor="middle" fill="#FFF3E0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">(filesDir)</text>
+
+  <line x1="580" y1="476" x2="740" y2="476" stroke="#455A64" stroke-width="2"/>
+  <line x1="740" y1="476" x2="740" y2="560" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="650" y="468" fill="#546E7A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="12">&#x5355;&#x9879; demoId</text>
+
+  <rect x="620" y="562" width="240" height="48" rx="10" fill="url(#jniGrad)" filter="url(#shadow)"/>
+  <text x="740" y="584" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">runSingleMmapDemo</text>
+  <text x="740" y="600" text-anchor="middle" fill="#FFF3E0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">(filesDir, demoId)</text>
+
+  <line x1="180" y1="610" x2="180" y2="640" stroke="#455A64" stroke-width="2"/>
+  <line x1="740" y1="610" x2="740" y2="640" stroke="#455A64" stroke-width="2"/>
+  <line x1="180" y1="640" x2="740" y2="640" stroke="#455A64" stroke-width="2"/>
+  <line x1="460" y1="640" x2="460" y2="668" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="240" y="670" width="440" height="56" rx="10" fill="url(#jniGrad)" filter="url(#shadow)"/>
+  <text x="460" y="694" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="bold">native-lib.cpp  JNI &#x6865;&#x63A5;</text>
+  <text x="460" y="712" text-anchor="middle" fill="#FFF3E0" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">GetStringUTFChars &#x2192; C++ &#x2192; NewStringUTF</text>
+
+  <line x1="460" y1="726" x2="460" y2="756" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="220" y="758" width="480" height="56" rx="10" fill="url(#nativeGrad)" filter="url(#shadow)"/>
+  <text x="460" y="782" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="bold">mmap_demo.cpp  &#x6F14;&#x793A;&#x8C03;&#x5EA6;</text>
+  <text x="460" y="800" text-anchor="middle" fill="#F3E5F5" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">switch(demoId) &#x6216;&#x987A;&#x5E8F;&#x6267;&#x884C; Demo 1&#x2013;9</text>
+
+  <line x1="460" y1="814" x2="460" y2="844" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="846" width="840" height="130" rx="12" fill="#FAFAFA" stroke="#BDBDBD" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="60" y="868" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="bold">mmap &#x6F14;&#x793A;&#x5185;&#x6838;&#xFF08;&#x6BCF;&#x9879;&#x72EC;&#x7ACB;&#x6267;&#x884C;&#xFF09;</text>
+
+  <rect x="60" y="882" width="150" height="36" rx="6" fill="#E8EAF6" stroke="#5C6BC0" stroke-width="1"/>
+  <text x="135" y="904" text-anchor="middle" fill="#3949AB" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">open / ftruncate</text>
+  <text x="220" y="904" fill="#78909C" font-family="Segoe UI, sans-serif" font-size="16">&#x2192;</text>
+  <rect x="235" y="882" width="150" height="36" rx="6" fill="#E8F5E9" stroke="#66BB6A" stroke-width="1"/>
+  <text x="310" y="904" text-anchor="middle" fill="#2E7D32" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">mmap / munmap</text>
+  <text x="395" y="904" fill="#78909C" font-family="Segoe UI, sans-serif" font-size="16">&#x2192;</text>
+  <rect x="410" y="882" width="150" height="36" rx="6" fill="#FFF8E1" stroke="#FFB300" stroke-width="1"/>
+  <text x="485" y="904" text-anchor="middle" fill="#F57F17" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">&#x8BFB;&#x5199; / atomic</text>
+  <text x="570" y="904" fill="#78909C" font-family="Segoe UI, sans-serif" font-size="16">&#x2192;</text>
+  <rect x="585" y="882" width="150" height="36" rx="6" fill="#FCE4EC" stroke="#EC407A" stroke-width="1"/>
+  <text x="660" y="904" text-anchor="middle" fill="#C2185B" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">msync / madvise</text>
+  <text x="745" y="904" fill="#78909C" font-family="Segoe UI, sans-serif" font-size="16">&#x2192;</text>
+  <rect x="760" y="882" width="100" height="36" rx="6" fill="#E0F7FA" stroke="#00ACC1" stroke-width="1"/>
+  <text x="810" y="904" text-anchor="middle" fill="#00838F" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">&#x751F;&#x6210;&#x62A5;&#x544A;</text>
+
+  <text x="60" y="940" fill="#757575" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">1 MAP_SHARED  2 MAP_PRIVATE/COW  3 &#x533F;&#x540D;&#x5171;&#x4EAB;  4 mprotect  5 madvise</text>
+  <text x="60" y="958" fill="#757575" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">6 offset &#x6620;&#x5C04;  7 &#x53CC;&#x6620;&#x5C04;  8 &#x73AF;&#x5F62;&#x7F13;&#x51B2;  9 mincore</text>
+
+  <line x1="460" y1="976" x2="460" y2="1006" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="280" y="1008" width="360" height="48" rx="10" fill="#ECEFF1" stroke="#607D8B" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="460" y="1030" text-anchor="middle" fill="#37474F" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">&#x8FD4;&#x56DE; std::string &#x62A5;&#x544A;</text>
+  <text x="460" y="1046" text-anchor="middle" fill="#546E7A" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="10">&#x7ECF; JNI &#x8F6C;&#x4E3A; jstring</text>
+
+  <line x1="460" y1="1056" x2="460" y2="1086" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="260" y="1088" width="400" height="52" rx="10" fill="url(#uiGrad)" filter="url(#shadow)"/>
+  <text x="460" y="1112" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="bold">runOnUiThread &#x66F4;&#x65B0; UI</text>
+  <text x="460" y="1130" text-anchor="middle" fill="#E3F2FD" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">ScrollView / outputText &#x663E;&#x793A;&#x7ED3;&#x679C;</text>
+
+  <line x1="460" y1="1140" x2="460" y2="1158" stroke="#455A64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <ellipse cx="460" cy="1168" rx="60" ry="24" fill="url(#startGrad)" filter="url(#shadow)"/>
+  <text x="460" y="1173" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold">&#x7ED3;&#x675F;</text>
+
+  <rect x="680" y="100" width="220" height="120" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" filter="url(#shadow)"/>
+  <text x="700" y="122" fill="#37474F" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="bold">&#x56FE;&#x4F8B;</text>
+  <rect x="700" y="134" width="16" height="16" rx="3" fill="url(#uiGrad)"/>
+  <text x="724" y="147" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">Android UI &#x5C42;</text>
+  <rect x="700" y="158" width="16" height="16" rx="3" fill="url(#jniGrad)"/>
+  <text x="724" y="171" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">JNI &#x6865;&#x63A5;&#x5C42;</text>
+  <rect x="700" y="182" width="16" height="16" rx="3" fill="url(#nativeGrad)"/>
+  <text x="724" y="195" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">Native &#x6F14;&#x793A;&#x5C42;</text>
+  <polygon points="708,206 716,214 708,222 700,214" fill="url(#decisionGrad)" stroke="#F9A825" stroke-width="1"/>
+  <text x="724" y="217" fill="#616161" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" font-size="11">&#x6761;&#x4EF6;&#x5206;&#x652F;</text>
+</svg>

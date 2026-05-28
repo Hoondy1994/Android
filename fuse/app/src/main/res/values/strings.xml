@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">filefuse</string>
+    <string name="app_title">FileFuse: FUSE + VFS + NFS</string>
+    <string name="backend_local">Local</string>
+    <string name="backend_nfs">NFS</string>
+    <string name="local_path_hint">Local root path</string>
+    <string name="nfs_host_hint">NFS server host</string>
+    <string name="nfs_export_hint">NFS export path, e.g. /export</string>
+    <string name="mount">Mount</string>
+    <string name="unmount">Unmount</string>
+    <string name="mount_success">Mounted</string>
+    <string name="mount_failed">Mount failed: %1$d</string>
+    <string name="current_path">Path: %1$s</string>
+</resources>
