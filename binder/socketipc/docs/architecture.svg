@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="mainProc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="binderProc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </linearGradient>
+    <linearGradient id="socketProc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffedd5"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+    <linearGradient id="nativeLib" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#475569"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#15803d"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#c2410c"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="820" fill="url(#bg)"/>
+  <text x="600" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">SocketIPC 项目架构图</text>
+  <text x="600" y="68" text-anchor="middle" font-size="14" fill="#64748b">Binder IPC vs Unix Domain Socket IPC / C++20 Native / 三进程模型</text>
+  <rect x="40" y="88" width="1120" height="56" rx="10" fill="#1e293b" filter="url(#shadow)"/>
+  <text x="600" y="122" text-anchor="middle" font-size="15" font-weight="600" fill="#f8fafc">Android Framework / Linux Kernel</text>
+  <rect x="80" y="168" width="220" height="48" rx="8" fill="#334155" filter="url(#shadow)"/>
+  <text x="190" y="198" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">Binder Driver (/dev/binder)</text>
+  <rect x="900" y="168" width="220" height="48" rx="8" fill="#334155" filter="url(#shadow)"/>
+  <text x="1010" y="192" text-anchor="middle" font-size="13" font-weight="600" fill="#e2e8f0">Unix Domain Socket</text>
+  <text x="1010" y="208" text-anchor="middle" font-size="11" fill="#94a3b8">abstract:socketipc_calc</text>
+  <rect x="40" y="240" width="360" height="340" rx="14" fill="url(#mainProc)" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="240" width="360" height="36" rx="14" fill="#2563eb"/>
+  <rect x="40" y="262" width="360" height="14" fill="#2563eb"/>
+  <text x="220" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">主进程 (Main Process)</text>
+  <text x="220" y="282" text-anchor="middle" font-size="11" fill="#1e40af">com.example.myapplication</text>
+  <rect x="60" y="300" width="320" height="52" rx="8" fill="#fff" stroke="#93c5fd"/>
+  <text x="220" y="322" text-anchor="middle" font-size="13" font-weight="600" fill="#1e3a8a">MainActivity (Kotlin UI)</text>
+  <text x="220" y="340" text-anchor="middle" font-size="11" fill="#64748b">bindService / 压测入口 / 日志展示</text>
+  <rect x="60" y="362" width="150" height="44" rx="8" fill="#fff" stroke="#93c5fd"/>
+  <text x="135" y="382" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">ICalculator</text>
+  <text x="135" y="398" text-anchor="middle" font-size="10" fill="#64748b">AIDL Client Stub</text>
+  <rect x="230" y="362" width="150" height="44" rx="8" fill="#fff" stroke="#93c5fd"/>
+  <text x="305" y="382" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">JNI Bridge</text>
+  <text x="305" y="398" text-anchor="middle" font-size="10" fill="#64748b">nativeWait / nativeAdd</text>
+  <rect x="60" y="418" width="320" height="44" rx="8" fill="#fff" stroke="#93c5fd"/>
+  <text x="220" y="438" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">BinderBenchmark / NativeIpc</text>
+  <text x="220" y="454" text-anchor="middle" font-size="10" fill="#64748b">多线程压测 / CustomCodec / ParcelCodec</text>
+  <rect x="60" y="474" width="320" height="44" rx="8" fill="#fff" stroke="#93c5fd"/>
+  <text x="220" y="494" text-anchor="middle" font-size="12" font-weight="600" fill="#1e3a8a">SocketClient (C++)</text>
+  <text x="220" y="510" text-anchor="middle" font-size="10" fill="#64748b">ping / add / process_custom / parcel</text>
+  <rect x="60" y="530" width="320" height="36" rx="8" fill="#eff6ff" stroke="#60a5fa" stroke-dasharray="4,3"/>
+  <text x="220" y="553" text-anchor="middle" font-size="11" fill="#1d4ed8">libmyapplication.so (Client 部分)</text>
+  <rect x="420" y="240" width="360" height="340" rx="14" fill="url(#binderProc)" stroke="#22c55e" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="420" y="240" width="360" height="36" rx="14" fill="#16a34a"/>
+  <rect x="420" y="262" width="360" height="14" fill="#16a34a"/>
+  <text x="600" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Binder 远程进程</text>
+  <text x="600" y="282" text-anchor="middle" font-size="11" fill="#14532d">:binder_remote</text>
+  <rect x="440" y="300" width="320" height="52" rx="8" fill="#fff" stroke="#86efac"/>
+  <text x="600" y="322" text-anchor="middle" font-size="13" font-weight="600" fill="#14532d">CalculatorService (Kotlin)</text>
+  <text x="600" y="340" text-anchor="middle" font-size="11" fill="#64748b">ICalculator.Stub / onBind</text>
+  <rect x="440" y="362" width="320" height="44" rx="8" fill="#fff" stroke="#86efac"/>
+  <text x="600" y="382" text-anchor="middle" font-size="12" font-weight="600" fill="#14532d">AIDL 接口层</text>
+  <text x="600" y="398" text-anchor="middle" font-size="10" fill="#64748b">add / processCustom / processParcel</text>
+  <rect x="440" y="418" width="320" height="44" rx="8" fill="#fff" stroke="#86efac"/>
+  <text x="600" y="438" text-anchor="middle" font-size="12" font-weight="600" fill="#14532d">NativeIpc (JNI Server)</text>
+  <text x="600" y="454" text-anchor="middle" font-size="10" fill="#64748b">nativeProcessCustom / ParcelPayload</text>
+  <rect x="440" y="474" width="320" height="44" rx="8" fill="#fff" stroke="#86efac"/>
+  <text x="600" y="494" text-anchor="middle" font-size="12" font-weight="600" fill="#14532d">业务逻辑</text>
+  <text x="600" y="510" text-anchor="middle" font-size="10" fill="#64748b">整数加法 / UserProfile 编解码</text>
+  <rect x="440" y="530" width="320" height="36" rx="8" fill="#f0fdf4" stroke="#4ade80" stroke-dasharray="4,3"/>
+  <text x="600" y="553" text-anchor="middle" font-size="11" fill="#15803d">libmyapplication.so (Server 编解码)</text>
+  <rect x="800" y="240" width="360" height="340" rx="14" fill="url(#socketProc)" stroke="#f97316" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="800" y="240" width="360" height="36" rx="14" fill="#ea580c"/>
+  <rect x="800" y="262" width="360" height="14" fill="#ea580c"/>
+  <text x="980" y="264" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Socket 远程进程</text>
+  <text x="980" y="282" text-anchor="middle" font-size="11" fill="#7c2d12">:socket_remote</text>
+  <rect x="820" y="300" width="320" height="52" rx="8" fill="#fff" stroke="#fdba74"/>
+  <text x="980" y="322" text-anchor="middle" font-size="13" font-weight="600" fill="#9a3412">SocketServerService (Kotlin)</text>
+  <text x="980" y="340" text-anchor="middle" font-size="11" fill="#64748b">onCreate / nativeStartSocketServer</text>
+  <rect x="820" y="362" width="320" height="44" rx="8" fill="#fff" stroke="#fdba74"/>
+  <text x="980" y="382" text-anchor="middle" font-size="12" font-weight="600" fill="#9a3412">SocketServer (C++)</text>
+  <text x="980" y="398" text-anchor="middle" font-size="10" fill="#64748b">listen / accept / 多线程处理</text>
+  <rect x="820" y="418" width="320" height="44" rx="8" fill="#fff" stroke="#fdba74"/>
+  <text x="980" y="438" text-anchor="middle" font-size="12" font-weight="600" fill="#9a3412">SocketProtocol 帧协议</text>
+  <text x="980" y="454" text-anchor="middle" font-size="10" fill="#64748b">[opcode][length][payload]</text>
+  <rect x="820" y="474" width="320" height="44" rx="8" fill="#fff" stroke="#fdba74"/>
+  <text x="980" y="494" text-anchor="middle" font-size="12" font-weight="600" fill="#9a3412">Opcode 分发</text>
+  <text x="980" y="510" text-anchor="middle" font-size="10" fill="#64748b">kAdd / kProcessCustom / kProcessParcel / kPing</text>
+  <rect x="820" y="530" width="320" height="36" rx="8" fill="#fff7ed" stroke="#fb923c" stroke-dasharray="4,3"/>
+  <text x="980" y="553" text-anchor="middle" font-size="11" fill="#c2410c">libmyapplication.so (Server 全量)</text>
+  <rect x="120" y="610" width="960" height="120" rx="14" fill="url(#nativeLib)" stroke="#8b5cf6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="600" y="638" text-anchor="middle" font-size="15" font-weight="700" fill="#5b21b6">共享 Native 模块 (C++20) - libmyapplication.so</text>
+  <rect x="140" y="654" width="170" height="58" rx="8" fill="#fff" stroke="#c4b5fd"/>
+  <text x="225" y="678" text-anchor="middle" font-size="12" font-weight="600" fill="#4c1d95">types.hpp</text>
+  <text x="225" y="696" text-anchor="middle" font-size="10" fill="#64748b">UserProfile</text>
+  <rect x="330" y="654" width="170" height="58" rx="8" fill="#fff" stroke="#c4b5fd"/>
+  <text x="415" y="678" text-anchor="middle" font-size="12" font-weight="600" fill="#4c1d95">CustomCodec</text>
+  <text x="415" y="696" text-anchor="middle" font-size="10" fill="#64748b">IPCC 紧凑二进制</text>
+  <rect x="520" y="654" width="170" height="58" rx="8" fill="#fff" stroke="#c4b5fd"/>
+  <text x="605" y="678" text-anchor="middle" font-size="12" font-weight="600" fill="#4c1d95">ParcelCodec</text>
+  <text x="605" y="696" text-anchor="middle" font-size="10" fill="#64748b">Parcel 4 字节对齐</text>
+  <rect x="710" y="654" width="170" height="58" rx="8" fill="#fff" stroke="#c4b5fd"/>
+  <text x="795" y="678" text-anchor="middle" font-size="12" font-weight="600" fill="#4c1d95">socket_protocol</text>
+  <text x="795" y="696" text-anchor="middle" font-size="10" fill="#64748b">帧编解码</text>
+  <rect x="900" y="654" width="160" height="58" rx="8" fill="#fff" stroke="#c4b5fd"/>
+  <text x="980" y="678" text-anchor="middle" font-size="12" font-weight="600" fill="#4c1d95">benchmark</text>
+  <text x="980" y="696" text-anchor="middle" font-size="10" fill="#64748b">多线程压测</text>
+  <path d="M 220 240 L 220 216 L 190 216" fill="none" stroke="#15803d" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <path d="M 190 216 L 420 216 L 600 240" fill="none" stroke="#15803d" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="310" y="208" font-size="11" font-weight="600" fill="#15803d">Binder IPC (AIDL + Parcel)</text>
+  <path d="M 380 400 L 880 216 L 1010 216" fill="none" stroke="#c2410c" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <text x="680" y="200" font-size="11" font-weight="600" fill="#c2410c">Socket IPC (Unix Domain)</text>
+  <line x1="380" y1="326" x2="440" y2="326" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="410" y="316" font-size="10" fill="#475569">bindService</text>
+  <line x1="380" y1="340" x2="820" y2="326" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="590" y="316" font-size="10" fill="#475569">bindService</text>
+  <rect x="40" y="752" width="1120" height="52" rx="10" fill="#fff" stroke="#cbd5e1" filter="url(#shadow)"/>
+  <rect x="60" y="770" width="16" height="16" rx="3" fill="#2563eb"/>
+  <text x="84" y="783" font-size="12" fill="#334155">主进程 UI + Client</text>
+  <rect x="230" y="770" width="16" height="16" rx="3" fill="#16a34a"/>
+  <text x="254" y="783" font-size="12" fill="#334155">Binder 服务端</text>
+  <rect x="390" y="770" width="16" height="16" rx="3" fill="#ea580c"/>
+  <text x="414" y="783" font-size="12" fill="#334155">Socket 服务端</text>
+  <rect x="560" y="770" width="16" height="16" rx="3" fill="#7c3aed"/>
+  <text x="584" y="783" font-size="12" fill="#334155">共享 C++20 库</text>
+  <line x1="720" y1="778" x2="760" y2="778" stroke="#15803d" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="770" y="783" font-size="12" fill="#334155">Binder 通道</text>
+  <line x1="870" y1="778" x2="910" y2="778" stroke="#c2410c" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <text x="920" y="783" font-size="12" fill="#334155">Socket 通道</text>
+</svg>

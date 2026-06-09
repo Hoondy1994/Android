@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0A0E14"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/surface_stage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.surfacetest.view.NativeGlesSurfaceView
+            android:id="@+id/gles_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.example.surfacetest.view.CanvasRingSurfaceView
+            android:id="@+id/canvas_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.example.surfacetest.view.OverlayPulseSurfaceView
+            android:id="@+id/overlay_surface"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="16dp" />
+    </FrameLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/stats_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_margin="12dp"
+        app:cardBackgroundColor="#CC111827"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lab_title"
+                android:textColor="#FFE5E7EB"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/stats_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="monospace"
+                android:textColor="#FF93C5FD"
+                android:textSize="11sp"
+                tools:text="UI≈60fps ..." />
+
+            <TextView
+                android:id="@+id/native_stats_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="monospace"
+                android:textColor="#FF86EFAC"
+                android:textSize="11sp"
+                tools:text="EGL 1080x1920 swap=1" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="12dp"
+        app:cardBackgroundColor="#EE1F2937"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/mode_chips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_plasma"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/mode_plasma"
+                        android:textColor="#FFE5E7EB"
+                        app:chipBackgroundColor="#FF374151" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_grid"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mode_grid"
+                        android:textColor="#FFE5E7EB"
+                        app:chipBackgroundColor="#FF374151" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_alpha"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mode_alpha"
+                        android:textColor="#FFE5E7EB"
+                        app:chipBackgroundColor="#FF374151" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_stress"
+                    android:textColor="#FFD1D5DB" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/stress_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="0"
+                    android:valueTo="16"
+                    android:stepSize="1"
+                    android:value="4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_rings"
+                    android:textColor="#FFD1D5DB" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/ring_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="0"
+                    android:valueTo="40"
+                    android:stepSize="1"
+                    android:value="12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_canvas_alpha"
+                    android:textColor="#FFD1D5DB" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/alpha_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="20"
+                    android:valueTo="255"
+                    android:stepSize="5"
+                    android:value="180" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_gles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/layer_gles"
+                    android:textColor="#FFE5E7EB" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_canvas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/layer_canvas"
+                    android:textColor="#FFE5E7EB" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/layer_overlay"
+                    android:textColor="#FFE5E7EB" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_fixed_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fixed_buffer_720p"
+                    android:textColor="#FFE5E7EB" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_stress_burst"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/btn_stress_burst" />
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

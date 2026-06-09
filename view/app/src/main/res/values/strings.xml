@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">View Demo</string>
+    <string name="demo_title">View 复杂 Demo</string>
+    <string name="section_particles">C++ 粒子场（触摸排斥）</string>
+    <string name="section_waveform">C++ 谐波波形</string>
+    <string name="section_orbit">C++ 轨道布局</string>
+    <string name="section_ripple">Kotlin 涟漪触摸</string>
+    <string name="layout_circle">圆形</string>
+    <string name="layout_spiral">螺旋</string>
+    <string name="layout_heart">心形</string>
+</resources>

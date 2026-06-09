@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_title"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/dashboard_subtitle"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="16dp"
+                android:useDefaultMargins="true">
+
+                <TextView android:text="@string/stat_sku" />
+                <TextView android:id="@+id/text_sku_count" android:text="0" android:textStyle="bold" />
+
+                <TextView android:text="@string/stat_location" />
+                <TextView android:id="@+id/text_location_count" android:text="0" android:textStyle="bold" />
+
+                <TextView android:text="@string/stat_on_hand" />
+                <TextView android:id="@+id/text_on_hand" android:text="0" android:textStyle="bold" />
+
+                <TextView android:text="@string/stat_inbound" />
+                <TextView android:id="@+id/text_open_inbound" android:text="0" android:textStyle="bold" />
+
+                <TextView android:text="@string/stat_outbound" />
+                <TextView android:id="@+id/text_open_outbound" android:text="0" android:textStyle="bold" />
+
+                <TextView android:text="@string/stat_pick" />
+                <TextView android:id="@+id/text_open_pick" android:text="0" android:textStyle="bold" />
+            </GridLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/learn_path"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

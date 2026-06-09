@@ -1,0 +1,1 @@
+-keep class com.example.audiotest.MainActivity { native <methods>; }

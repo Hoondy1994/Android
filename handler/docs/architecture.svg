@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="mainThread" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8f5e9"/>
+      <stop offset="100%" stop-color="#c8e6c9"/>
+    </linearGradient>
+    <linearGradient id="uiBox" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#455a64"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#07C160"/>
+    </marker>
+  </defs>
+
+  <rect width="920" height="640" fill="url(#bg)"/>
+  <text x="460" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">&#24494;&#20449;&#24335;&#20027;&#31243;&#24207; - Handler &#26550;&#26500;&#22270;</text>
+  <text x="460" y="58" text-anchor="middle" font-size="13" fill="#546e7a">com.example.myapplication</text>
+
+  <rect x="40" y="80" width="840" height="400" rx="12" fill="url(#mainThread)" stroke="#07C160" stroke-width="2" filter="url(#shadow)"/>
+  <text x="60" y="108" font-size="15" font-weight="bold" fill="#2e7d32">UI &#20027;&#32447;&#31243; (Looper.getMainLooper)</text>
+
+  <rect x="60" y="130" width="240" height="320" rx="8" fill="#ffffff" stroke="#81c784" stroke-width="1.5"/>
+  <text x="180" y="158" text-anchor="middle" font-size="14" font-weight="bold" fill="#388e3c">&#28040;&#24687;&#24490;&#29615;&#26680;&#24515;</text>
+
+  <rect x="80" y="175" width="200" height="56" rx="6" fill="#e3f2fd" stroke="#1976d2"/>
+  <text x="180" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">Looper</text>
+  <text x="180" y="218" text-anchor="middle" font-size="11" fill="#455a64">loop() &#19981;&#26029;&#21462;&#28040;&#24687;</text>
+
+  <rect x="80" y="245" width="200" height="56" rx="6" fill="#fff3e0" stroke="#f57c00"/>
+  <text x="180" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">MessageQueue</text>
+  <text x="180" y="288" text-anchor="middle" font-size="11" fill="#455a64">FIFO: Message / Runnable</text>
+
+  <rect x="80" y="315" width="200" height="56" rx="6" fill="#f3e5f5" stroke="#7b1fa2"/>
+  <text x="180" y="340" text-anchor="middle" font-size="13" font-weight="bold" fill="#6a1b9a">MainAppHandler</text>
+  <text x="180" y="358" text-anchor="middle" font-size="11" fill="#455a64">handleMessage(msg)</text>
+
+  <line x1="180" y1="231" x2="180" y2="245" stroke="#455a64" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="180" y1="301" x2="180" y2="315" stroke="#455a64" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="390" width="200" height="44" rx="6" fill="#fce4ec" stroke="#c2185b"/>
+  <text x="180" y="412" text-anchor="middle" font-size="12" font-weight="bold" fill="#ad1457">Runnable</text>
+  <text x="180" y="428" text-anchor="middle" font-size="10" fill="#455a64">post / postDelayed</text>
+
+  <rect x="330" y="130" width="260" height="320" rx="8" fill="url(#uiBox)" stroke="#607d8b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="460" y="158" text-anchor="middle" font-size="14" font-weight="bold" fill="#37474f">MainActivity</text>
+
+  <rect x="350" y="175" width="220" height="40" rx="5" fill="#07C160" opacity="0.15" stroke="#07C160"/>
+  <text x="460" y="200" text-anchor="middle" font-size="12" fill="#1b5e20">Toolbar / tv_title</text>
+
+  <rect x="350" y="225" width="220" height="40" rx="5" fill="#fff9c4" stroke="#fbc02d"/>
+  <text x="460" y="250" text-anchor="middle" font-size="12" fill="#f57f17">tv_handler_log</text>
+
+  <rect x="350" y="275" width="220" height="50" rx="5" fill="#e8eaf6" stroke="#3f51b5"/>
+  <text x="460" y="298" text-anchor="middle" font-size="12" font-weight="bold" fill="#283593">FragmentContainerView</text>
+  <text x="460" y="316" text-anchor="middle" font-size="10" fill="#455a64">&#23376;&#39029;&#38754;&#23481;&#22120;</text>
+
+  <rect x="350" y="340" width="220" height="40" rx="5" fill="#ffffff" stroke="#90a4ae"/>
+  <text x="460" y="365" text-anchor="middle" font-size="12" fill="#455a64">BottomNavigationView</text>
+
+  <rect x="350" y="395" width="220" height="42" rx="5" fill="#eceff1" stroke="#78909c"/>
+  <text x="460" y="415" text-anchor="middle" font-size="11" fill="#37474f">onMomentsScroll / onTabChanged</text>
+  <text x="460" y="430" text-anchor="middle" font-size="10" fill="#607d8b">Handler &#22238;&#35843;&#26356;&#26032; UI</text>
+
+  <rect x="620" y="130" width="240" height="320" rx="8" fill="url(#uiBox)" stroke="#ff9800" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="740" y="158" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">&#23376;&#27169;&#22359; Fragment</text>
+
+  <rect x="640" y="180" width="200" height="48" rx="5" fill="#ffffff" stroke="#bdbdbd"/>
+  <text x="740" y="202" text-anchor="middle" font-size="12" fill="#616161">PlaceholderFragment</text>
+  <text x="740" y="218" text-anchor="middle" font-size="10" fill="#9e9e9e">&#24494;&#20449; / &#36890;&#35759;&#24405; / &#25105;</text>
+
+  <rect x="640" y="245" width="200" height="120" rx="5" fill="#e8f5e9" stroke="#07C160" stroke-width="2"/>
+  <text x="740" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">MomentsFragment</text>
+  <text x="740" y="290" text-anchor="middle" font-size="11" fill="#455a64">RecyclerView &#26379;&#21451;&#22280;</text>
+  <text x="740" y="310" text-anchor="middle" font-size="10" fill="#546e7a">OnScrollListener</text>
+  <text x="740" y="328" text-anchor="middle" font-size="10" fill="#546e7a">sendMessage / post</text>
+  <text x="740" y="346" text-anchor="middle" font-size="10" fill="#546e7a">&#19981;&#30452;&#25509;&#25913; Activity</text>
+
+  <rect x="640" y="380" width="200" height="55" rx="5" fill="#ffffff" stroke="#bdbdbd"/>
+  <text x="740" y="402" text-anchor="middle" font-size="12" fill="#616161">MomentsAdapter</text>
+  <text x="740" y="420" text-anchor="middle" font-size="10" fill="#9e9e9e">MomentPost &#21015;&#34920;</text>
+
+  <rect x="640" y="465" width="100" height="36" rx="5" fill="#ede7f6" stroke="#673ab7"/>
+  <text x="690" y="488" text-anchor="middle" font-size="11" fill="#4527a0">AppMessage</text>
+  <rect x="760" y="465" width="100" height="36" rx="5" fill="#ede7f6" stroke="#673ab7"/>
+  <text x="810" y="488" text-anchor="middle" font-size="11" fill="#4527a0">MomentPost</text>
+
+  <path d="M 280 335 L 328 335" fill="none" stroke="#07C160" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="304" y="325" text-anchor="middle" font-size="10" fill="#2e7d32">dispatch</text>
+
+  <path d="M 590 290 L 618 290" fill="none" stroke="#f57c00" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="604" y="280" text-anchor="middle" font-size="10" fill="#e65100">enqueue</text>
+
+  <path d="M 640 305 Q 520 480 350 400" fill="none" stroke="#07C160" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowGreen)"/>
+  <text x="500" y="470" text-anchor="middle" font-size="10" fill="#388e3c">attachMainHandler(mainHandler)</text>
+
+  <rect x="40" y="500" width="840" height="120" rx="10" fill="#ffffff" stroke="#cfd8dc" filter="url(#shadow)"/>
+  <text x="60" y="528" font-size="14" font-weight="bold" fill="#37474f">&#27169;&#22359;&#32844;&#36131;</text>
+  <circle cx="75" cy="552" r="6" fill="#07C160"/>
+  <text x="90" y="556" font-size="12" fill="#455a64">&#20027;&#32447;&#31243;&#65306;&#25152;&#26377; UI &#26356;&#26032;&#22312; Handler &#20013;&#25191;&#34892;</text>
+  <circle cx="75" cy="578" r="6" fill="#f57c00"/>
+  <text x="90" y="582" font-size="12" fill="#455a64">Fragment&#65306;&#21482;&#25237;&#36882; Message/Runnable&#65292;&#30001; MainAppHandler &#20998;&#21457;</text>
+  <circle cx="75" cy="604" r="6" fill="#1976d2"/>
+  <text x="90" y="608" font-size="12" fill="#455a64">what: 1&#23601;&#32490; 2Tab 10&#28378;&#21160; 11&#29366;&#24577; 12&#21487;&#35265;&#39033;</text>
+
+  <rect x="480" y="540" width="380" height="68" rx="6" fill="#fafafa" stroke="#e0e0e0"/>
+  <text x="500" y="562" font-size="12" font-weight="bold" fill="#263238">&#31867;&#25991;&#20214;</text>
+  <text x="500" y="582" font-size="11" fill="#546e7a">MainActivity.kt / MainAppHandler.kt / AppMessage.kt</text>
+  <text x="500" y="600" font-size="11" fill="#546e7a">MomentsFragment.kt / MomentsAdapter.kt / MomentPost.kt</text>
+</svg>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Input Lab</string>
+    <string name="lab_title">Android Input 综合实验室</string>
+    <string name="tab_touch">触摸</string>
+    <string name="tab_gesture">手势</string>
+    <string name="tab_keyboard">键盘</string>
+    <string name="tab_key">按键</string>
+    <string name="tab_nested">嵌套滑动</string>
+    <string name="tab_dispatch">派发链</string>
+    <string name="touch_hint">多指触摸画布，观察轨迹、压力与 VelocityTracker</string>
+    <string name="gesture_hint">单指：拖动 / 快速滑动 / 双击 / 长按；双指：捏合缩放</string>
+    <string name="keyboard_hint">切换 IME 类型与 action，观察 WindowInsets 键盘高度</string>
+    <string name="key_hint">先点击聚焦下方区域，再按音量键或连接键盘测试</string>
+    <string name="nested_hint">在色块区域斜向滑动，切换「子 View 抢占」观察嵌套冲突</string>
+    <string name="dispatch_hint">点击色块，查看 dispatch → intercept → onTouch 顺序</string>
+    <string name="switch_parent_intercept">父布局拦截 MOVE（测试 onInterceptTouchEvent）</string>
+    <string name="show_keyboard">显示键盘</string>
+    <string name="hide_keyboard">隐藏键盘</string>
+    <string name="disallow_intercept_on">子 View 抢占触摸 (requestDisallowInterceptTouchEvent)</string>
+    <string name="disallow_intercept_off">父布局可拦截 (默认)</string>
+    <string name="clear_log">清空日志</string>
+</resources>

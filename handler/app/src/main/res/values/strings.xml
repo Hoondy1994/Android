@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">微信 Handler 演示</string>
+    <string name="tab_chats">微信</string>
+    <string name="tab_contacts">通讯录</string>
+    <string name="tab_discover">发现</string>
+    <string name="tab_me">我</string>
+    <string name="moments_title">朋友圈</string>
+    <string name="handler_log_hint">主线程 Handler 消息：</string>
+    <string name="main_looper_ready">主 Looper 已就绪（MessageQueue 等待消息）</string>
+    <string name="handler_log_scroll">滑动 → %1$s  dy=%2$d  offset=%3$d</string>
+    <string name="handler_log_visible">停止/防抖 → 可见第 %1$d 条 · %2$s</string>
+</resources>

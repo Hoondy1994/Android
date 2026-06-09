@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 900" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="sh">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/>
+    </filter>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="a4" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#9333ea"/>
+    </marker>
+  </defs>
+
+  <rect width="1100" height="900" fill="url(#bg2)"/>
+
+  <!-- Title -->
+  <text x="550" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Android Binder &#x8C03;&#x7528;&#x6D41;&#x7A0B;&#x56FE;</text>
+  <text x="550" y="62" text-anchor="middle" font-size="13" fill="#64748b">&#x4E00;&#x6B21;&#x5B8C;&#x6574;&#x7684;&#x8DE8;&#x8FDB;&#x7A0B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF08;Client &#x2192; Server &#x2192; &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF09;</text>
+
+  <!-- Lane headers -->
+  <rect x="30" y="78" width="220" height="44" rx="8" fill="#2563eb" filter="url(#sh)"/>
+  <text x="140" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Client &#x8FDB;&#x7A0B;</text>
+
+  <rect x="430" y="78" width="240" height="44" rx="8" fill="#db2777" filter="url(#sh)"/>
+  <text x="550" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Binder Driver (&#x5185;&#x6838;)</text>
+
+  <rect x="850" y="78" width="220" height="44" rx="8" fill="#16a34a" filter="url(#sh)"/>
+  <text x="960" y="106" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Server &#x8FDB;&#x7A0B;</text>
+
+  <!-- Lane dividers -->
+  <line x1="140" y1="122" x2="140" y2="870" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="550" y1="122" x2="550" y2="870" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="960" y1="122" x2="960" y2="870" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Client steps -->
+  <rect x="40" y="138" width="200" height="52" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="140" y="159" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a8a">&#x2460; &#x8C03;&#x7528; AIDL &#x63A5;&#x53E3;&#x65B9;&#x6CD5;</text>
+  <text x="140" y="176" text-anchor="middle" font-size="10" fill="#475569">iXxxService.doSomething(args)</text>
+
+  <rect x="40" y="222" width="200" height="52" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="140" y="243" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a8a">&#x2461; Proxy &#x5E8F;&#x5217;&#x5316;&#x53C2;&#x6570;</text>
+  <text x="140" y="260" text-anchor="middle" font-size="10" fill="#475569">Parcel.writeInt / writeString...</text>
+
+  <rect x="40" y="306" width="200" height="52" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="140" y="327" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a8a">&#x2462; IBinder.transact()</text>
+  <text x="140" y="344" text-anchor="middle" font-size="10" fill="#475569">BpBinder &#x2192; IPCThreadState</text>
+
+  <rect x="40" y="390" width="200" height="52" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="140" y="411" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a8a">&#x2463; ioctl &#x5199;&#x5165;&#x9A71;&#x52A8;</text>
+  <text x="140" y="428" text-anchor="middle" font-size="10" fill="#475569">BINDER_WRITE_READ</text>
+
+  <rect x="40" y="474" width="200" height="52" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="5,3" filter="url(#sh)"/>
+  <text x="140" y="495" text-anchor="middle" font-size="11" font-weight="600" fill="#3730a3">&#x2464; &#x7EBF;&#x7A0B;&#x6302;&#x8D77;&#x7B49;&#x5F85;</text>
+  <text x="140" y="512" text-anchor="middle" font-size="10" fill="#475569">BC_TRANSACTION &#x963B;&#x585E;</text>
+
+  <!-- Client inner arrows -->
+  <line x1="140" y1="190" x2="140" y2="220" stroke="#2563eb" stroke-width="1.5" marker-end="url(#a1)"/>
+  <line x1="140" y1="274" x2="140" y2="304" stroke="#2563eb" stroke-width="1.5" marker-end="url(#a1)"/>
+  <line x1="140" y1="358" x2="140" y2="388" stroke="#2563eb" stroke-width="1.5" marker-end="url(#a1)"/>
+  <line x1="140" y1="442" x2="140" y2="472" stroke="#2563eb" stroke-width="1.5" marker-end="url(#a1)"/>
+
+  <!-- Kernel steps -->
+  <rect x="430" y="390" width="240" height="52" rx="8" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="550" y="411" text-anchor="middle" font-size="11" font-weight="600" fill="#9d174d">&#x2465; copy_from_user</text>
+  <text x="550" y="428" text-anchor="middle" font-size="10" fill="#475569">Parcel &#x6570;&#x636E;&#x62F7;&#x5165;&#x5185;&#x6838;&#x7F13;&#x51B2;&#x533A;</text>
+
+  <rect x="430" y="474" width="240" height="52" rx="8" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="550" y="495" text-anchor="middle" font-size="11" font-weight="600" fill="#9d174d">&#x2466; mmap &#x96F6;&#x62F7;&#x8D1D;&#x6620;&#x5C04;</text>
+  <text x="550" y="512" text-anchor="middle" font-size="10" fill="#475569">&#x6570;&#x636E;&#x76F4;&#x63A5;&#x6620;&#x5C04;&#x5230;&#x63A5;&#x6536;&#x65B9;&#x5730;&#x5740;&#x7A7A;&#x95F4;</text>
+
+  <rect x="430" y="558" width="240" height="52" rx="8" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="550" y="579" text-anchor="middle" font-size="11" font-weight="600" fill="#9d174d">&#x2467; &#x5524;&#x9192; Server &#x7EBF;&#x7A0B;</text>
+  <text x="550" y="596" text-anchor="middle" font-size="10" fill="#475569">BR_TRANSACTION &#x901A;&#x77E5;</text>
+
+  <line x1="550" y1="442" x2="550" y2="472" stroke="#dc2626" stroke-width="1.5" marker-end="url(#a3)"/>
+  <line x1="550" y1="526" x2="550" y2="556" stroke="#dc2626" stroke-width="1.5" marker-end="url(#a3)"/>
+
+  <!-- Server steps -->
+  <rect x="850" y="558" width="200" height="52" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="960" y="579" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">&#x2468; onTransact() &#x5206;&#x53D1;</text>
+  <text x="960" y="596" text-anchor="middle" font-size="10" fill="#475569">Stub &#x89E3;&#x6790; code&#xFF0C;&#x8C03;&#x4E1A;&#x52A1;&#x65B9;&#x6CD5;</text>
+
+  <rect x="850" y="642" width="200" height="52" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="960" y="663" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">&#x2469; &#x6267;&#x884C;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</text>
+  <text x="960" y="680" text-anchor="middle" font-size="10" fill="#475569">&#x8BA1;&#x7B97; / &#x67E5;&#x8BE2; / &#x5199;&#x6570;&#x636E;</text>
+
+  <rect x="850" y="726" width="200" height="52" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="960" y="747" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">&#x246A; &#x5199; reply Parcel</text>
+  <text x="960" y="764" text-anchor="middle" font-size="10" fill="#475569">BC_REPLY &#x2192; &#x9A71;&#x52A8;&#x8FD4;&#x56DE;</text>
+
+  <line x1="960" y1="610" x2="960" y2="640" stroke="#16a34a" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="960" y1="694" x2="960" y2="724" stroke="#16a34a" stroke-width="1.5" marker-end="url(#a2)"/>
+
+  <!-- Client final step -->
+  <rect x="40" y="726" width="200" height="52" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="140" y="747" text-anchor="middle" font-size="11" font-weight="600" fill="#1e3a8a">&#x246B; &#x7EBF;&#x7A0B;&#x6062;&#x590D;&#xFF0C;&#x8BFB; reply</text>
+  <text x="140" y="764" text-anchor="middle" font-size="10" fill="#475569">Parcel.readInt / readString...</text>
+
+  <!-- Cross-lane arrows -->
+  <line x1="242" y1="416" x2="428" y2="416" stroke="#dc2626" stroke-width="2" marker-end="url(#a3)"/>
+  <text x="335" y="410" text-anchor="middle" font-size="10" fill="#dc2626">ioctl(BINDER_WRITE_READ)</text>
+
+  <line x1="672" y1="584" x2="848" y2="584" stroke="#16a34a" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="760" y="578" text-anchor="middle" font-size="10" fill="#16a34a">BR_TRANSACTION</text>
+
+  <line x1="848" y1="756" x2="672" y2="756" stroke="#9333ea" stroke-width="2" marker-end="url(#a4)"/>
+  <text x="760" y="750" text-anchor="middle" font-size="10" fill="#9333ea">BC_REPLY</text>
+
+  <line x1="428" y1="756" x2="242" y2="756" stroke="#9333ea" stroke-width="2" marker-end="url(#a4)"/>
+  <text x="335" y="750" text-anchor="middle" font-size="10" fill="#9333ea">BR_REPLY &#x2192; &#x5524;&#x9192;</text>
+
+  <!-- Legend -->
+  <rect x="30" y="840" width="1040" height="44" rx="8" fill="#1e293b" filter="url(#sh)"/>
+  <line x1="70" y1="862" x2="110" y2="862" stroke="#2563eb" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="120" y="866" font-size="11" fill="#93c5fd">Client &#x8C03;&#x7528;&#x94FE;</text>
+  <line x1="240" y1="862" x2="280" y2="862" stroke="#dc2626" stroke-width="2" marker-end="url(#a3)"/>
+  <text x="290" y="866" font-size="11" fill="#fca5a5">&#x6570;&#x636E;&#x8FDB;&#x5165;&#x5185;&#x6838;</text>
+  <line x1="430" y1="862" x2="470" y2="862" stroke="#16a34a" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="480" y="866" font-size="11" fill="#86efac">Server &#x5904;&#x7406;</text>
+  <line x1="590" y1="862" x2="630" y2="862" stroke="#9333ea" stroke-width="2" marker-end="url(#a4)"/>
+  <text x="640" y="866" font-size="11" fill="#d8b4fe">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</text>
+  <text x="850" y="866" font-size="11" fill="#64748b">&#x5168;&#x7A0B;&#x53EA;&#x6709; 1 &#x6B21;&#x5185;&#x5B58;&#x62F7;&#x8D1D;&#xFF08;copy_from_user&#xFF09;</text>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lab_bg">#FF0D1117</color>
+    <color name="lab_surface">#FF161B22</color>
+    <color name="lab_accent">#FF58A6FF</color>
+    <color name="lab_text">#FFE6EDF3</color>
+    <color name="lab_muted">#FF8B949E</color>
+    <color name="pointer_0">#FF58A6FF</color>
+    <color name="pointer_1">#FF3FB950</color>
+    <color name="pointer_2">#FFF78166</color>
+    <color name="pointer_3">#FFD2A8FF</color>
+    <color name="pointer_4">#FFFFA657</color>
+</resources>

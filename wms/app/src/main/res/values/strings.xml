@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">WMS 学习中心</string>
+    <string name="nav_dashboard">首页</string>
+    <string name="nav_inventory">库存</string>
+    <string name="nav_inbound">入库</string>
+    <string name="nav_outbound">出库</string>
+    <string name="nav_pick">拣货</string>
+    <string name="dashboard_title">仓储运营看板</string>
+    <string name="dashboard_subtitle">演示数据已预置，可按下方路径实操完整流程</string>
+    <string name="stat_sku">SKU 种类</string>
+    <string name="stat_location">库位数量</string>
+    <string name="stat_on_hand">在库总量</string>
+    <string name="stat_inbound">待处理入库</string>
+    <string name="stat_outbound">待处理出库</string>
+    <string name="stat_pick">待拣任务</string>
+    <string name="learn_path">学习路径建议：\n1. 入库 → 打开入库单 → 收货上架\n2. 出库 → 对「已确认」单点击「分配库存」\n3. 拣货 → 确认拣货数量\n4. 库存 → 体验库内移库\n\n核心代码：wms/data/repository/WmsRepository.kt</string>
+    <string name="search_inventory">搜索 SKU / 库位</string>
+    <string name="outbound_hint">「已确认」状态的出库单可点击「分配库存」生成拣货任务</string>
+    <string name="btn_transfer">移库</string>
+    <string name="btn_allocate">分配库存</string>
+    <string name="btn_confirm_pick">确认拣货</string>
+    <string name="btn_receive">收货</string>
+    <string name="hint_qty">数量</string>
+</resources>

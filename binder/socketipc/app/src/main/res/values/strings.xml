@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Socket Binder IPC</string>
+    <string name="ipc_demo_title">Socket IPC vs Binder IPC (C++20)</string>
+    <string name="number_a">数字 A</string>
+    <string name="number_b">数字 B</string>
+    <string name="binder_ipc">Binder Add</string>
+    <string name="socket_ipc">Socket Add</string>
+    <string name="complex_object_label">复杂对象 (Custom vs Parcel 编解码)</string>
+    <string name="binder_custom">Binder Custom</string>
+    <string name="binder_parcel">Binder Parcel</string>
+    <string name="socket_custom">Socket Custom</string>
+    <string name="socket_parcel">Socket Parcel</string>
+    <string name="benchmark_label">多线程压测</string>
+    <string name="thread_count">线程数</string>
+    <string name="iterations">每线程迭代次数</string>
+    <string name="bench_serialization">纯序列化压测 (C++)</string>
+    <string name="bench_binder">Binder 压测</string>
+    <string name="bench_socket">Socket 压测 (C++)</string>
+    <string name="log_label">调用日志</string>
+</resources>

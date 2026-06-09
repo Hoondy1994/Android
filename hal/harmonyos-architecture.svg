@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="900" viewBox="0 0 960 900">
+  <defs><style>text{font-family:"Segoe UI","Microsoft YaHei","PingFang SC",system-ui,sans-serif;}</style></defs>
+
+  <!-- Background -->
+  <rect width="960" height="900" fill="#080c14"/>
+
+  <!-- Title -->
+  <text x="24" y="44" font-size="22" font-weight="600" fill="#f1f5f9">鸿蒙操作系统 (HarmonyOS) 系统架构</text>
+  <text x="24" y="64" font-size="12" fill="#94a3b8">华为自研操作系统 · 面向万物互联的分布式微内核架构 · 一套系统，覆盖全场景终端</text>
+  <line x1="0" y1="76" x2="960" y2="76" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- L5: 应用层 y=84~184  color: cyan -->
+  <rect x="0" y="84" width="960" height="100" fill="#042f3d"/>
+  <rect x="0" y="84" width="200" height="100" fill="#021e28"/>
+  <rect x="0" y="84" width="4" height="100" fill="#06b6d4"/>
+  <line x1="204" y1="84" x2="204" y2="184" stroke="#0c4a5c" stroke-width="1"/>
+  <text x="100" y="130" text-anchor="middle" font-size="18" font-weight="700" fill="#67e8f9">L5</text>
+  <text x="100" y="147" text-anchor="middle" font-size="13" font-weight="600" fill="#67e8f9">应用层</text>
+  <text x="100" y="162" text-anchor="middle" font-size="10" fill="#22d3ee">Applications</text>
+  <text x="100" y="175" text-anchor="middle" font-size="9" fill="#0e4a5c" font-style="italic">ArkTS · ArkUI</text>
+  <text x="214" y="100" font-size="10" fill="#5eaec0">系统内置应用与第三方应用程序，运行于 Stage/FA 模型之上</text>
+  <rect x="208" y="112" width="120" height="22" rx="3" fill="#0c4a5c" stroke="#0891b2" stroke-width="0.5"/><text x="268" y="127" text-anchor="middle" font-size="10" fill="#67e8f9">通话 (Phone)</text>
+  <rect x="334" y="112" width="120" height="22" rx="3" fill="#0c4a5c" stroke="#0891b2" stroke-width="0.5"/><text x="394" y="127" text-anchor="middle" font-size="10" fill="#67e8f9">信息 (Message)</text>
+  <rect x="460" y="112" width="120" height="22" rx="3" fill="#0c4a5c" stroke="#0891b2" stroke-width="0.5"/><text x="520" y="127" text-anchor="middle" font-size="10" fill="#67e8f9">日历 (Calendar)</text>
+  <rect x="586" y="112" width="120" height="22" rx="3" fill="#0c4a5c" stroke="#0891b2" stroke-width="0.5"/><text x="646" y="127" text-anchor="middle" font-size="10" fill="#67e8f9">浏览器 (Browser)</text>
+  <rect x="712" y="112" width="120" height="22" rx="3" fill="#0c4a5c" stroke="#0891b2" stroke-width="0.5"/><text x="772" y="127" text-anchor="middle" font-size="10" fill="#67e8f9">相机 (Camera)</text>
+  <rect x="838" y="112" width="120" height="22" rx="3" fill="#0c4a5c" stroke="#0891b2" stroke-width="0.5"/><text x="898" y="127" text-anchor="middle" font-size="10" fill="#67e8f9">地图 (Maps)</text>
+  <rect x="208" y="142" width="120" height="22" rx="3" fill="#0c4a5c" stroke="#0891b2" stroke-width="0.5"/><text x="268" y="157" text-anchor="middle" font-size="10" fill="#67e8f9">设置 (Settings)</text>
+  <rect x="334" y="142" width="120" height="22" rx="3" fill="#0c4a5c" stroke="#0891b2" stroke-width="0.5"/><text x="394" y="157" text-anchor="middle" font-size="10" fill="#67e8f9">第三方应用</text>
+
+  <!-- L4: 应用框架层 y=192~292  color: violet -->
+  <rect x="0" y="192" width="960" height="100" fill="#1c0a38"/>
+  <rect x="0" y="192" width="200" height="100" fill="#120622"/>
+  <rect x="0" y="192" width="4" height="100" fill="#a78bfa"/>
+  <line x1="204" y1="192" x2="204" y2="292" stroke="#2d1460" stroke-width="1"/>
+  <text x="100" y="238" text-anchor="middle" font-size="18" font-weight="700" fill="#c4b5fd">L4</text>
+  <text x="100" y="255" text-anchor="middle" font-size="13" font-weight="600" fill="#c4b5fd">应用框架层</text>
+  <text x="100" y="270" text-anchor="middle" font-size="10" fill="#a78bfa">App Framework</text>
+  <text x="100" y="283" text-anchor="middle" font-size="9" fill="#2d1460" font-style="italic">ArkUI · Ability Kit</text>
+  <text x="214" y="208" font-size="10" fill="#a08bc5">为开发者提供高层 API，管理 Ability 生命周期与系统资源调度</text>
+  <rect x="208" y="220" width="120" height="22" rx="3" fill="#2d1460" stroke="#7c3aed" stroke-width="0.5"/><text x="268" y="235" text-anchor="middle" font-size="10" fill="#c4b5fd">ArkUI 框架</text>
+  <rect x="334" y="220" width="120" height="22" rx="3" fill="#2d1460" stroke="#7c3aed" stroke-width="0.5"/><text x="394" y="235" text-anchor="middle" font-size="10" fill="#c4b5fd">Ability Kit</text>
+  <rect x="460" y="220" width="120" height="22" rx="3" fill="#2d1460" stroke="#7c3aed" stroke-width="0.5"/><text x="520" y="235" text-anchor="middle" font-size="10" fill="#c4b5fd">Stage 模型</text>
+  <rect x="586" y="220" width="120" height="22" rx="3" fill="#2d1460" stroke="#7c3aed" stroke-width="0.5"/><text x="646" y="235" text-anchor="middle" font-size="10" fill="#c4b5fd">媒体框架</text>
+  <rect x="712" y="220" width="120" height="22" rx="3" fill="#2d1460" stroke="#7c3aed" stroke-width="0.5"/><text x="772" y="235" text-anchor="middle" font-size="10" fill="#c4b5fd">网络管理框架</text>
+  <rect x="838" y="220" width="120" height="22" rx="3" fill="#2d1460" stroke="#7c3aed" stroke-width="0.5"/><text x="898" y="235" text-anchor="middle" font-size="10" fill="#c4b5fd">数据管理框架</text>
+  <rect x="208" y="250" width="120" height="22" rx="3" fill="#2d1460" stroke="#7c3aed" stroke-width="0.5"/><text x="268" y="265" text-anchor="middle" font-size="10" fill="#c4b5fd">包管理服务</text>
+  <rect x="334" y="250" width="120" height="22" rx="3" fill="#2d1460" stroke="#7c3aed" stroke-width="0.5"/><text x="394" y="265" text-anchor="middle" font-size="10" fill="#c4b5fd">安全框架</text>
+  <rect x="460" y="250" width="120" height="22" rx="3" fill="#2d1460" stroke="#7c3aed" stroke-width="0.5"/><text x="520" y="265" text-anchor="middle" font-size="10" fill="#c4b5fd">图形框架</text>
+
+  <!-- L3: 系统服务层 y=300~400  color: indigo (distributed) -->
+  <rect x="0" y="300" width="960" height="100" fill="#0a1540"/>
+  <rect x="0" y="300" width="200" height="100" fill="#060d28"/>
+  <rect x="0" y="300" width="4" height="100" fill="#6366f1"/>
+  <line x1="204" y1="300" x2="204" y2="400" stroke="#1a2060" stroke-width="1"/>
+  <text x="100" y="338" text-anchor="middle" font-size="18" font-weight="700" fill="#a5b4fc">L3</text>
+  <text x="100" y="355" text-anchor="middle" font-size="13" font-weight="600" fill="#a5b4fc">系统服务层</text>
+  <text x="100" y="370" text-anchor="middle" font-size="10" fill="#818cf8">System Services</text>
+  <text x="100" y="384" text-anchor="middle" font-size="9" fill="#4338ca" font-weight="600">★ 分布式核心</text>
+  <text x="214" y="316" font-size="10" fill="#6b91c0">HarmonyOS 分布式能力核心层，支持跨设备协同、资源共享与超级终端</text>
+  <rect x="208" y="328" width="120" height="22" rx="3" fill="#1a2060" stroke="#4338ca" stroke-width="0.5"/><text x="268" y="343" text-anchor="middle" font-size="9" fill="#a5b4fc">分布式软总线</text>
+  <rect x="334" y="328" width="120" height="22" rx="3" fill="#1a2060" stroke="#4338ca" stroke-width="0.5"/><text x="394" y="343" text-anchor="middle" font-size="9" fill="#a5b4fc">分布式数据管理</text>
+  <rect x="460" y="328" width="120" height="22" rx="3" fill="#1a2060" stroke="#4338ca" stroke-width="0.5"/><text x="520" y="343" text-anchor="middle" font-size="9" fill="#a5b4fc">分布式任务调度</text>
+  <rect x="586" y="328" width="120" height="22" rx="3" fill="#1a2060" stroke="#4338ca" stroke-width="0.5"/><text x="646" y="343" text-anchor="middle" font-size="9" fill="#a5b4fc">方舟运行时(ART)</text>
+  <rect x="712" y="328" width="120" height="22" rx="3" fill="#1a2060" stroke="#4338ca" stroke-width="0.5"/><text x="772" y="343" text-anchor="middle" font-size="9" fill="#a5b4fc">多模输入子系统</text>
+  <rect x="838" y="328" width="120" height="22" rx="3" fill="#1a2060" stroke="#4338ca" stroke-width="0.5"/><text x="898" y="343" text-anchor="middle" font-size="9" fill="#a5b4fc">图形子系统</text>
+  <rect x="208" y="358" width="120" height="22" rx="3" fill="#1a2060" stroke="#4338ca" stroke-width="0.5"/><text x="268" y="373" text-anchor="middle" font-size="9" fill="#a5b4fc">安全子系统</text>
+  <rect x="334" y="358" width="120" height="22" rx="3" fill="#1a2060" stroke="#4338ca" stroke-width="0.5"/><text x="394" y="373" text-anchor="middle" font-size="9" fill="#a5b4fc">AI 子系统</text>
+  <rect x="460" y="358" width="120" height="22" rx="3" fill="#1a2060" stroke="#4338ca" stroke-width="0.5"/><text x="520" y="373" text-anchor="middle" font-size="9" fill="#a5b4fc">账号管理</text>
+
+  <!-- L2: 内核层 y=408~508  color: steel blue/slate (multi-kernel) -->
+  <rect x="0" y="408" width="960" height="100" fill="#0e1624"/>
+  <rect x="0" y="408" width="200" height="100" fill="#090e18"/>
+  <rect x="0" y="408" width="4" height="100" fill="#60a5fa"/>
+  <line x1="204" y1="408" x2="204" y2="508" stroke="#1a2d48" stroke-width="1"/>
+  <text x="100" y="454" text-anchor="middle" font-size="18" font-weight="700" fill="#93c5fd">L2</text>
+  <text x="100" y="471" text-anchor="middle" font-size="13" font-weight="600" fill="#93c5fd">内核层</text>
+  <text x="100" y="486" text-anchor="middle" font-size="10" fill="#60a5fa">Multi-Kernel</text>
+  <text x="100" y="499" text-anchor="middle" font-size="9" fill="#1e3a5f" font-style="italic">LiteOS · Linux</text>
+  <text x="214" y="424" font-size="10" fill="#6b91c0">多内核架构：轻量 / 小型 / 标准系统共用一套驱动框架 (HDF)</text>
+  <rect x="208" y="436" width="120" height="22" rx="3" fill="#1a2d48" stroke="#3b82f6" stroke-width="0.5"/><text x="268" y="451" text-anchor="middle" font-size="10" fill="#93c5fd">LiteOS-M</text>
+  <rect x="334" y="436" width="120" height="22" rx="3" fill="#1a2d48" stroke="#3b82f6" stroke-width="0.5"/><text x="394" y="451" text-anchor="middle" font-size="10" fill="#93c5fd">LiteOS-A</text>
+  <rect x="460" y="436" width="120" height="22" rx="3" fill="#1a2d48" stroke="#3b82f6" stroke-width="0.5"/><text x="520" y="451" text-anchor="middle" font-size="10" fill="#93c5fd">Linux Kernel</text>
+  <rect x="586" y="436" width="120" height="22" rx="3" fill="#1a2d48" stroke="#3b82f6" stroke-width="0.5"/><text x="646" y="451" text-anchor="middle" font-size="10" fill="#93c5fd">HDF 驱动框架</text>
+  <rect x="712" y="436" width="120" height="22" rx="3" fill="#1a2d48" stroke="#3b82f6" stroke-width="0.5"/><text x="772" y="451" text-anchor="middle" font-size="10" fill="#93c5fd">进程调度</text>
+  <rect x="838" y="436" width="120" height="22" rx="3" fill="#1a2d48" stroke="#3b82f6" stroke-width="0.5"/><text x="898" y="451" text-anchor="middle" font-size="10" fill="#93c5fd">内存管理</text>
+  <rect x="208" y="466" width="120" height="22" rx="3" fill="#1a2d48" stroke="#3b82f6" stroke-width="0.5"/><text x="268" y="481" text-anchor="middle" font-size="10" fill="#93c5fd">文件系统</text>
+  <rect x="334" y="466" width="120" height="22" rx="3" fill="#1a2d48" stroke="#3b82f6" stroke-width="0.5"/><text x="394" y="481" text-anchor="middle" font-size="10" fill="#93c5fd">网络协议栈</text>
+
+  <!-- L1: 硬件层 y=516~616  color: orange/amber -->
+  <rect x="0" y="516" width="960" height="100" fill="#1f1206"/>
+  <rect x="0" y="516" width="200" height="100" fill="#140c04"/>
+  <rect x="0" y="516" width="4" height="100" fill="#f97316"/>
+  <line x1="204" y1="516" x2="204" y2="616" stroke="#3d2208" stroke-width="1"/>
+  <text x="100" y="562" text-anchor="middle" font-size="18" font-weight="700" fill="#fed7aa">L1</text>
+  <text x="100" y="579" text-anchor="middle" font-size="13" font-weight="600" fill="#fed7aa">硬件层</text>
+  <text x="100" y="594" text-anchor="middle" font-size="10" fill="#fb923c">Hardware</text>
+  <text x="100" y="607" text-anchor="middle" font-size="9" fill="#3d2208" font-style="italic">全场景终端设备</text>
+  <text x="214" y="532" font-size="10" fill="#c09050">覆盖手机、平板、手表、TV、车机、IoT 等全场景终端硬件</text>
+  <rect x="208" y="544" width="120" height="22" rx="3" fill="#3d2208" stroke="#ea580c" stroke-width="0.5"/><text x="268" y="559" text-anchor="middle" font-size="10" fill="#fed7aa">显示模块</text>
+  <rect x="334" y="544" width="120" height="22" rx="3" fill="#3d2208" stroke="#ea580c" stroke-width="0.5"/><text x="394" y="559" text-anchor="middle" font-size="10" fill="#fed7aa">摄像头</text>
+  <rect x="460" y="544" width="120" height="22" rx="3" fill="#3d2208" stroke="#ea580c" stroke-width="0.5"/><text x="520" y="559" text-anchor="middle" font-size="10" fill="#fed7aa">音频模块</text>
+  <rect x="586" y="544" width="120" height="22" rx="3" fill="#3d2208" stroke="#ea580c" stroke-width="0.5"/><text x="646" y="559" text-anchor="middle" font-size="10" fill="#fed7aa">传感器</text>
+  <rect x="712" y="544" width="120" height="22" rx="3" fill="#3d2208" stroke="#ea580c" stroke-width="0.5"/><text x="772" y="559" text-anchor="middle" font-size="10" fill="#fed7aa">Wi-Fi / BT / NFC</text>
+  <rect x="838" y="544" width="120" height="22" rx="3" fill="#3d2208" stroke="#ea580c" stroke-width="0.5"/><text x="898" y="559" text-anchor="middle" font-size="10" fill="#fed7aa">GPS / 基带</text>
+  <rect x="208" y="574" width="120" height="22" rx="3" fill="#3d2208" stroke="#ea580c" stroke-width="0.5"/><text x="268" y="589" text-anchor="middle" font-size="10" fill="#fed7aa">存储 (eMMC/UFS)</text>
+  <rect x="334" y="574" width="120" height="22" rx="3" fill="#3d2208" stroke="#ea580c" stroke-width="0.5"/><text x="394" y="589" text-anchor="middle" font-size="10" fill="#fed7aa">电源管理</text>
+
+  <!-- Direction Indicators -->
+  <line x1="0" y1="618" x2="960" y2="618" stroke="#1e293b" stroke-width="1"/>
+  <text x="24" y="638" font-size="11" fill="#475569">← 应用空间 (User Space)   L5 / L4 / L3</text>
+  <text x="936" y="638" text-anchor="end" font-size="11" fill="#475569">L2 / L1   内核 &amp; 硬件 (Kernel &amp; Hardware) →</text>
+  <line x1="0" y1="648" x2="960" y2="648" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- IPC Mechanisms -->
+  <text x="24" y="670" font-size="15" font-weight="600" fill="#e2e8f0">层间通信机制</text>
+  <text x="24" y="688" font-size="11" fill="#64748b">HarmonyOS 各架构层之间的通信接口与协议。</text>
+  <!-- Table header -->
+  <rect x="24" y="698" width="912" height="28" fill="#1e293b"/>
+  <text x="34" y="716" font-size="11" font-weight="600" fill="#94a3b8">层间通信</text>
+  <text x="194" y="716" font-size="11" font-weight="600" fill="#94a3b8">通信机制</text>
+  <text x="386" y="716" font-size="11" font-weight="600" fill="#94a3b8">说明</text>
+  <line x1="184" y1="698" x2="184" y2="726" stroke="#334155" stroke-width="1"/>
+  <line x1="376" y1="698" x2="376" y2="726" stroke="#334155" stroke-width="1"/>
+  <!-- Row 1 -->
+  <rect x="24" y="726" width="912" height="27" fill="#111827"/>
+  <text x="34" y="743" font-size="10" fill="#cbd5e1">应用层 ↔ 框架层</text>
+  <text x="194" y="743" font-size="10" fill="#a78bfa">ArkTS · API 调用</text>
+  <text x="386" y="743" font-size="10" fill="#94a3b8">ArkTS 语言运行时提供的 API，通过 Stage/FA 模型统一管理 Ability 生命周期</text>
+  <line x1="184" y1="726" x2="184" y2="753" stroke="#1e293b" stroke-width="1"/>
+  <line x1="376" y1="726" x2="376" y2="753" stroke="#1e293b" stroke-width="1"/>
+  <line x1="24" y1="753" x2="936" y2="753" stroke="#1e293b" stroke-width="0.5"/>
+  <!-- Row 2 -->
+  <rect x="24" y="753" width="912" height="27" fill="#0f172a"/>
+  <text x="34" y="770" font-size="10" fill="#cbd5e1">框架层 ↔ 服务层</text>
+  <text x="194" y="770" font-size="10" fill="#a78bfa">IPC / SAM</text>
+  <text x="386" y="770" font-size="10" fill="#94a3b8">进程间通信 + ServiceAbilityManager，框架通过 IPC 机制访问系统服务能力</text>
+  <line x1="184" y1="753" x2="184" y2="780" stroke="#1e293b" stroke-width="1"/>
+  <line x1="376" y1="753" x2="376" y2="780" stroke="#1e293b" stroke-width="1"/>
+  <line x1="24" y1="780" x2="936" y2="780" stroke="#1e293b" stroke-width="0.5"/>
+  <!-- Row 3 -->
+  <rect x="24" y="780" width="912" height="27" fill="#111827"/>
+  <text x="34" y="797" font-size="10" fill="#cbd5e1">服务层 ↔ 内核层</text>
+  <text x="194" y="797" font-size="10" fill="#a78bfa">Syscall</text>
+  <text x="386" y="797" font-size="10" fill="#94a3b8">系统调用接口，连接用户空间服务与内核能力（进程/内存/文件/网络）</text>
+  <line x1="184" y1="780" x2="184" y2="807" stroke="#1e293b" stroke-width="1"/>
+  <line x1="376" y1="780" x2="376" y2="807" stroke="#1e293b" stroke-width="1"/>
+  <line x1="24" y1="807" x2="936" y2="807" stroke="#1e293b" stroke-width="0.5"/>
+  <!-- Row 4 -->
+  <rect x="24" y="807" width="912" height="27" fill="#0f172a"/>
+  <text x="34" y="824" font-size="10" fill="#cbd5e1">内核层 ↔ 硬件层</text>
+  <text x="194" y="824" font-size="10" fill="#a78bfa">HDF</text>
+  <text x="386" y="824" font-size="10" fill="#94a3b8">Hardware Driver Foundation — 统一跨设备驱动框架，屏蔽硬件差异</text>
+  <line x1="184" y1="807" x2="184" y2="834" stroke="#1e293b" stroke-width="1"/>
+  <line x1="376" y1="807" x2="376" y2="834" stroke="#1e293b" stroke-width="1"/>
+  <!-- Table border -->
+  <rect x="24" y="698" width="912" height="136" rx="4" fill="none" stroke="#334155" stroke-width="1"/>
+
+  <!-- HarmonyOS Key Feature Badge -->
+  <rect x="24" y="848" width="912" height="28" rx="4" fill="#0a1540" stroke="#4338ca" stroke-width="0.5"/>
+  <text x="480" y="866" text-anchor="middle" font-size="10" fill="#6366f1">★  分布式软总线 · 超级终端 · 方舟编译器 · HDF 统一驱动框架 · 微内核安全架构  ★</text>
+
+  <!-- Footer -->
+  <text x="480" y="892" text-anchor="middle" font-size="10" fill="#334155">HarmonyOS NEXT · 华为技术有限公司 · 鸿蒙操作系统架构参考</text>
+</svg>

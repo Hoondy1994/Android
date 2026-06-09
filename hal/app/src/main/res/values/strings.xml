@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">HAL Demo</string>
+    <string name="hal_demo_title">HAL 硬件抽象层 Demo</string>
+    <string name="hal_backend_label">实现后端</string>
+    <string name="hal_backend_mock">Mock (Kotlin)</string>
+    <string name="hal_backend_native">Native (C++/JNI)</string>
+    <string name="hal_status_idle">未初始化 — 选择后端后自动初始化</string>
+    <string name="hal_status_starting">正在初始化 HAL…</string>
+    <string name="hal_status_switching">正在切换后端…</string>
+    <string name="hal_sensor_section">环境传感器 HAL</string>
+    <string name="hal_gpio_section">虚拟 GPIO HAL</string>
+    <string name="hal_power_section">电源管理 HAL</string>
+    <string name="hal_log_section">事件日志</string>
+    <string name="hal_open">打开</string>
+    <string name="hal_read">单次采样</string>
+    <string name="hal_stream">流式采样</string>
+    <string name="hal_gpio_setup">配置 Pin7</string>
+    <string name="hal_gpio_toggle">翻转 Pin7</string>
+    <string name="hal_suspend">系统休眠</string>
+    <string name="hal_wake">全部唤醒</string>
+    <string name="hal_dump">Dump 状态</string>
+    <string name="hal_clear">清空</string>
+</resources>

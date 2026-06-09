@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SurfaceFlinger Lab</string>
+    <string name="lab_title">SurfaceFlinger 多层合成实验台</string>
+    <string name="mode_plasma">Plasma</string>
+    <string name="mode_grid">Grid</string>
+    <string name="mode_alpha">脉冲透明</string>
+    <string name="label_stress">GLES 压力层数</string>
+    <string name="label_rings">Canvas 环数量</string>
+    <string name="label_canvas_alpha">Canvas 层 Alpha</string>
+    <string name="layer_gles">底层 EGL Surface</string>
+    <string name="layer_canvas">中层 Canvas Surface</string>
+    <string name="layer_overlay">顶层 Z-OnTop Surface</string>
+    <string name="fixed_buffer_720p">固定 Buffer 1280×720</string>
+    <string name="btn_stress_burst">3 秒极限压力</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Audio Recorder</string>
+    <string name="record">录音</string>
+    <string name="tap_to_record">点击开始录音</string>
+    <string name="recordings">录音列表</string>
+    <string name="no_recordings">暂无录音，点击麦克风开始</string>
+    <string name="play">播放</string>
+    <string name="delete">删除</string>
+</resources>

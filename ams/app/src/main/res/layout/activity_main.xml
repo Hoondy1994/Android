@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#121212">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android AMS Demo (C++17)"
+        android:textColor="#BB86FC"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingVertical="8dp"/>
+
+    <!-- Top Activity indicator -->
+    <TextView
+        android:id="@+id/tv_top_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top: —"
+        android:textColor="#03DAC6"
+        android:textSize="12sp"
+        android:background="#1E1E1E"
+        android:padding="6dp"
+        android:fontFamily="monospace"/>
+
+    <!-- Row 1: Start Activity buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp">
+
+        <Button
+            android:id="@+id/btn_start_settings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start\nSettings"
+            android:textSize="11sp"
+            android:backgroundTint="#3700B3"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_start_maps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start\nMaps"
+            android:textSize="11sp"
+            android:backgroundTint="#3700B3"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_start_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start\nCamera"
+            android:textSize="11sp"
+            android:backgroundTint="#3700B3"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_start_single_task"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SingleTask\nBrowser"
+            android:textSize="10sp"
+            android:backgroundTint="#018786"/>
+    </LinearLayout>
+
+    <!-- Row 2: Finish / Back-press -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <Button
+            android:id="@+id/btn_finish_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Finish Top"
+            android:textSize="11sp"
+            android:backgroundTint="#CF6679"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_finish_settings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Finish\nSettings"
+            android:textSize="11sp"
+            android:backgroundTint="#CF6679"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_start_fg_svc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FG\nService"
+            android:textSize="11sp"
+            android:backgroundTint="#795548"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_stop_svc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop\nService"
+            android:textSize="11sp"
+            android:backgroundTint="#795548"/>
+    </LinearLayout>
+
+    <!-- Row 3: Broadcast / Processes / Dump -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <Button
+            android:id="@+id/btn_broadcast_boot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Boot\nBcast"
+            android:textSize="11sp"
+            android:backgroundTint="#37474F"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_broadcast_batt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Battery\nLow"
+            android:textSize="11sp"
+            android:backgroundTint="#37474F"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_show_procs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Processes"
+            android:textSize="11sp"
+            android:backgroundTint="#1B5E20"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_dump"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Full\nDump"
+            android:textSize="11sp"
+            android:backgroundTint="#1B5E20"/>
+    </LinearLayout>
+
+    <!-- Row 4: Tasks / Clear log -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <Button
+            android:id="@+id/btn_tasks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Running\nTasks"
+            android:textSize="11sp"
+            android:backgroundTint="#4A148C"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_start_single_instance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SingleInst\nPhone"
+            android:textSize="10sp"
+            android:backgroundTint="#4A148C"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/btn_clear_log"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear\nLog"
+            android:textSize="11sp"
+            android:backgroundTint="#263238"/>
+    </LinearLayout>
+
+    <!-- Log output -->
+    <ScrollView
+        android:id="@+id/scroll_log"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:background="#0D0D0D">
+
+        <TextView
+            android:id="@+id/tv_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#E0E0E0"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:padding="6dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="AMS log will appear here..."/>
+    </ScrollView>
+
+</LinearLayout>

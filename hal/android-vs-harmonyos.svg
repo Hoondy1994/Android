@@ -1,0 +1,403 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1380" viewBox="0 0 1200 1380">
+<defs><style>text{font-family:"Segoe UI","Microsoft YaHei","PingFang SC",system-ui,sans-serif;}</style></defs>
+<rect x="0" y="0" width="1200" height="1380" fill="#0f172a"/>
+<text x="30" y="44" text-anchor="start" font-size="20" fill="#f1f5f9" font-weight="600">Android vs HarmonyOS 系统架构差异分析</text>
+<text x="30" y="64" text-anchor="start" font-size="11" fill="#94a3b8">基于 AOSP Android 与 HarmonyOS NEXT 的完整技术架构对比 · 2024</text>
+<line x1="0" y1="76" x2="1200" y2="76" stroke="#1e293b" stroke-width="1"/>
+<rect x="30" y="82" width="170" height="44" fill="#1a2535"/>
+<rect x="200" y="82" width="310" height="44" fill="#0d2244"/>
+<rect x="510" y="82" width="310" height="44" fill="#0d1448"/>
+<rect x="820" y="82" width="350" height="44" fill="#1a2535"/>
+<line x1="200" y1="82" x2="200" y2="126" stroke="#334155" stroke-width="1"/>
+<line x1="510" y1="82" x2="510" y2="126" stroke="#334155" stroke-width="1"/>
+<line x1="820" y1="82" x2="820" y2="126" stroke="#334155" stroke-width="1"/>
+<text x="40" y="100" text-anchor="start" font-size="11" fill="#94a3b8" font-weight="600">对比维度</text>
+<text x="210" y="98" text-anchor="start" font-size="12" fill="#60a5fa" font-weight="700">Android  (Google · AOSP)</text>
+<text x="210" y="113" text-anchor="start" font-size="9" fill="#3b82f6">宏内核 · Java/Kotlin · 移动互联网生态</text>
+<text x="520" y="98" text-anchor="start" font-size="12" fill="#818cf8" font-weight="700">HarmonyOS  (华为 · OHOS)</text>
+<text x="520" y="113" text-anchor="start" font-size="9" fill="#6366f1">多内核 · ArkTS · 全场景分布式架构</text>
+<text x="830" y="100" text-anchor="start" font-size="11" fill="#94a3b8" font-weight="600">差异评述</text>
+<line x1="30" y1="126" x2="1170" y2="126" stroke="#334155" stroke-width="1"/>
+<rect x="30" y="126" width="1140" height="28" fill="#1e293b"/>
+<rect x="30" y="126" width="4" height="28" fill="#3b82f6"/>
+<text x="42" y="145" text-anchor="start" font-size="11" fill="#3b82f6" font-weight="600">1. 架构设计 (Architecture Design)</text>
+<line x1="30" y1="154" x2="1170" y2="154" stroke="#334155" stroke-width="1"/>
+<line x1="200" y1="126" x2="200" y2="154" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="510" y1="126" x2="510" y2="154" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="820" y1="126" x2="820" y2="154" stroke="#1e293b" stroke-width="0.5"/>
+<rect x="30" y="154" width="170" height="44" fill="#111827"/>
+<rect x="200" y="154" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="154" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="154" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="154" x2="200" y2="198" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="154" x2="510" y2="198" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="154" x2="820" y2="198" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="198" x2="1170" y2="198" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="170" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">整体设计理念</text>
+<text x="208" y="169" text-anchor="start" font-size="10" fill="#93c5fd">单设备优先；专注手机/平板生态</text>
+<text x="208" y="182" text-anchor="start" font-size="10" fill="#93c5fd">基于 Linux 单体宏内核架构</text>
+<text x="518" y="169" text-anchor="start" font-size="10" fill="#a5b4fc">万物互联；全场景多设备协同</text>
+<text x="518" y="182" text-anchor="start" font-size="10" fill="#a5b4fc">分布式微内核架构设计</text>
+<text x="828" y="169" text-anchor="start" font-size="10" fill="#94a3b8">HarmonyOS 原生支持多设备协同</text>
+<text x="828" y="182" text-anchor="start" font-size="10" fill="#94a3b8">Android 后期补充跨设备能力</text>
+<rect x="30" y="198" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="198" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="198" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="198" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="198" x2="200" y2="242" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="198" x2="510" y2="242" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="198" x2="820" y2="242" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="242" x2="1170" y2="242" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="214" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">系统层次结构</text>
+<text x="208" y="213" text-anchor="start" font-size="10" fill="#93c5fd">5层：应用 / 框架 / 库+运行时</text>
+<text x="208" y="226" text-anchor="start" font-size="10" fill="#93c5fd">/ HAL / Linux 内核</text>
+<text x="518" y="213" text-anchor="start" font-size="10" fill="#a5b4fc">5层：应用 / 框架 / 系统服务</text>
+<text x="518" y="226" text-anchor="start" font-size="10" fill="#a5b4fc">/ 内核层 / 硬件层</text>
+<text x="828" y="213" text-anchor="start" font-size="10" fill="#94a3b8">两者均5层；系统服务层内置</text>
+<text x="828" y="226" text-anchor="start" font-size="10" fill="#94a3b8">分布式能力是核心差异所在</text>
+<rect x="30" y="242" width="170" height="44" fill="#111827"/>
+<rect x="200" y="242" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="242" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="242" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="242" x2="200" y2="286" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="242" x2="510" y2="286" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="242" x2="820" y2="286" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="286" x2="1170" y2="286" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="258" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">目标设备场景</text>
+<text x="208" y="257" text-anchor="start" font-size="10" fill="#93c5fd">手机、平板为主；Wear OS</text>
+<text x="208" y="270" text-anchor="start" font-size="10" fill="#93c5fd">/ Android TV 各自独立子系统</text>
+<text x="518" y="257" text-anchor="start" font-size="10" fill="#a5b4fc">手机/平板/手表/TV/车机/IoT</text>
+<text x="518" y="270" text-anchor="start" font-size="10" fill="#a5b4fc">统一系统框架覆盖全场景</text>
+<text x="828" y="257" text-anchor="start" font-size="10" fill="#94a3b8">HarmonyOS 一套系统覆盖全场景</text>
+<text x="828" y="270" text-anchor="start" font-size="10" fill="#94a3b8">Android 各场景独立子系统</text>
+<rect x="30" y="286" width="1140" height="28" fill="#1e293b"/>
+<rect x="30" y="286" width="4" height="28" fill="#64748b"/>
+<text x="42" y="305" text-anchor="start" font-size="11" fill="#64748b" font-weight="600">2. 内核与底层 (Kernel &amp; Low-level)</text>
+<line x1="30" y1="314" x2="1170" y2="314" stroke="#334155" stroke-width="1"/>
+<line x1="200" y1="286" x2="200" y2="314" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="510" y1="286" x2="510" y2="314" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="820" y1="286" x2="820" y2="314" stroke="#1e293b" stroke-width="0.5"/>
+<rect x="30" y="314" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="314" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="314" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="314" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="314" x2="200" y2="358" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="314" x2="510" y2="358" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="314" x2="820" y2="358" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="358" x2="1170" y2="358" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="330" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">内核类型</text>
+<text x="208" y="329" text-anchor="start" font-size="10" fill="#93c5fd">Linux 宏内核 (Monolithic Kernel)</text>
+<text x="208" y="342" text-anchor="start" font-size="10" fill="#93c5fd">所有服务运行于内核态</text>
+<text x="518" y="329" text-anchor="start" font-size="10" fill="#a5b4fc">多内核：LiteOS-M / LiteOS-A</text>
+<text x="518" y="342" text-anchor="start" font-size="10" fill="#a5b4fc">/ Linux Kernel（微内核架构规划中）</text>
+<text x="828" y="329" text-anchor="start" font-size="10" fill="#94a3b8">HarmonyOS 多内核灵活适配设备</text>
+<text x="828" y="342" text-anchor="start" font-size="10" fill="#94a3b8">Android 仅支持 Linux 宏内核</text>
+<rect x="30" y="358" width="170" height="44" fill="#111827"/>
+<rect x="200" y="358" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="358" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="358" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="358" x2="200" y2="402" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="358" x2="510" y2="402" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="358" x2="820" y2="402" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="402" x2="1170" y2="402" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="374" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">驱动框架</text>
+<text x="208" y="373" text-anchor="start" font-size="10" fill="#93c5fd">HAL（Hardware Abstraction Layer）</text>
+<text x="208" y="386" text-anchor="start" font-size="10" fill="#93c5fd">HIDL / AIDL 版本化稳定接口</text>
+<text x="518" y="373" text-anchor="start" font-size="10" fill="#a5b4fc">HDF（Hardware Driver Foundation）</text>
+<text x="518" y="386" text-anchor="start" font-size="10" fill="#a5b4fc">统一跨设备驱动框架</text>
+<text x="828" y="373" text-anchor="start" font-size="10" fill="#94a3b8">HDF 支持跨设备共用驱动模型</text>
+<text x="828" y="386" text-anchor="start" font-size="10" fill="#94a3b8">Android HAL 仅针对单类设备</text>
+<rect x="30" y="402" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="402" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="402" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="402" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="402" x2="200" y2="446" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="402" x2="510" y2="446" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="402" x2="820" y2="446" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="446" x2="1170" y2="446" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="418" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">系统启动流程</text>
+<text x="208" y="417" text-anchor="start" font-size="10" fill="#93c5fd">init → Zygote → system_server</text>
+<text x="208" y="430" text-anchor="start" font-size="10" fill="#93c5fd">→ 应用进程（fork 模型）</text>
+<text x="518" y="417" text-anchor="start" font-size="10" fill="#a5b4fc">init → samgr（服务管理器）</text>
+<text x="518" y="430" text-anchor="start" font-size="10" fill="#a5b4fc">→ 子系统服务 → 应用</text>
+<text x="828" y="417" text-anchor="start" font-size="10" fill="#94a3b8">Zygote fork 启动快但内存占用大</text>
+<text x="828" y="430" text-anchor="start" font-size="10" fill="#94a3b8">samgr 服务化更安全灵活</text>
+<rect x="30" y="446" width="1140" height="28" fill="#1e293b"/>
+<rect x="30" y="446" width="4" height="28" fill="#8b5cf6"/>
+<text x="42" y="465" text-anchor="start" font-size="11" fill="#8b5cf6" font-weight="600">3. 运行时与开发语言 (Runtime &amp; Language)</text>
+<line x1="30" y1="474" x2="1170" y2="474" stroke="#334155" stroke-width="1"/>
+<line x1="200" y1="446" x2="200" y2="474" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="510" y1="446" x2="510" y2="474" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="820" y1="446" x2="820" y2="474" stroke="#1e293b" stroke-width="0.5"/>
+<rect x="30" y="474" width="170" height="44" fill="#111827"/>
+<rect x="200" y="474" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="474" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="474" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="474" x2="200" y2="518" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="474" x2="510" y2="518" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="474" x2="820" y2="518" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="518" x2="1170" y2="518" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="490" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">主要开发语言</text>
+<text x="208" y="489" text-anchor="start" font-size="10" fill="#93c5fd">Java / Kotlin（应用层）</text>
+<text x="208" y="502" text-anchor="start" font-size="10" fill="#93c5fd">C / C++（系统库层）</text>
+<text x="518" y="489" text-anchor="start" font-size="10" fill="#a5b4fc">ArkTS（TypeScript 超集，强类型）</text>
+<text x="518" y="502" text-anchor="start" font-size="10" fill="#a5b4fc">C / C++（系统层）</text>
+<text x="828" y="489" text-anchor="start" font-size="10" fill="#94a3b8">ArkTS 更现代安全；HarmonyOS</text>
+<text x="828" y="502" text-anchor="start" font-size="10" fill="#94a3b8">已停止支持 Java API</text>
+<rect x="30" y="518" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="518" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="518" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="518" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="518" x2="200" y2="562" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="518" x2="510" y2="562" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="518" x2="820" y2="562" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="562" x2="1170" y2="562" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="534" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">UI 框架</text>
+<text x="208" y="533" text-anchor="start" font-size="10" fill="#93c5fd">XML View + Jetpack Compose</text>
+<text x="208" y="546" text-anchor="start" font-size="10" fill="#93c5fd">（声明式 UI，Google 推进中）</text>
+<text x="518" y="533" text-anchor="start" font-size="10" fill="#a5b4fc">ArkUI（原生声明式 UI 框架）</text>
+<text x="518" y="546" text-anchor="start" font-size="10" fill="#a5b4fc">类 SwiftUI / Flutter 设计风格</text>
+<text x="828" y="533" text-anchor="start" font-size="10" fill="#94a3b8">均支持声明式 UI；ArkUI</text>
+<text x="828" y="546" text-anchor="start" font-size="10" fill="#94a3b8">为 HarmonyOS 专属原生框架</text>
+<rect x="30" y="562" width="170" height="44" fill="#111827"/>
+<rect x="200" y="562" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="562" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="562" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="562" x2="200" y2="606" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="562" x2="510" y2="606" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="562" x2="820" y2="606" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="606" x2="1170" y2="606" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="578" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">应用运行时</text>
+<text x="208" y="577" text-anchor="start" font-size="10" fill="#93c5fd">ART（Android Runtime）</text>
+<text x="208" y="590" text-anchor="start" font-size="10" fill="#93c5fd">AOT + JIT 混合编译模式</text>
+<text x="518" y="577" text-anchor="start" font-size="10" fill="#a5b4fc">方舟运行时 (ArkRuntime)</text>
+<text x="518" y="590" text-anchor="start" font-size="10" fill="#a5b4fc">静态类型 + AOT 提前编译</text>
+<text x="828" y="577" text-anchor="start" font-size="10" fill="#94a3b8">ArkRuntime 静态编译性能更优</text>
+<text x="828" y="590" text-anchor="start" font-size="10" fill="#94a3b8">ART 成熟稳定、生态更广</text>
+<rect x="30" y="606" width="1140" height="28" fill="#1e293b"/>
+<rect x="30" y="606" width="4" height="28" fill="#06b6d4"/>
+<text x="42" y="625" text-anchor="start" font-size="11" fill="#06b6d4" font-weight="600">4. 进程间通信 (IPC Mechanism)</text>
+<line x1="30" y1="634" x2="1170" y2="634" stroke="#334155" stroke-width="1"/>
+<line x1="200" y1="606" x2="200" y2="634" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="510" y1="606" x2="510" y2="634" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="820" y1="606" x2="820" y2="634" stroke="#1e293b" stroke-width="0.5"/>
+<rect x="30" y="634" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="634" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="634" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="634" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="634" x2="200" y2="678" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="634" x2="510" y2="678" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="634" x2="820" y2="678" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="678" x2="1170" y2="678" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="650" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">核心 IPC 机制</text>
+<text x="208" y="649" text-anchor="start" font-size="10" fill="#93c5fd">Binder IPC（内核驱动实现）</text>
+<text x="208" y="662" text-anchor="start" font-size="10" fill="#93c5fd">成熟高性能跨进程通信机制</text>
+<text x="518" y="649" text-anchor="start" font-size="10" fill="#a5b4fc">IPC + 分布式软总线（系统内置）</text>
+<text x="518" y="662" text-anchor="start" font-size="10" fill="#a5b4fc">实现跨设备透明通信</text>
+<text x="828" y="649" text-anchor="start" font-size="10" fill="#94a3b8">软总线是 HarmonyOS 独有创新</text>
+<text x="828" y="662" text-anchor="start" font-size="10" fill="#94a3b8">可透明实现跨设备 IPC 通信</text>
+<rect x="30" y="678" width="170" height="44" fill="#111827"/>
+<rect x="200" y="678" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="678" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="678" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="678" x2="200" y2="722" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="678" x2="510" y2="722" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="678" x2="820" y2="722" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="722" x2="1170" y2="722" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="694" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">硬件接口标准</text>
+<text x="208" y="693" text-anchor="start" font-size="10" fill="#93c5fd">HIDL / AIDL（版本化稳定接口）</text>
+<text x="208" y="706" text-anchor="start" font-size="10" fill="#93c5fd">框架层与驱动层解耦</text>
+<text x="518" y="693" text-anchor="start" font-size="10" fill="#a5b4fc">HDF IDL 硬件接口定义语言</text>
+<text x="518" y="706" text-anchor="start" font-size="10" fill="#a5b4fc">与 HDF 驱动框架深度集成</text>
+<text x="828" y="693" text-anchor="start" font-size="10" fill="#94a3b8">功能相近；HDF IDL</text>
+<text x="828" y="706" text-anchor="start" font-size="10" fill="#94a3b8">与 HarmonyOS 生态深度绑定</text>
+<rect x="30" y="722" width="1140" height="28" fill="#0a1540"/>
+<rect x="30" y="722" width="4" height="28" fill="#6366f1"/>
+<text x="42" y="741" text-anchor="start" font-size="11" fill="#6366f1" font-weight="600">5. 分布式能力 (Distributed)  ★ HarmonyOS 核心特色</text>
+<line x1="30" y1="750" x2="1170" y2="750" stroke="#334155" stroke-width="1"/>
+<line x1="200" y1="722" x2="200" y2="750" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="510" y1="722" x2="510" y2="750" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="820" y1="722" x2="820" y2="750" stroke="#1e293b" stroke-width="0.5"/>
+<rect x="30" y="750" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="750" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="750" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="750" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="750" x2="200" y2="794" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="750" x2="510" y2="794" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="750" x2="820" y2="794" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="794" x2="1170" y2="794" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="766" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">跨设备通信</text>
+<text x="208" y="765" text-anchor="start" font-size="10" fill="#93c5fd">无系统级跨设备通信机制</text>
+<text x="208" y="778" text-anchor="start" font-size="10" fill="#93c5fd">依赖 Nearby Share / Cast</text>
+<text x="518" y="765" text-anchor="start" font-size="10" fill="#a5b4fc">分布式软总线（系统内置）</text>
+<text x="518" y="778" text-anchor="start" font-size="10" fill="#a5b4fc">自动发现、连接、透明通信</text>
+<text x="828" y="765" text-anchor="start" font-size="10" fill="#94a3b8">HarmonyOS 最大技术创新</text>
+<text x="828" y="778" text-anchor="start" font-size="10" fill="#94a3b8">Android 无原生对等能力</text>
+<rect x="30" y="794" width="170" height="44" fill="#111827"/>
+<rect x="200" y="794" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="794" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="794" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="794" x2="200" y2="838" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="794" x2="510" y2="838" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="794" x2="820" y2="838" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="838" x2="1170" y2="838" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="810" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">任务协同</text>
+<text x="208" y="809" text-anchor="start" font-size="10" fill="#93c5fd">无原生跨设备任务调度能力</text>
+<text x="208" y="822" text-anchor="start" font-size="10" fill="#93c5fd">需第三方应用自行实现</text>
+<text x="518" y="809" text-anchor="start" font-size="10" fill="#a5b4fc">分布式任务调度（系统级）</text>
+<text x="518" y="822" text-anchor="start" font-size="10" fill="#a5b4fc">Ability 可在设备间无缝迁移</text>
+<text x="828" y="809" text-anchor="start" font-size="10" fill="#94a3b8">超级终端能力独属 HarmonyOS</text>
+<text x="828" y="822" text-anchor="start" font-size="10" fill="#94a3b8">Android 无对等系统级能力</text>
+<rect x="30" y="838" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="838" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="838" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="838" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="838" x2="200" y2="882" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="838" x2="510" y2="882" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="838" x2="820" y2="882" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="882" x2="1170" y2="882" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="854" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">数据共享</text>
+<text x="208" y="853" text-anchor="start" font-size="10" fill="#93c5fd">依赖云存储（Google Drive 等）</text>
+<text x="208" y="866" text-anchor="start" font-size="10" fill="#93c5fd">无本地跨设备数据库</text>
+<text x="518" y="853" text-anchor="start" font-size="10" fill="#a5b4fc">分布式数据管理（系统级）</text>
+<text x="518" y="866" text-anchor="start" font-size="10" fill="#a5b4fc">本地数据跨设备实时同步</text>
+<text x="828" y="853" text-anchor="start" font-size="10" fill="#94a3b8">HarmonyOS 系统级数据同步</text>
+<text x="828" y="866" text-anchor="start" font-size="10" fill="#94a3b8">Android 需应用层自行实现</text>
+<rect x="30" y="882" width="1140" height="28" fill="#1e293b"/>
+<rect x="30" y="882" width="4" height="28" fill="#ef4444"/>
+<text x="42" y="901" text-anchor="start" font-size="11" fill="#ef4444" font-weight="600">6. 安全机制 (Security)</text>
+<line x1="30" y1="910" x2="1170" y2="910" stroke="#334155" stroke-width="1"/>
+<line x1="200" y1="882" x2="200" y2="910" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="510" y1="882" x2="510" y2="910" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="820" y1="882" x2="820" y2="910" stroke="#1e293b" stroke-width="0.5"/>
+<rect x="30" y="910" width="170" height="44" fill="#111827"/>
+<rect x="200" y="910" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="910" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="910" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="910" x2="200" y2="954" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="910" x2="510" y2="954" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="910" x2="820" y2="954" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="954" x2="1170" y2="954" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="926" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">安全架构</text>
+<text x="208" y="925" text-anchor="start" font-size="10" fill="#93c5fd">Linux DAC + SELinux + 沙箱</text>
+<text x="208" y="938" text-anchor="start" font-size="10" fill="#93c5fd">历经多年安全加固，成熟稳定</text>
+<text x="518" y="925" text-anchor="start" font-size="10" fill="#a5b4fc">TEE + 微内核安全架构</text>
+<text x="518" y="938" text-anchor="start" font-size="10" fill="#a5b4fc">服务运行于用户态，缩小攻击面</text>
+<text x="828" y="925" text-anchor="start" font-size="10" fill="#94a3b8">微内核攻击面更小但尚在完善</text>
+<text x="828" y="938" text-anchor="start" font-size="10" fill="#94a3b8">SELinux 经多年生产验证可靠</text>
+<rect x="30" y="954" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="954" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="954" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="954" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="954" x2="200" y2="998" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="954" x2="510" y2="998" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="954" x2="820" y2="998" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="998" x2="1170" y2="998" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="970" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">权限模型</text>
+<text x="208" y="969" text-anchor="start" font-size="10" fill="#93c5fd">运行时权限组（Android 6+）</text>
+<text x="208" y="982" text-anchor="start" font-size="10" fill="#93c5fd">细粒度用户授权管理</text>
+<text x="518" y="969" text-anchor="start" font-size="10" fill="#a5b4fc">运行时权限 + ACL 最小化原则</text>
+<text x="518" y="982" text-anchor="start" font-size="10" fill="#a5b4fc">更严格的权限管控策略</text>
+<text x="828" y="969" text-anchor="start" font-size="10" fill="#94a3b8">两者模型相近；HarmonyOS</text>
+<text x="828" y="982" text-anchor="start" font-size="10" fill="#94a3b8">更强调最小化授权原则</text>
+<rect x="30" y="998" width="170" height="44" fill="#111827"/>
+<rect x="200" y="998" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="998" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="998" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="998" x2="200" y2="1042" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="998" x2="510" y2="1042" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="998" x2="820" y2="1042" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="1042" x2="1170" y2="1042" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="1014" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">应用沙箱</text>
+<text x="208" y="1013" text-anchor="start" font-size="10" fill="#93c5fd">Linux UID 隔离 + SELinux</text>
+<text x="208" y="1026" text-anchor="start" font-size="10" fill="#93c5fd">应用间严格数据隔离</text>
+<text x="518" y="1013" text-anchor="start" font-size="10" fill="#a5b4fc">HAP 包沙箱 + 签名完整性校验</text>
+<text x="518" y="1026" text-anchor="start" font-size="10" fill="#a5b4fc">数据加密 + 完整性保护</text>
+<text x="828" y="1013" text-anchor="start" font-size="10" fill="#94a3b8">Android SELinux 更成熟可靠</text>
+<text x="828" y="1026" text-anchor="start" font-size="10" fill="#94a3b8">HarmonyOS HAP 签名机制创新</text>
+<rect x="30" y="1042" width="1140" height="28" fill="#1e293b"/>
+<rect x="30" y="1042" width="4" height="28" fill="#22c55e"/>
+<text x="42" y="1061" text-anchor="start" font-size="11" fill="#22c55e" font-weight="600">7. 应用生态 (App Ecosystem)</text>
+<line x1="30" y1="1070" x2="1170" y2="1070" stroke="#334155" stroke-width="1"/>
+<line x1="200" y1="1042" x2="200" y2="1070" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="510" y1="1042" x2="510" y2="1070" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="820" y1="1042" x2="820" y2="1070" stroke="#1e293b" stroke-width="0.5"/>
+<rect x="30" y="1070" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="1070" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="1070" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="1070" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="1070" x2="200" y2="1114" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="1070" x2="510" y2="1114" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="1070" x2="820" y2="1114" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="1114" x2="1170" y2="1114" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="1086" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">开发工具链</text>
+<text x="208" y="1085" text-anchor="start" font-size="10" fill="#93c5fd">Android Studio + Gradle</text>
+<text x="208" y="1098" text-anchor="start" font-size="10" fill="#93c5fd">全球最完善的移动开发生态</text>
+<text x="518" y="1085" text-anchor="start" font-size="10" fill="#a5b4fc">DevEco Studio + ohpm 包管理</text>
+<text x="518" y="1098" text-anchor="start" font-size="10" fill="#a5b4fc">基于 IntelliJ，持续完善中</text>
+<text x="828" y="1085" text-anchor="start" font-size="10" fill="#94a3b8">Android Studio 更成熟完善</text>
+<text x="828" y="1098" text-anchor="start" font-size="10" fill="#94a3b8">DevEco Studio 快速追赶</text>
+<rect x="30" y="1114" width="170" height="44" fill="#111827"/>
+<rect x="200" y="1114" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="1114" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="1114" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="1114" x2="200" y2="1158" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="1114" x2="510" y2="1158" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="1114" x2="820" y2="1158" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="1158" x2="1170" y2="1158" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="1130" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">生态规模</text>
+<text x="208" y="1129" text-anchor="start" font-size="10" fill="#93c5fd">Google Play 300万+ 应用</text>
+<text x="208" y="1142" text-anchor="start" font-size="10" fill="#93c5fd">全球最大移动应用生态</text>
+<text x="518" y="1129" text-anchor="start" font-size="10" fill="#a5b4fc">华为市场 5万+ 鸿蒙原生应用</text>
+<text x="518" y="1142" text-anchor="start" font-size="10" fill="#a5b4fc">（2024年，快速增长中）</text>
+<text x="828" y="1129" text-anchor="start" font-size="10" fill="#94a3b8">Android 生态压倒性领先</text>
+<text x="828" y="1142" text-anchor="start" font-size="10" fill="#94a3b8">HarmonyOS 快速扩展中</text>
+<rect x="30" y="1158" width="1140" height="28" fill="#1e293b"/>
+<rect x="30" y="1158" width="4" height="28" fill="#f59e0b"/>
+<text x="42" y="1177" text-anchor="start" font-size="11" fill="#f59e0b" font-weight="600">8. 开源情况 (Open Source)</text>
+<line x1="30" y1="1186" x2="1170" y2="1186" stroke="#334155" stroke-width="1"/>
+<line x1="200" y1="1158" x2="200" y2="1186" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="510" y1="1158" x2="510" y2="1186" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="820" y1="1158" x2="820" y2="1186" stroke="#1e293b" stroke-width="0.5"/>
+<rect x="30" y="1186" width="170" height="44" fill="#0f172a"/>
+<rect x="200" y="1186" width="310" height="44" fill="#0a1a38"/>
+<rect x="510" y="1186" width="310" height="44" fill="#0a1040"/>
+<rect x="820" y="1186" width="350" height="44" fill="#0f172a"/>
+<line x1="200" y1="1186" x2="200" y2="1230" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="1186" x2="510" y2="1230" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="1186" x2="820" y2="1230" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="1230" x2="1170" y2="1230" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="1202" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">开源策略</text>
+<text x="208" y="1201" text-anchor="start" font-size="10" fill="#93c5fd">AOSP 完全开源（Apache / GPL）</text>
+<text x="208" y="1214" text-anchor="start" font-size="10" fill="#93c5fd">GMS（Google 服务）不开源</text>
+<text x="518" y="1201" text-anchor="start" font-size="10" fill="#a5b4fc">OpenHarmony 开源（Apache 2.0）</text>
+<text x="518" y="1214" text-anchor="start" font-size="10" fill="#a5b4fc">华为商业版含专有服务组件</text>
+<text x="828" y="1201" text-anchor="start" font-size="10" fill="#94a3b8">AOSP 生态更成熟完善</text>
+<text x="828" y="1214" text-anchor="start" font-size="10" fill="#94a3b8">OpenHarmony 社区快速发展</text>
+<rect x="30" y="1230" width="1140" height="28" fill="#1e293b"/>
+<rect x="30" y="1230" width="4" height="28" fill="#ec4899"/>
+<text x="42" y="1249" text-anchor="start" font-size="11" fill="#ec4899" font-weight="600">9. 适用场景 (Use Cases)</text>
+<line x1="30" y1="1258" x2="1170" y2="1258" stroke="#334155" stroke-width="1"/>
+<line x1="200" y1="1230" x2="200" y2="1258" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="510" y1="1230" x2="510" y2="1258" stroke="#1e293b" stroke-width="0.5"/>
+<line x1="820" y1="1230" x2="820" y2="1258" stroke="#1e293b" stroke-width="0.5"/>
+<rect x="30" y="1258" width="170" height="44" fill="#111827"/>
+<rect x="200" y="1258" width="310" height="44" fill="#0d2040"/>
+<rect x="510" y="1258" width="310" height="44" fill="#0d1444"/>
+<rect x="820" y="1258" width="350" height="44" fill="#111827"/>
+<line x1="200" y1="1258" x2="200" y2="1302" stroke="#1e293b" stroke-width="1"/>
+<line x1="510" y1="1258" x2="510" y2="1302" stroke="#1e293b" stroke-width="1"/>
+<line x1="820" y1="1258" x2="820" y2="1302" stroke="#1e293b" stroke-width="1"/>
+<line x1="30" y1="1302" x2="1170" y2="1302" stroke="#1e293b" stroke-width="0.5"/>
+<text x="38" y="1274" text-anchor="start" font-size="10" fill="#e2e8f0" font-weight="600">主要应用场景</text>
+<text x="208" y="1273" text-anchor="start" font-size="10" fill="#93c5fd">移动互联网（社交/电商/游戏）</text>
+<text x="208" y="1286" text-anchor="start" font-size="10" fill="#93c5fd">企业移动办公</text>
+<text x="518" y="1273" text-anchor="start" font-size="10" fill="#a5b4fc">全场景智能终端（IoT/车机</text>
+<text x="518" y="1286" text-anchor="start" font-size="10" fill="#a5b4fc">手机/智能家居/工业设备）</text>
+<text x="828" y="1273" text-anchor="start" font-size="10" fill="#94a3b8">Android 移动互联网生态更强</text>
+<text x="828" y="1286" text-anchor="start" font-size="10" fill="#94a3b8">HarmonyOS IoT/全场景更优</text>
+<rect x="30" y="82" width="1140" height="1220" fill="none" stroke="#334155" stroke-width="1"/>
+<rect x="30" y="1310" width="1140" height="36" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+<text x="600" y="1324" text-anchor="middle" font-size="9.5" fill="#64748b">核心差异总结：HarmonyOS 分布式能力 / 多内核 / ArkTS 是三大技术优势；Android 生态规模 / SELinux成熟度 / 全球开发者社区是核心竞争力</text>
+<text x="600" y="1338" text-anchor="middle" font-size="9" fill="#334155">AOSP Android · HarmonyOS NEXT / OpenHarmony  ·  技术架构对比参考  ·  2024</text>
+</svg>

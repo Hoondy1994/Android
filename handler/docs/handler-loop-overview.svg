@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" font-family="Segoe UI, Microsoft YaHei, sans-serif">
+  <defs>
+    <filter id="ds">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#455a64"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="520" fill="#fafbfc"/>
+  <text x="360" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#263238">Handler / Looper / MessageQueue &#20851;&#31995;&#24635;&#35272;</text>
+
+  <ellipse cx="360" cy="280" rx="280" ry="180" fill="none" stroke="#b0bec5" stroke-width="2" stroke-dasharray="8,6"/>
+
+  <rect x="280" y="70" width="160" height="56" rx="28" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" filter="url(#ds)"/>
+  <text x="360" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">&#29983;&#20135;&#32773;</text>
+  <text x="360" y="114" text-anchor="middle" font-size="11" fill="#455a64">sendMessage / post</text>
+
+  <rect x="500" y="220" width="160" height="56" rx="28" fill="#fff3e0" stroke="#ef6c00" stroke-width="2" filter="url(#ds)"/>
+  <text x="580" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">MessageQueue</text>
+  <text x="580" y="264" text-anchor="middle" font-size="11" fill="#455a64">enqueue &#20837;&#38431;</text>
+
+  <rect x="280" y="420" width="160" height="56" rx="28" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" filter="url(#ds)"/>
+  <text x="360" y="445" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a148c">Looper</text>
+  <text x="360" y="464" text-anchor="middle" font-size="11" fill="#455a64">loop() &#21462;&#38431;&#22836;</text>
+
+  <rect x="60" y="220" width="160" height="56" rx="28" fill="#e8f5e9" stroke="#07C160" stroke-width="2" filter="url(#ds)"/>
+  <text x="140" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">Handler</text>
+  <text x="140" y="264" text-anchor="middle" font-size="11" fill="#455a64">dispatch &#20998;&#21457;</text>
+
+  <path d="M 360 126 Q 480 150 580 218" fill="none" stroke="#455a64" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 580 276 Q 520 380 440 420" fill="none" stroke="#455a64" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 280 448 Q 180 400 140 276" fill="none" stroke="#455a64" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 140 218 Q 200 120 280 98" fill="none" stroke="#07C160" stroke-width="2" marker-end="url(#arr)"/>
+
+  <circle cx="360" cy="280" r="72" fill="#ffffff" stroke="#07C160" stroke-width="3" filter="url(#ds)"/>
+  <text x="360" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#07C160">&#20027;&#32447;&#31243;</text>
+  <text x="360" y="286" text-anchor="middle" font-size="11" fill="#455a64">UI Thread</text>
+  <text x="360" y="304" text-anchor="middle" font-size="10" fill="#78909c">&#21333;&#32447;&#31243;&#39034;&#24207;&#25191;&#34892;</text>
+
+  <rect x="40" y="360" width="300" height="130" rx="10" fill="#fff" stroke="#cfd8dc" filter="url(#ds)"/>
+  <text x="60" y="385" font-size="13" font-weight="bold" fill="#37474f">Message &#31867;&#22411;</text>
+  <text x="60" y="408" font-size="11" fill="#455a64">Message: what / arg1 / arg2 / obj</text>
+  <text x="60" y="428" font-size="11" fill="#455a64">Runnable: post() &#23553;&#35013;&#20026; Message</text>
+  <text x="60" y="455" font-size="11" fill="#2e7d32">&#26379;&#21451;&#22280;: what=10/11/12</text>
+  <text x="60" y="475" font-size="11" fill="#1565c0">&#20027;&#31243;&#24207;: what=1/2</text>
+
+  <rect x="380" y="360" width="300" height="130" rx="10" fill="#fff" stroke="#cfd8dc" filter="url(#ds)"/>
+  <text x="400" y="385" font-size="13" font-weight="bold" fill="#37474f">&#26412;&#39033;&#30446;&#20195;&#30721;</text>
+  <text x="400" y="408" font-size="11" fill="#455a64">Looper.getMainLooper()</text>
+  <text x="400" y="428" font-size="11" fill="#455a64">MainAppHandler(looper, activity)</text>
+  <text x="400" y="448" font-size="11" fill="#455a64">MomentsFragment - mainHandler</text>
+  <text x="400" y="468" font-size="11" fill="#455a64">handleMessage - Activity UI</text>
+  <text x="400" y="488" font-size="10" fill="#90a4ae">&#31105;&#27490;&#23376;&#32447;&#31243;&#30452;&#25509;&#25913; View</text>
+</svg>

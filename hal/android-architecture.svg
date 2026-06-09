@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="880" viewBox="0 0 960 880">
+  <defs><style>text{font-family:"Segoe UI","Microsoft YaHei","PingFang SC",system-ui,sans-serif;}</style></defs>
+
+  <!-- Background -->
+  <rect width="960" height="880" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="24" y="44" font-size="22" font-weight="600" fill="#f1f5f9">Android 系统架构</text>
+  <text x="24" y="64" font-size="12" fill="#94a3b8">Android 平台标准五层架构模型 — 从用户应用到 Linux 内核的完整技术栈</text>
+  <line x1="0" y1="76" x2="960" y2="76" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- L5: Applications y=84~184 -->
+  <rect x="0" y="84" width="960" height="100" fill="#0d1f3c"/>
+  <rect x="0" y="84" width="200" height="100" fill="#091628"/>
+  <rect x="0" y="84" width="4" height="100" fill="#3b82f6"/>
+  <line x1="204" y1="84" x2="204" y2="184" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="100" y="130" text-anchor="middle" font-size="18" font-weight="700" fill="#93c5fd">L5</text>
+  <text x="100" y="147" text-anchor="middle" font-size="13" font-weight="600" fill="#93c5fd">应用层</text>
+  <text x="100" y="162" text-anchor="middle" font-size="10" fill="#60a5fa">Applications</text>
+  <text x="100" y="175" text-anchor="middle" font-size="9" fill="#2d4a7a" font-style="italic">Java / Kotlin · SDK</text>
+  <text x="214" y="100" font-size="10" fill="#7aa2d4">用户直接安装和使用的应用程序（系统内置 + 第三方）</text>
+  <rect x="208" y="112" width="120" height="22" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.5"/><text x="268" y="127" text-anchor="middle" font-size="10" fill="#93c5fd">通话 (Phone)</text>
+  <rect x="334" y="112" width="120" height="22" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.5"/><text x="394" y="127" text-anchor="middle" font-size="10" fill="#93c5fd">短信 (SMS)</text>
+  <rect x="460" y="112" width="120" height="22" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.5"/><text x="520" y="127" text-anchor="middle" font-size="10" fill="#93c5fd">日历 (Calendar)</text>
+  <rect x="586" y="112" width="120" height="22" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.5"/><text x="646" y="127" text-anchor="middle" font-size="10" fill="#93c5fd">浏览器 (Browser)</text>
+  <rect x="712" y="112" width="120" height="22" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.5"/><text x="772" y="127" text-anchor="middle" font-size="10" fill="#93c5fd">地图 (Maps)</text>
+  <rect x="838" y="112" width="120" height="22" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.5"/><text x="898" y="127" text-anchor="middle" font-size="10" fill="#93c5fd">相机 (Camera)</text>
+  <rect x="208" y="142" width="120" height="22" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.5"/><text x="268" y="157" text-anchor="middle" font-size="10" fill="#93c5fd">设置 (Settings)</text>
+  <rect x="334" y="142" width="120" height="22" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="0.5"/><text x="394" y="157" text-anchor="middle" font-size="10" fill="#93c5fd">第三方应用</text>
+
+  <!-- L4: App Framework y=192~292 -->
+  <rect x="0" y="192" width="960" height="100" fill="#0a2218"/>
+  <rect x="0" y="192" width="200" height="100" fill="#061610"/>
+  <rect x="0" y="192" width="4" height="100" fill="#22c55e"/>
+  <line x1="204" y1="192" x2="204" y2="292" stroke="#14532d" stroke-width="1"/>
+  <text x="100" y="238" text-anchor="middle" font-size="18" font-weight="700" fill="#86efac">L4</text>
+  <text x="100" y="255" text-anchor="middle" font-size="13" font-weight="600" fill="#86efac">应用框架层</text>
+  <text x="100" y="270" text-anchor="middle" font-size="10" fill="#4ade80">App Framework</text>
+  <text x="100" y="283" text-anchor="middle" font-size="9" fill="#1a4a2e" font-style="italic">Java · Binder IPC</text>
+  <text x="214" y="208" font-size="10" fill="#6fba93">为开发者提供高级 API，管理应用生命周期与系统资源</text>
+  <rect x="208" y="220" width="120" height="22" rx="3" fill="#14532d" stroke="#16a34a" stroke-width="0.5"/><text x="268" y="235" text-anchor="middle" font-size="10" fill="#86efac">Activity Manager</text>
+  <rect x="334" y="220" width="120" height="22" rx="3" fill="#14532d" stroke="#16a34a" stroke-width="0.5"/><text x="394" y="235" text-anchor="middle" font-size="10" fill="#86efac">Window Manager</text>
+  <rect x="460" y="220" width="120" height="22" rx="3" fill="#14532d" stroke="#16a34a" stroke-width="0.5"/><text x="520" y="235" text-anchor="middle" font-size="10" fill="#86efac">Content Providers</text>
+  <rect x="586" y="220" width="120" height="22" rx="3" fill="#14532d" stroke="#16a34a" stroke-width="0.5"/><text x="646" y="235" text-anchor="middle" font-size="10" fill="#86efac">View System</text>
+  <rect x="712" y="220" width="120" height="22" rx="3" fill="#14532d" stroke="#16a34a" stroke-width="0.5"/><text x="772" y="235" text-anchor="middle" font-size="10" fill="#86efac">Package Manager</text>
+  <rect x="838" y="220" width="120" height="22" rx="3" fill="#14532d" stroke="#16a34a" stroke-width="0.5"/><text x="898" y="235" text-anchor="middle" font-size="10" fill="#86efac">Telephony Mgr</text>
+  <rect x="208" y="250" width="120" height="22" rx="3" fill="#14532d" stroke="#16a34a" stroke-width="0.5"/><text x="268" y="265" text-anchor="middle" font-size="10" fill="#86efac">Resource Manager</text>
+  <rect x="334" y="250" width="120" height="22" rx="3" fill="#14532d" stroke="#16a34a" stroke-width="0.5"/><text x="394" y="265" text-anchor="middle" font-size="10" fill="#86efac">Location Manager</text>
+  <rect x="460" y="250" width="120" height="22" rx="3" fill="#14532d" stroke="#16a34a" stroke-width="0.5"/><text x="520" y="265" text-anchor="middle" font-size="10" fill="#86efac">Notification Mgr</text>
+
+  <!-- L3: Libraries + ART y=300~400 -->
+  <rect x="0" y="300" width="960" height="100" fill="#201200"/>
+  <rect x="0" y="300" width="200" height="100" fill="#140b00"/>
+  <rect x="0" y="300" width="4" height="100" fill="#f59e0b"/>
+  <line x1="204" y1="300" x2="204" y2="400" stroke="#3d2100" stroke-width="1"/>
+  <text x="100" y="346" text-anchor="middle" font-size="18" font-weight="700" fill="#fcd34d">L3</text>
+  <text x="100" y="363" text-anchor="middle" font-size="13" font-weight="600" fill="#fcd34d">系统库 &amp; 运行时</text>
+  <text x="100" y="378" text-anchor="middle" font-size="10" fill="#fbbf24">Libraries + ART</text>
+  <text x="100" y="391" text-anchor="middle" font-size="9" fill="#5c3d00" font-style="italic">C / C++ · JNI</text>
+  <text x="214" y="316" font-size="10" fill="#b07f30">C/C++ 核心库与 ART 虚拟机，承载应用执行环境</text>
+  <rect x="208" y="328" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="268" y="343" text-anchor="middle" font-size="10" fill="#fcd34d">Surface Manager</text>
+  <rect x="334" y="328" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="394" y="343" text-anchor="middle" font-size="10" fill="#fcd34d">OpenGL ES</text>
+  <rect x="460" y="328" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="520" y="343" text-anchor="middle" font-size="10" fill="#fcd34d">Media Framework</text>
+  <rect x="586" y="328" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="646" y="343" text-anchor="middle" font-size="10" fill="#fcd34d">SQLite</text>
+  <rect x="712" y="328" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="772" y="343" text-anchor="middle" font-size="10" fill="#fcd34d">WebKit</text>
+  <rect x="838" y="328" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="898" y="343" text-anchor="middle" font-size="10" fill="#fcd34d">FreeType / SSL</text>
+  <rect x="208" y="358" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="268" y="373" text-anchor="middle" font-size="10" fill="#fcd34d">ART Runtime</text>
+  <rect x="334" y="358" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="394" y="373" text-anchor="middle" font-size="10" fill="#fcd34d">Core Libraries</text>
+  <rect x="460" y="358" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="520" y="373" text-anchor="middle" font-size="10" fill="#fcd34d">Dalvik VM</text>
+  <rect x="586" y="358" width="120" height="22" rx="3" fill="#3d2100" stroke="#d97706" stroke-width="0.5"/><text x="646" y="373" text-anchor="middle" font-size="10" fill="#fcd34d">libc / Bionic</text>
+
+  <!-- L2: HAL y=408~508 -->
+  <rect x="0" y="408" width="960" height="100" fill="#200808"/>
+  <rect x="0" y="408" width="200" height="100" fill="#130505"/>
+  <rect x="0" y="408" width="4" height="100" fill="#ef4444"/>
+  <line x1="204" y1="408" x2="204" y2="508" stroke="#3d0808" stroke-width="1"/>
+  <text x="100" y="454" text-anchor="middle" font-size="18" font-weight="700" fill="#fca5a5">L2</text>
+  <text x="100" y="471" text-anchor="middle" font-size="13" font-weight="600" fill="#fca5a5">硬件抽象层</text>
+  <text x="100" y="486" text-anchor="middle" font-size="10" fill="#f87171">HAL</text>
+  <text x="100" y="499" text-anchor="middle" font-size="9" fill="#5c0808" font-style="italic">C · HIDL / AIDL</text>
+  <text x="214" y="424" font-size="10" fill="#a87070">屏蔽硬件差异，向上提供统一的标准接口</text>
+  <rect x="208" y="436" width="120" height="22" rx="3" fill="#3d0808" stroke="#dc2626" stroke-width="0.5"/><text x="268" y="451" text-anchor="middle" font-size="10" fill="#fca5a5">Audio HAL</text>
+  <rect x="334" y="436" width="120" height="22" rx="3" fill="#3d0808" stroke="#dc2626" stroke-width="0.5"/><text x="394" y="451" text-anchor="middle" font-size="10" fill="#fca5a5">Camera HAL</text>
+  <rect x="460" y="436" width="120" height="22" rx="3" fill="#3d0808" stroke="#dc2626" stroke-width="0.5"/><text x="520" y="451" text-anchor="middle" font-size="10" fill="#fca5a5">Bluetooth HAL</text>
+  <rect x="586" y="436" width="120" height="22" rx="3" fill="#3d0808" stroke="#dc2626" stroke-width="0.5"/><text x="646" y="451" text-anchor="middle" font-size="10" fill="#fca5a5">Sensors HAL</text>
+  <rect x="712" y="436" width="120" height="22" rx="3" fill="#3d0808" stroke="#dc2626" stroke-width="0.5"/><text x="772" y="451" text-anchor="middle" font-size="10" fill="#fca5a5">Wi-Fi HAL</text>
+  <rect x="838" y="436" width="120" height="22" rx="3" fill="#3d0808" stroke="#dc2626" stroke-width="0.5"/><text x="898" y="451" text-anchor="middle" font-size="10" fill="#fca5a5">GPS HAL</text>
+  <rect x="208" y="466" width="120" height="22" rx="3" fill="#3d0808" stroke="#dc2626" stroke-width="0.5"/><text x="268" y="481" text-anchor="middle" font-size="10" fill="#fca5a5">Display HAL</text>
+  <rect x="334" y="466" width="120" height="22" rx="3" fill="#3d0808" stroke="#dc2626" stroke-width="0.5"/><text x="394" y="481" text-anchor="middle" font-size="10" fill="#fca5a5">Power HAL</text>
+
+  <!-- L1: Linux Kernel y=516~616 -->
+  <rect x="0" y="516" width="960" height="100" fill="#131d2a"/>
+  <rect x="0" y="516" width="200" height="100" fill="#0c1520"/>
+  <rect x="0" y="516" width="4" height="100" fill="#6b7280"/>
+  <line x1="204" y1="516" x2="204" y2="616" stroke="#1f2937" stroke-width="1"/>
+  <text x="100" y="562" text-anchor="middle" font-size="18" font-weight="700" fill="#d1d5db">L1</text>
+  <text x="100" y="579" text-anchor="middle" font-size="13" font-weight="600" fill="#d1d5db">Linux 内核层</text>
+  <text x="100" y="594" text-anchor="middle" font-size="10" fill="#9ca3af">Linux Kernel</text>
+  <text x="100" y="607" text-anchor="middle" font-size="9" fill="#374151" font-style="italic">C · Linux Kernel</text>
+  <text x="214" y="532" font-size="10" fill="#7a8a9a">设备驱动、进程调度、内存管理与安全机制的基础</text>
+  <rect x="208" y="544" width="120" height="22" rx="3" fill="#1f2937" stroke="#4b5563" stroke-width="0.5"/><text x="268" y="559" text-anchor="middle" font-size="10" fill="#d1d5db">Display Driver</text>
+  <rect x="334" y="544" width="120" height="22" rx="3" fill="#1f2937" stroke="#4b5563" stroke-width="0.5"/><text x="394" y="559" text-anchor="middle" font-size="10" fill="#d1d5db">Camera Driver</text>
+  <rect x="460" y="544" width="120" height="22" rx="3" fill="#1f2937" stroke="#4b5563" stroke-width="0.5"/><text x="520" y="559" text-anchor="middle" font-size="10" fill="#d1d5db">Audio Drivers</text>
+  <rect x="586" y="544" width="120" height="22" rx="3" fill="#1f2937" stroke="#4b5563" stroke-width="0.5"/><text x="646" y="559" text-anchor="middle" font-size="10" fill="#d1d5db">Binder IPC Driver</text>
+  <rect x="712" y="544" width="120" height="22" rx="3" fill="#1f2937" stroke="#4b5563" stroke-width="0.5"/><text x="772" y="559" text-anchor="middle" font-size="10" fill="#d1d5db">Keypad Driver</text>
+  <rect x="838" y="544" width="120" height="22" rx="3" fill="#1f2937" stroke="#4b5563" stroke-width="0.5"/><text x="898" y="559" text-anchor="middle" font-size="10" fill="#d1d5db">Wi-Fi Driver</text>
+  <rect x="208" y="574" width="120" height="22" rx="3" fill="#1f2937" stroke="#4b5563" stroke-width="0.5"/><text x="268" y="589" text-anchor="middle" font-size="10" fill="#d1d5db">Flash Memory</text>
+  <rect x="334" y="574" width="120" height="22" rx="3" fill="#1f2937" stroke="#4b5563" stroke-width="0.5"/><text x="394" y="589" text-anchor="middle" font-size="10" fill="#d1d5db">Power Management</text>
+
+  <!-- Direction Indicators -->
+  <line x1="0" y1="618" x2="960" y2="618" stroke="#1e293b" stroke-width="1"/>
+  <text x="24" y="638" font-size="11" fill="#475569">← 用户空间 (User Space)   L5 / L4 / L3</text>
+  <text x="936" y="638" text-anchor="end" font-size="11" fill="#475569">L2 / L1   内核空间 (Kernel Space) →</text>
+  <line x1="0" y1="648" x2="960" y2="648" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- IPC Mechanisms -->
+  <text x="24" y="670" font-size="15" font-weight="600" fill="#e2e8f0">层间通信机制</text>
+  <text x="24" y="688" font-size="11" fill="#64748b">Android 各架构层之间通过专用机制进行通信，保证安全性与性能。</text>
+  <!-- Table header -->
+  <rect x="24" y="698" width="912" height="28" fill="#1e293b"/>
+  <text x="34" y="716" font-size="11" font-weight="600" fill="#94a3b8">层间通信</text>
+  <text x="194" y="716" font-size="11" font-weight="600" fill="#94a3b8">通信机制</text>
+  <text x="386" y="716" font-size="11" font-weight="600" fill="#94a3b8">说明</text>
+  <line x1="184" y1="698" x2="184" y2="726" stroke="#334155" stroke-width="1"/>
+  <line x1="376" y1="698" x2="376" y2="726" stroke="#334155" stroke-width="1"/>
+  <!-- Row 1 -->
+  <rect x="24" y="726" width="912" height="27" fill="#111827"/>
+  <text x="34" y="743" font-size="10" fill="#cbd5e1">应用层 ↔ 框架层</text>
+  <text x="194" y="743" font-size="10" fill="#60a5fa">Binder IPC</text>
+  <text x="386" y="743" font-size="10" fill="#94a3b8">Android 核心进程间通信机制，基于 Linux 内核驱动模块，低延迟高安全</text>
+  <line x1="184" y1="726" x2="184" y2="753" stroke="#1e293b" stroke-width="1"/>
+  <line x1="376" y1="726" x2="376" y2="753" stroke="#1e293b" stroke-width="1"/>
+  <line x1="24" y1="753" x2="936" y2="753" stroke="#1e293b" stroke-width="0.5"/>
+  <!-- Row 2 -->
+  <rect x="24" y="753" width="912" height="27" fill="#0f172a"/>
+  <text x="34" y="770" font-size="10" fill="#cbd5e1">框架层 ↔ 系统库</text>
+  <text x="194" y="770" font-size="10" fill="#60a5fa">JNI</text>
+  <text x="386" y="770" font-size="10" fill="#94a3b8">Java Native Interface，Java 层调用 C/C++ 本地代码的标准桥梁</text>
+  <line x1="184" y1="753" x2="184" y2="780" stroke="#1e293b" stroke-width="1"/>
+  <line x1="376" y1="753" x2="376" y2="780" stroke="#1e293b" stroke-width="1"/>
+  <line x1="24" y1="780" x2="936" y2="780" stroke="#1e293b" stroke-width="0.5"/>
+  <!-- Row 3 -->
+  <rect x="24" y="780" width="912" height="27" fill="#111827"/>
+  <text x="34" y="797" font-size="10" fill="#cbd5e1">框架层 ↔ HAL</text>
+  <text x="194" y="797" font-size="10" fill="#60a5fa">HIDL / AIDL</text>
+  <text x="386" y="797" font-size="10" fill="#94a3b8">硬件接口定义语言，版本化稳定接口，使框架与驱动完全解耦</text>
+  <line x1="184" y1="780" x2="184" y2="807" stroke="#1e293b" stroke-width="1"/>
+  <line x1="376" y1="780" x2="376" y2="807" stroke="#1e293b" stroke-width="1"/>
+  <line x1="24" y1="807" x2="936" y2="807" stroke="#1e293b" stroke-width="0.5"/>
+  <!-- Row 4 -->
+  <rect x="24" y="807" width="912" height="27" fill="#0f172a"/>
+  <text x="34" y="824" font-size="10" fill="#cbd5e1">HAL ↔ 内核</text>
+  <text x="194" y="824" font-size="10" fill="#60a5fa">ioctl / sysfs</text>
+  <text x="386" y="824" font-size="10" fill="#94a3b8">用户空间驱动控制与内核数据交换的 POSIX 标准接口</text>
+  <line x1="184" y1="807" x2="184" y2="834" stroke="#1e293b" stroke-width="1"/>
+  <line x1="376" y1="807" x2="376" y2="834" stroke="#1e293b" stroke-width="1"/>
+  <!-- Table border -->
+  <rect x="24" y="698" width="912" height="136" rx="4" fill="none" stroke="#334155" stroke-width="1"/>
+
+  <!-- Footer -->
+  <text x="480" y="864" text-anchor="middle" font-size="10" fill="#334155">Android Open Source Project (AOSP) · 架构参考文档</text>
+</svg>
